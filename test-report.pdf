@@ -1,0 +1,139 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="utf-8">
+            <title>REKAPITULASI DATA TANAMAN DAN PRODUKTIVITAS PERTANIAN</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                .header { text-align: center; margin-bottom: 30px; }
+                .title { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
+                .info { margin-bottom: 20px; }
+                .info-row { margin-bottom: 5px; }
+                table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                th { background-color: #f2f2f2; font-weight: bold; }
+                .totals { margin-top: 20px; }
+                .total-section { margin-bottom: 15px; }
+                .total-title { font-weight: bold; margin-bottom: 5px; }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="title">REKAPITULASI DATA TANAMAN DAN PRODUKTIVITAS PERTANIAN</div>
+                <div>Kode: KNRKKP008</div>
+                <div>Periode: 08-2025</div>
+                <div>User: SYSTEM</div>
+            </div>
+
+            <div class="info">
+                <div class="info-row">Kantor Wilayah: KANWIL DKI JAKARTA (903)</div>
+                <div class="info-row">Kantor: GRHA BPJAMSOSTEK (J0P)</div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kode Tanaman</th>
+                        <th>Nama Tanaman</th>
+                        <th>Jenis Tanaman</th>
+                        <th>Varietas</th>
+                        <th>Metode Pembibitan</th>
+                        <th>Tingkat Perkecambahan</th>
+                        <th>Benih per Sel</th>
+                        <th>Profil Cahaya</th>
+                        <th>Kondisi Tanah</th>
+                        <th>Hari Muncul</th>
+                        <th>Jarak Tanam</th>
+                        <th>Jarak Baris</th>
+                        <th>Kedalaman Tanam</th>
+                        <th>Tinggi Rata-rata</th>
+                        <th>Hari Berbunga</th>
+                        <th>Hari Panen</th>
+                        <th>Jendela Panen</th>
+                        <th>Tingkat Kehilangan</th>
+                        <th>Satuan Panen</th>
+                        <th>Pendapatan Estimasi</th>
+                        <th>Hasil Estimasi</th>
+                        <th>Tanaman Tahunan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>6</td>
+                        <td>jagung</td>
+                        <td>-</td>
+                        <td>Hibrida BISI-2</td>
+                        <td>Semaian Langsung</td>
+                        <td>95.00</td>
+                        <td>1</td>
+                        <td>Matahari Penuh</td>
+                        <td>Lempung</td>
+                        <td>7</td>
+                        <td>25.00</td>
+                        <td>75.00</td>
+                        <td>5.00</td>
+                        <td>110.00</td>
+                        <td>90</td>
+                        <td>110</td>
+                        <td>10</td>
+                        <td>6.00</td>
+                        <td>kilogram</td>
+                        <td>4000.00</td>
+                        <td>0</td>
+                        <td>Tidak</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>7</td>
+                        <td>jagung</td>
+                        <td>-</td>
+                        <td>Hibrida BISI-2</td>
+                        <td>Semaian Langsung</td>
+                        <td>97.00</td>
+                        <td>1</td>
+                        <td>Matahari Penuh</td>
+                        <td>Lempung</td>
+                        <td>7</td>
+                        <td>25.00</td>
+                        <td>50.00</td>
+                        <td>5.00</td>
+                        <td>110.00</td>
+                        <td>90</td>
+                        <td>110</td>
+                        <td>10</td>
+                        <td>10.00</td>
+                        <td>kilogram</td>
+                        <td>4000.00</td>
+                        <td>0</td>
+                        <td>Tidak</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+            <div class="totals">
+                <div class="total-section">
+                    <div class="total-title">Total Target:</div>
+                    <div>Total Tanaman: 2</div>
+                    <div>Total Hasil Estimasi: 0</div>
+                    <div>Rata-rata Perkecambahan: 0.00%</div>
+                </div>
+                <div class="total-section">
+                    <div class="total-title">Total Kategori:</div>
+                    <div>Tanaman Tahunan: 0</div>
+                    <div>Tanaman Musiman: 2</div>
+                    <div>Dengan Varietas: 2</div>
+                    <div>Dengan Metode Pembibitan: 2</div>
+                    <div>Dengan Profil Cahaya: 2</div>
+                </div>
+                <div class="total-section">
+                    <div class="total-title">Total Keuangan:</div>
+                    <div>Total Pendapatan Estimasi: 04000.004000.00</div>
+                    <div>Rata-rata Pendapatan: 0.00</div>
+                </div>
+            </div>
+        </body>
+        </html>
+        

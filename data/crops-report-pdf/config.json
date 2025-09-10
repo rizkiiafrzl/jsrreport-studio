@@ -1,0 +1,15 @@
+{
+    "name": "crops-report-pdf",
+    "engine": "handlebars",
+    "recipe": "chrome-pdf",
+    "isSystem": false,
+    "creationDate": {
+        "$$date": 1757408216540
+    },
+    "modificationDate": {
+        "$$date": 1757408216540
+    },
+    "shortid": "TiPlqmG",
+    "_id": "PzjTO9KgM6e8ftXD",
+    "$entitySet": "templates"
+}

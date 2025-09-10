@@ -1,18 +1,63 @@
 const Repository = require('../repository/repository');
+const path = require('path');
 
 // Import jsreport for report generation (without studio)
 let jsreport = null;
-try {
-    jsreport = require('jsreport')({
-        dataDirectory: './jsreport-data'
-    });
-} catch (err) {
-    console.log('jsreport not available in service, using fallback mode:', err.message);
+let jsreportInitialized = false;
+
+async function initializeJsReport() {
+    if (jsreportInitialized) return jsreport;
+    
+    try {
+        const dataDir = path.resolve(__dirname, '../jsreport-data');
+        jsreport = require('jsreport')({
+            dataDirectory: dataDir,
+            studio: { enabled: false },
+            store: { provider: 'fs' },
+            blobStorage: { provider: 'fs' },
+            extensions: {
+                express: { enabled: false },
+                studio: { enabled: false },
+                'fs-store': { dataDirectory: dataDir }
+            }
+        });
+        await jsreport.init();
+        jsreportInitialized = true;
+        console.log('JsReport initialized. Using data directory:', dataDir);
+        return jsreport;
+    } catch (err) {
+        console.log('jsreport not available in service, using fallback mode:', err.message);
+        return null;
+    }
 }
 
 class Service {
     constructor() {
         this.repository = new Repository();
+    }
+
+    async ensureTemplateExists(jsreportInstance, templateName, templateContent) {
+        try {
+            // Check if template exists
+            const existingTemplate = await jsreportInstance.documentStore.collection('templates').findOne({ name: templateName });
+            
+            if (!existingTemplate) {
+                console.log(`Creating template: ${templateName}`);
+                // Create template
+                await jsreportInstance.documentStore.collection('templates').insert({
+                    name: templateName,
+                    content: templateContent,
+                    engine: 'handlebars',
+                    recipe: 'chrome-pdf',
+                    isSystem: false
+                });
+                console.log(`Template ${templateName} created successfully`);
+            } else {
+                console.log(`Template ${templateName} already exists`);
+            }
+        } catch (error) {
+            console.log(`Error ensuring template ${templateName}:`, error.message);
+        }
     }
 
     async getReportData(params = {}) {
@@ -45,15 +90,29 @@ class Service {
                 throw new Error(reportData.message);
             }
 
-            // Use jsreport to generate PDF if available
-            if (jsreport) {
+            const templateName = process.env.JSREPORT_TEMPLATE_NAME || 'template-pdf';
+
+            const jsreportInstance = await initializeJsReport();
+            if (jsreportInstance) {
                 try {
-                    const report = await jsreport.render({
-                        template: {
-                            name: 'crops-report-pdf' // Template name in jsreport studio
-                        },
-                        data: reportData.data
-                    });
+                    // TEMP: list visible templates for diagnostics
+                    try {
+                        const list = await jsreportInstance.documentStore.collection('templates').find({});
+                        console.log('Visible templates:', list.map(t => t.name));
+                    } catch (e) {
+                        console.log('Unable to list templates:', e.message);
+                    }
+                    let report;
+                    try {
+                        console.log(`Attempting to use template: ${templateName}`);
+                        report = await jsreportInstance.render({
+                            template: { name: templateName },
+                            data: reportData.data
+                        });
+                        console.log(`Successfully used template: ${templateName}`);
+                    } catch (templateError) {
+                        throw new Error(`Template not found or failed: ${templateName}. ${templateError.message}`);
+                    }
 
                     return {
                         success: true,
@@ -62,21 +121,17 @@ class Service {
                         contentType: 'application/pdf'
                     };
                 } catch (jsreportError) {
-                    console.log('jsreport PDF generation failed, using fallback:', jsreportError.message);
+                    return {
+                        success: false,
+                        data: null,
+                        message: `PDF generation failed: ${jsreportError.message}`
+                    };
                 }
             }
         } catch (error) {
             console.error('jsreport PDF generation error:', error);
+            return { success: false, data: null, message: error.message };
         }
-        
-        // Fallback to HTML if jsreport fails
-        const htmlTemplate = this.createHTMLTemplate(reportData.data);
-        return {
-            success: true,
-            data: htmlTemplate,
-            message: "HTML report generated (jsreport template not found, using fallback)",
-            contentType: 'text/html'
-        };
     }
 
     async generateExcelReport(params = {}) {
@@ -88,9 +143,10 @@ class Service {
             }
 
             // Use jsreport to generate Excel if available
-            if (jsreport) {
+            const jsreportInstance = await initializeJsReport();
+            if (jsreportInstance) {
                 try {
-                    const report = await jsreport.render({
+                    const report = await jsreportInstance.render({
                         template: {
                             name: 'crops-report-excel' // Template name in jsreport studio
                         },
@@ -112,127 +168,115 @@ class Service {
         }
         
         // Fallback to CSV if jsreport fails
-        const csvContent = this.createCSVTemplate(reportData.data);
-        return {
-            success: true,
-            data: csvContent,
-            message: "CSV report generated (jsreport template not found, using fallback)",
-            contentType: 'text/csv'
-        };
+        try {
+            const reportData = await this.getReportData(params);
+            if (!reportData.success) {
+                throw new Error(reportData.message);
+            }
+            
+            const csvContent = this.createCSVTemplate(reportData.data);
+            return {
+                success: true,
+                data: csvContent,
+                message: "CSV report generated (jsreport template not found, using fallback)",
+                contentType: 'text/csv'
+            };
+        } catch (fallbackError) {
+            return {
+                success: false,
+                data: null,
+                message: fallbackError.message
+            };
+        }
     }
 
     createHTMLTemplate(data) {
+        const kantor = data.info?.nama_kantor || 'KANTOR PUSAT';
+        const periodeText = data.periode || '-';
+        const codeLeft = data.code || 'KNODIK003';
+        const codeRight = data.reportCode || 'REKAP2025';
         return `
         <!DOCTYPE html>
-        <html>
+        <html lang="id">
         <head>
-            <meta charset="utf-8">
-            <title>${data.title}</title>
-            <style>
-                body { font-family: Arial, sans-serif; margin: 20px; }
-                .header { text-align: center; margin-bottom: 30px; }
-                .title { font-size: 18px; font-weight: bold; margin-bottom: 10px; }
-                .info { margin-bottom: 20px; }
-                .info-row { margin-bottom: 5px; }
-                table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                th { background-color: #f2f2f2; font-weight: bold; }
-                .totals { margin-top: 20px; }
-                .total-section { margin-bottom: 15px; }
-                .total-title { font-weight: bold; margin-bottom: 5px; }
-            </style>
+          <meta charset="utf-8">
+          <title>${data.title || 'REKAP GTK PER PROVINSI'}</title>
+          <style>
+            @page { size: A4 landscape; margin: 16mm 12mm 16mm 12mm; }
+            html, body { margin: 0; padding: 0; }
+            body { font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #000; }
+            .page-header { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; margin-bottom: 8px; }
+            .brand { display: flex; align-items: center; gap: 10px; }
+            .brand-logo { width: 120px; height: 32px; background: url('https://upload.wikimedia.org/wikipedia/commons/5/5e/BPJS_Ketenagakerjaan_logo.svg') no-repeat left center/contain; }
+            .brand-title { font-weight: bold; text-align: center; width: 100%; }
+            .brand-title .title-line-1 { font-weight: 700; }
+            .brand-title .title-line-2 { font-weight: 700; }
+            .brand-title .periode { margin-top: 2px; }
+            .meta { line-height: 1.25; text-align: right; font-size: 11px; }
+            .meta-row { white-space: nowrap; }
+            .section { margin-top: 8px; margin-bottom: 6px; display: grid; grid-template-columns: auto 1fr; gap: 8px; align-items: center; }
+            .section .label { font-weight: bold; }
+            .section .value { font-weight: 600; }
+            .section .underline { grid-column: 1 / -1; height: 2px; background: #1e90ff; margin-top: 6px; margin-bottom: 2px; border-radius: 2px; }
+            table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+            thead th { background: #efefef; font-weight: 700; border: 1px solid #cfcfcf; padding: 6px 8px; text-align: center; }
+            tbody td { border: 1px solid #d9d9d9; padding: 6px 8px; vertical-align: middle; }
+            .col-no { width: 38px; text-align: center; }
+            .col-work { width: auto; }
+            .col-aktif { width: 80px; text-align: center; }
+            .col-tambah { width: 100px; text-align: center; }
+            .page-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 11px; }
+            .code-left { font-weight: 600; }
+            .code-right { font-weight: 700; padding: 2px 8px; border-radius: 10px; border: 2px solid #27ae60; color: #27ae60; }
+            @media print { .page-header { position: running(pageHeader); } .page-footer { position: running(pageFooter); } .print-header { display: block; height: 0; } .print-footer { display: block; height: 0; } .with-header { margin-top: 8px; } .with-footer { margin-bottom: 8px; } }
+          </style>
         </head>
         <body>
-            <div class="header">
-                <div class="title">${data.title}</div>
-                <div>Kode: ${data.code}</div>
-                <div>Periode: ${data.periode}</div>
-                <div>User: ${data.user}</div>
+          <div class="page-header">
+            <div class="brand">
+              <div class="brand-logo" aria-hidden="true"></div>
+              <div class="brand-title">
+                <div class="title-line-1">${data.title || 'REKAP GTK PER PROVINSI'}</div>
+                <div class="title-line-2">${data.subtitle || 'SEMUA JENIS KEPEGAWAIAN'}</div>
+                <div class="periode">Periode: ${periodeText}</div>
+              </div>
             </div>
-
-            <div class="info">
-                <div class="info-row">Kantor Wilayah: ${data.info.nama_kantor_wilayah} (${data.info.kode_kantor_wilayah})</div>
-                <div class="info-row">Kantor: ${data.info.nama_kantor} (${data.info.kode_kantor})</div>
+            <div class="meta">
+              <div class="meta-row">Halaman : 1/1</div>
+              <div class="meta-row">Tanggal Cetak : ${new Date().toLocaleDateString('id-ID')}</div>
+              <div class="meta-row">Waktu Cetak : ${new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })}</div>
             </div>
+          </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Kode Tanaman</th>
-                        <th>Nama Tanaman</th>
-                        <th>Jenis Tanaman</th>
-                        <th>Varietas</th>
-                        <th>Metode Pembibitan</th>
-                        <th>Tingkat Perkecambahan</th>
-                        <th>Benih per Sel</th>
-                        <th>Profil Cahaya</th>
-                        <th>Kondisi Tanah</th>
-                        <th>Hari Muncul</th>
-                        <th>Jarak Tanam</th>
-                        <th>Jarak Baris</th>
-                        <th>Kedalaman Tanam</th>
-                        <th>Tinggi Rata-rata</th>
-                        <th>Hari Berbunga</th>
-                        <th>Hari Panen</th>
-                        <th>Jendela Panen</th>
-                        <th>Tingkat Kehilangan</th>
-                        <th>Satuan Panen</th>
-                        <th>Pendapatan Estimasi</th>
-                        <th>Hasil Estimasi</th>
-                        <th>Tanaman Tahunan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    ${data.datas.map(item => `
-                    <tr>
-                        <td>${item.KODE_TANAMAN}</td>
-                        <td>${item.NAMA_TANAMAN}</td>
-                        <td>${item.JENIS_TANAMAN}</td>
-                        <td>${item.VARIETAS}</td>
-                        <td>${item.METODE_PEMBIBITAN}</td>
-                        <td>${item.TINGKAT_PERKECAMBAHAN}</td>
-                        <td>${item.BENIH_PER_SEL}</td>
-                        <td>${item.PROFIL_CAHAYA}</td>
-                        <td>${item.KONDISI_TANAH}</td>
-                        <td>${item.HARI_MUNCUL}</td>
-                        <td>${item.JARAK_TANAM}</td>
-                        <td>${item.JARAK_BARIS}</td>
-                        <td>${item.KEDALAMAN_TANAM}</td>
-                        <td>${item.TINGGI_RATA_RATA}</td>
-                        <td>${item.HARI_BERBUNGA}</td>
-                        <td>${item.HARI_PANEN}</td>
-                        <td>${item.JENDELA_PANEN}</td>
-                        <td>${item.TINGKAT_KEHILANGAN}</td>
-                        <td>${item.SATUAN_PANEN}</td>
-                        <td>${item.PENDAPATAN_ESTIMASI}</td>
-                        <td>${item.HASIL_ESTIMASI}</td>
-                        <td>${item.TANAMAN_TAHUNAN}</td>
-                    </tr>
-                    `).join('')}
-                </tbody>
-            </table>
+          <div class="section">
+            <div class="label">NAMA KANTOR :</div>
+            <div class="value">${kantor}</div>
+            <div class="underline"></div>
+          </div>
 
-            <div class="totals">
-                <div class="total-section">
-                    <div class="total-title">Total Target:</div>
-                    <div>Total Tanaman: ${data.totals.totalTarget.TOTAL_TANAMAN}</div>
-                    <div>Total Hasil Estimasi: ${data.totals.totalTarget.TOTAL_HASIL_ESTIMASI}</div>
-                    <div>Rata-rata Perkecambahan: ${data.totals.totalTarget.RATA_RATA_PERKECAMBAHAN.toFixed(2)}%</div>
-                </div>
-                <div class="total-section">
-                    <div class="total-title">Total Kategori:</div>
-                    <div>Tanaman Tahunan: ${data.totals.totalKategori.TANAMAN_TAHUNAN}</div>
-                    <div>Tanaman Musiman: ${data.totals.totalKategori.TANAMAN_MUSIMAN}</div>
-                    <div>Dengan Varietas: ${data.totals.totalKategori.DENGAN_VARIETAS}</div>
-                    <div>Dengan Metode Pembibitan: ${data.totals.totalKategori.DENGAN_METODE_PEMBIBITAN}</div>
-                    <div>Dengan Profil Cahaya: ${data.totals.totalKategori.DENGAN_PROFIL_CAHAYA}</div>
-                </div>
-                <div class="total-section">
-                    <div class="total-title">Total Keuangan:</div>
-                    <div>Total Pendapatan Estimasi: ${data.totals.totalKeuangan.TOTAL_PENDAPATAN_ESTIMASI}</div>
-                    <div>Rata-rata Pendapatan: ${data.totals.totalKeuangan.RATA_RATA_PENDAPATAN.toFixed(2)}</div>
-                </div>
-            </div>
+          <table class="with-header with-footer">
+            <thead>
+              <tr>
+                <th class="col-no">NO.</th>
+                <th class="col-work">WORKDESC</th>
+                <th class="col-aktif">TK AKTIF</th>
+                <th class="col-tambah">PENAMBAHAN</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${data.datas.map((item, idx) => {
+                const work = item.WORKDESC || item.NAMA_TANAMAN || item.name || '-';
+                const aktif = item.TK_AKTIF ?? item.HASIL_ESTIMASI ?? item.expected_yield ?? 0;
+                const tambah = item.PENAMBAHAN ?? item.PENDAPATAN_ESTIMASI ?? item.estimated_revenue ?? 0;
+                return `<tr><td class="col-no">${idx + 1}</td><td class="col-work">${work}</td><td class="col-aktif">${aktif}</td><td class="col-tambah">${tambah}</td></tr>`;
+              }).join('')}
+            </tbody>
+          </table>
+
+          <div class="page-footer">
+            <div class="code-left">${codeLeft}</div>
+            <div class="code-right">${codeRight}</div>
+          </div>
         </body>
         </html>
         `;

@@ -8,7 +8,20 @@ const jsreportInstance = jsreport({
         enabled: true,
         port: 5488
     },
-    dataDirectory: './jsreport-data'
+    dataDirectory: './jsreport-data',
+    // Ensure templates are saved to disk
+    store: {
+        provider: 'fs'
+    },
+    blobStorage: {
+        provider: 'fs'
+    },
+    // Enable template persistence
+    extensions: {
+        'fs-store': {
+            dataDirectory: './jsreport-data'
+        }
+    }
 });
 
 // Initialize and start jsreport

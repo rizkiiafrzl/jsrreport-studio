@@ -19,7 +19,7 @@ module.exports = {
         }
     },
     
-    // Data directory for templates and data
+    // Data directory for templates and data (fs-store root)
     dataDirectory: './jsreport-data',
     
     // Templates configuration
