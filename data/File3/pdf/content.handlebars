@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>REKAP GTK PER PROVINSI</title>
+  <style>
+    /* ====== Halaman ====== */
+    @page { size: A4 landscape; margin: 6mm; }
+    html, body { margin: 0; font-size: 8.4px; font-family: Arial, Helvetica, sans-serif; }
+
+    /* ====== Header: logo kiri, judul tengah, meta kanan (GRID) ====== */
+    .page-header{
+      display: grid;
+      grid-template-columns: auto 1fr auto; /* kiri | tengah fleksibel | kanan */
+      align-items: center;
+      margin-bottom: 6px;
+      gap: 12px;
+    }
+    .brand{ display:flex; align-items:center; }
+    .brand-logo{
+      height: 90px;           /* atur besar logo di sini */
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+    .brand-title{
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .brand-title .title-line-1{ font-size: 14px; }
+    .brand-title .title-line-2{ font-size: 12.5px; }
+    .brand-title .periode{ font-size: 11px; margin-top: 2px; }
+
+    .meta{
+      font-size: 9.5px;
+      text-align: right;
+      line-height: 1.25;
+    }
+
+    /* ====== Tabel ====== */
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th, td { border: 0.6px solid #cfcfcf; padding: 2px 3px; vertical-align: middle; }
+    th { text-align: center; background: #f6f6f6; line-height: 1.2; }
+
+    /* Tampilkan angka penuh & rapi */
+    td{
+  text-align: center;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+  font-variant-numeric: tabular-nums;
+}
+/* tetap biar nama provinsi kiri */
+td.wrap { white-space: normal; text-align: left; }
+
+    /* Zebra halus */
+    tbody tr:nth-child(odd) td { background: #fbfbfb; }
+
+    /* ====== Kolom ====== */
+    col.idx  { width: 24px; }
+    col.prov { width: 140px; }
+    col.num  { width: 34px; }
+    col.sub  { width: 48px; }
+
+    /* Persen lebih kecil */
+    td.percent, th.percent { font-size: 8.2px; padding: 2px; }
+    col.num.percent { width: 38px; }
+    col.sub.percent { width: 46px; }
+
+    /* Garis pemisah grup */
+    .sep-r { border-right: 0.6px solid #cfcfcf !important; }
+
+    /* Subtotal (sel per kolom) */
+    td.subtotal { background: #efefef; font-weight: 600; }
+
+    /* Total (baris akhir) */
+    tfoot { display: table-row-group; }
+    .row-total { font-weight: 700; background: #efefef; }
+
+    /* Footer */
+    .page-footer{
+      margin-top: 4mm;
+      display:flex; justify-content: space-between;
+      font-size: 9px; color:#444;
+    }
+
+    /* Amankan gambar */
+    img{ max-width: 100%; height: auto; }
+  </style>
+
+  <script>
+    // Format angka ribuan Indonesia
+    function fmtID(num) {
+      if (num == null || num === '' || isNaN(num)) return '0';
+      return Number(num).toLocaleString('id-ID');
+    }
+    // Format persen Indonesia 0–100
+    function fmtPercent(num, digits=2) {
+      const zero = (0).toLocaleString('id-ID', {minimumFractionDigits:digits, maximumFractionDigits:digits}) + '%';
+      if (num == null || num === '' || isNaN(num)) return zero;
+      return Number(num).toLocaleString('id-ID', { minimumFractionDigits: digits, maximumFractionDigits: digits }) + '%';
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="brand">
+      <!-- Ganti path aset sesuai lokasi di Assets:
+           - jika di root Assets: 'Logo BPJS Ketenagakerjaan.png'
+           - jika di folder /assets: '/assets/Logo BPJS Ketenagakerjaan.png' -->
+      <img src="{{asset 'Logo BPJS Ketenagakerjaan.png' 'dataURI'}}" alt="BPJS Ketenagakerjaan" class="brand-logo" />
+    </div>
+    <div class="brand-title">
+      <div class="title-line-1">REKAP GTK PER PROVINSI</div>
+      <div class="title-line-2">(PAUD, TK, SD, SMP)</div>
+      <div class="periode">Periode: {{period}}</div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">Halaman : 1/1</div>
+      <div class="meta-row">Tanggal Cetak : {{printDate}}</div>
+      <div class="meta-row">Waktu Cetak : {{printTime}}</div>
+    </div>
+  </div>
+
+  <table>
+    <colgroup>
+      <col class="idx">
+      <col class="prov">
+
+      <!-- DAPODIK NON ASN NEGERI (5 kolom) -->
+      <col class="num"><col class="num"><col class="num"><col class="num"><col class="sub sep-r">
+
+      <!-- DAPODIK SWASTA (5 kolom) -->
+      <col class="num"><col class="num"><col class="num"><col class="num"><col class="sub sep-r">
+
+      <!-- BPJS NON ASN NEGERI (5 kolom) -->
+      <col class="num"><col class="num"><col class="num"><col class="num"><col class="sub sep-r">
+
+      <!-- BPJS SWASTA (5 kolom) -->
+      <col class="num"><col class="num"><col class="num"><col class="num"><col class="sub sep-r">
+
+      <!-- % NON ASN NEGERI (5 kolom) -->
+      <col class="num percent"><col class="num percent"><col class="num percent"><col class="num percent"><col class="sub percent sep-r">
+
+      <!-- % SWASTA (5 kolom) -->
+      <col class="num percent"><col class="num percent"><col class="num percent"><col class="num percent"><col class="sub percent">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th rowspan="3">No</th>
+        <th rowspan="3">Nama Provinsi</th>
+        <th colspan="10">JUMLAH GTK DAPODIK KEMENDIKBUD</th>
+        <th colspan="10">JUMLAH GTK TERDAFTAR BPJS KETENAGAKERJAAN</th>
+        <th class="percent" colspan="10">% Kepesertaan Aktif</th>
+      </tr>
+      <tr>
+        <th colspan="5">NON ASN NEGERI</th>
+        <th colspan="5">SWASTA</th>
+        <th colspan="5">NON ASN NEGERI</th>
+        <th colspan="5">SWASTA</th>
+        <th class="percent" colspan="5">NON ASN NEGERI</th>
+        <th class="percent" colspan="5">SWASTA</th>
+      </tr>
+      <tr>
+        <th>PAUD</th><th>TK</th><th>SD</th><th>SMP</th><th>Subtotal</th>
+        <th>PAUD</th><th>TK</th><th>SD</th><th>SMP</th><th>Subtotal</th>
+        <th>PAUD</th><th>TK</th><th>SD</th><th>SMP</th><th>Subtotal</th>
+        <th>PAUD</th><th>TK</th><th>SD</th><th>SMP</th><th>Subtotal</th>
+        <th class="percent">PAUD</th><th class="percent">TK</th><th class="percent">SD</th><th class="percent">SMP</th><th class="percent">Subtotal</th>
+        <th class="percent">PAUD</th><th class="percent">TK</th><th class="percent">SD</th><th class="percent">SMP</th><th class="percent">Subtotal</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each provinces}}
+      <tr>
+        <td>{{index}}</td>
+        <td class="wrap">{{province}}</td>
+
+        <!-- DAPODIK NON ASN NEGERI -->
+        <td><script>document.write(fmtID({{dapodik.nonAsnNegeri.paud}}))</script></td>
+        <td><script>document.write(fmtID({{dapodik.nonAsnNegeri.tk}}))</script></td>
+        <td><script>document.write(fmtID({{dapodik.nonAsnNegeri.sd}}))</script></td>
+        <td><script>document.write(fmtID({{dapodik.nonAsnNegeri.smp}}))</script></td>
+        <td class="sep-r subtotal"><script>document.write(fmtID({{dapodik.nonAsnNegeri.subtotal}}))</script></td>
+
+        <!-- DAPODIK SWASTA -->
+        <td><script>document.write(fmtID({{dapodik.swasta.paud}}))</script></td>
+        <td><script>document.write(fmtID({{dapodik.swasta.tk}}))</script></td>
+        <td><script>document.write(fmtID({{dapodik.swasta.sd}}))</script></td>
+        <td><script>document.write(fmtID({{dapodik.swasta.smp}}))</script></td>
+        <td class="sep-r subtotal"><script>document.write(fmtID({{dapodik.swasta.subtotal}}))</script></td>
+
+        <!-- BPJS NON ASN NEGERI -->
+        <td><script>document.write(fmtID({{bpjsTerdaftar.nonAsnNegeri.paud}}))</script></td>
+        <td><script>document.write(fmtID({{bpjsTerdaftar.nonAsnNegeri.tk}}))</script></td>
+        <td><script>document.write(fmtID({{bpjsTerdaftar.nonAsnNegeri.sd}}))</script></td>
+        <td><script>document.write(fmtID({{bpjsTerdaftar.nonAsnNegeri.smp}}))</script></td>
+        <td class="sep-r subtotal"><script>document.write(fmtID({{bpjsTerdaftar.nonAsnNegeri.subtotal}}))</script></td>
+
+        <!-- BPJS SWASTA -->
+        <td><script>document.write(fmtID({{bpjsTerdaftar.swasta.paud}}))</script></td>
+        <td><script>document.write(fmtID({{bpjsTerdaftar.swasta.tk}}))</script></td>
+        <td><script>document.write(fmtID({{bpjsTerdaftar.swasta.sd}}))</script></td>
+        <td><script>document.write(fmtID({{bpjsTerdaftar.swasta.smp}}))</script></td>
+        <td class="sep-r subtotal"><script>document.write(fmtID({{bpjsTerdaftar.swasta.subtotal}}))</script></td>
+
+        <!-- % AKTIF NON ASN NEGERI -->
+        <td class="percent"><script>document.write(fmtPercent({{aktifPercent.nonAsnNegeri.paud}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{aktifPercent.nonAsnNegeri.tk}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{aktifPercent.nonAsnNegeri.sd}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{aktifPercent.nonAsnNegeri.smp}}))</script></td>
+        <td class="percent sep-r subtotal"><script>document.write(fmtPercent({{aktifPercent.nonAsnNegeri.subtotal}}))</script></td>
+
+        <!-- % AKTIF SWASTA -->
+        <td class="percent"><script>document.write(fmtPercent({{aktifPercent.swasta.paud}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{aktifPercent.swasta.tk}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{aktifPercent.swasta.sd}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{aktifPercent.swasta.smp}}))</script></td>
+        <td class="percent subtotal"><script>document.write(fmtPercent({{aktifPercent.swasta.subtotal}}))</script></td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+    <tfoot>
+      <tr class="row-total">
+        <td colspan="2">TOTAL</td>
+
+        <!-- TOTAL DAPODIK NON ASN NEGERI -->
+        <td><script>document.write(fmtID({{totals.dapodik.nonAsnNegeri.paud}}))</script></td>
+        <td><script>document.write(fmtID({{totals.dapodik.nonAsnNegeri.tk}}))</script></td>
+        <td><script>document.write(fmtID({{totals.dapodik.nonAsnNegeri.sd}}))</script></td>
+        <td><script>document.write(fmtID({{totals.dapodik.nonAsnNegeri.smp}}))</script></td>
+        <td class="sep-r"><script>document.write(fmtID({{totals.dapodik.nonAsnNegeri.subtotal}}))</script></td>
+
+        <!-- TOTAL DAPODIK SWASTA -->
+        <td><script>document.write(fmtID({{totals.dapodik.swasta.paud}}))</script></td>
+        <td><script>document.write(fmtID({{totals.dapodik.swasta.tk}}))</script></td>
+        <td><script>document.write(fmtID({{totals.dapodik.swasta.sd}}))</script></td>
+        <td><script>document.write(fmtID({{totals.dapodik.swasta.smp}}))</script></td>
+        <td class="sep-r"><script>document.write(fmtID({{totals.dapodik.swasta.subtotal}}))</script></td>
+
+        <!-- TOTAL BPJS NON ASN NEGERI -->
+        <td><script>document.write(fmtID({{totals.bpjsTerdaftar.nonAsnNegeri.paud}}))</script></td>
+        <td><script>document.write(fmtID({{totals.bpjsTerdaftar.nonAsnNegeri.tk}}))</script></td>
+        <td><script>document.write(fmtID({{totals.bpjsTerdaftar.nonAsnNegeri.sd}}))</script></td>
+        <td><script>document.write(fmtID({{totals.bpjsTerdaftar.nonAsnNegeri.smp}}))</script></td>
+        <td class="sep-r"><script>document.write(fmtID({{totals.bpjsTerdaftar.nonAsnNegeri.subtotal}}))</script></td>
+
+        <!-- TOTAL BPJS SWASTA -->
+        <td><script>document.write(fmtID({{totals.bpjsTerdaftar.swasta.paud}}))</script></td>
+        <td><script>document.write(fmtID({{totals.bpjsTerdaftar.swasta.tk}}))</script></td>
+        <td><script>document.write(fmtID({{totals.bpjsTerdaftar.swasta.sd}}))</script></td>
+        <td><script>document.write(fmtID({{totals.bpjsTerdaftar.swasta.smp}}))</script></td>
+        <td class="sep-r"><script>document.write(fmtID({{totals.bpjsTerdaftar.swasta.subtotal}}))</script></td>
+
+        <!-- RATA2 % AKTIF NON ASN NEGERI -->
+        <td class="percent"><script>document.write(fmtPercent({{totals.aktifPercent.nonAsnNegeri.paud}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{totals.aktifPercent.nonAsnNegeri.tk}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{totals.aktifPercent.nonAsnNegeri.sd}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{totals.aktifPercent.nonAsnNegeri.smp}}))</script></td>
+        <td class="percent sep-r"><script>document.write(fmtPercent({{totals.aktifPercent.nonAsnNegeri.subtotal}}))</script></td>
+
+        <!-- RATA2 % AKTIF SWASTA -->
+        <td class="percent"><script>document.write(fmtPercent({{totals.aktifPercent.swasta.paud}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{totals.aktifPercent.swasta.tk}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{totals.aktifPercent.swasta.sd}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{totals.aktifPercent.swasta.smp}}))</script></td>
+        <td class="percent"><script>document.write(fmtPercent({{totals.aktifPercent.swasta.subtotal}}))</script></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="page-footer">
+    <div class="code-left">REKAP {{year}}</div>
+    <div class="code-right">KNODIK007</div>
+  </div>
+
+</body>
+</html>

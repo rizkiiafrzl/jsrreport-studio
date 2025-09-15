@@ -1,0 +1,17 @@
+{
+    "shortid": "086paD_8P",
+    "name": "helpers-format",
+    "scope": "template",
+    "isGlobal": false,
+    "entitySet": "scripts",
+    "type": "entity",
+    "key": "xCJOtZhbo3pMIhJK",
+    "creationDate": {
+        "$$date": 1757554400257
+    },
+    "modificationDate": {
+        "$$date": 1757554400257
+    },
+    "_id": "Pn6lGngrqNVxNwrR",
+    "$entitySet": "scripts"
+}

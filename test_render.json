@@ -1,0 +1,43 @@
+{
+  "template": {
+    "name": "File_1"
+  },
+  "data": {
+    "period": "2025",
+    "printDate": "2025-01-01",
+    "printTime": "12:00",
+    "provinces": [
+      {
+        "index": 1,
+        "province": "Test Province",
+        "dapodik": {
+          "nonAsnNegeri": {"sma": 100, "smk": 200, "slb": 50, "subtotal": 350},
+          "swasta": {"sma": 150, "smk": 250, "slb": 75, "subtotal": 475}
+        },
+        "bpjsTerdaftar": {
+          "nonAsnNegeri": {"sma": 80, "smk": 160, "slb": 40, "subtotal": 280},
+          "swasta": {"sma": 120, "smk": 200, "slb": 60, "subtotal": 380}
+        },
+        "aktifPercent": {
+          "nonAsnNegeri": {"sma": 80, "smk": 80, "slb": 80, "subtotal": 80},
+          "swasta": {"sma": 80, "smk": 80, "slb": 80, "subtotal": 80}
+        }
+      }
+    ],
+    "totals": {
+      "dapodik": {
+        "nonAsnNegeri": {"sma": 100, "smk": 200, "slb": 50, "subtotal": 350},
+        "swasta": {"sma": 150, "smk": 250, "slb": 75, "subtotal": 475}
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {"sma": 80, "smk": 160, "slb": 40, "subtotal": 280},
+        "swasta": {"sma": 120, "smk": 200, "slb": 60, "subtotal": 380}
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {"sma": 80, "smk": 80, "slb": 80, "subtotal": 80},
+        "swasta": {"sma": 80, "smk": 80, "slb": 80, "subtotal": 80}
+      }
+    },
+    "year": "2025"
+  }
+}

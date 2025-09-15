@@ -1,0 +1,149 @@
+<style>
+  table { width:100%; border-collapse:collapse; table-layout:fixed; font-family: Arial, Helvetica, sans-serif; }
+  th, td { padding:3px 6px; border:1px solid #cfcfcf; text-align:center; font-size:10px; vertical-align:middle; }
+  thead th { background:#f5f5f5; font-weight:700; }
+  .title { background:#fff; font-size:12px; text-align:left; }
+  .col-no { width:40px; }
+  .col-prov { width:240px; text-align:left; }
+  .n { width:60px; }
+  .w { width:85px; }
+  .subtotal { background:#f0f0f0; font-weight:bold; }
+</style>
+
+<table border="1">
+  <colgroup>
+    <col class="col-no" />
+    <col class="col-prov" />
+    <!-- DAPODIK NON ASN NEGERI -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+    <!-- DAPODIK SWASTA -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+    <!-- BPJS NON ASN NEGERI -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+    <!-- BPJS SWASTA -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+    <!-- % NON ASN NEGERI -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+    <!-- % SWASTA -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th colspan="26" class="title">
+        {{reportInfo.title}} — Provinsi: {{reportInfo.province}} — Periode: {{reportInfo.period}}
+      </th>
+    </tr>
+    <tr>
+      <th rowspan="3">No</th>
+      <th rowspan="3">Nama Kabupaten/Kota</th>
+      <th colspan="8">JUMLAH GTK DAPODIK KEMENDIKBUD</th>
+      <th colspan="8">JUMLAH GTK TERDAFTAR BPJS KETENAGAKERJAAN</th>
+      <th colspan="8">% Kepesertaan Aktif</th>
+    </tr>
+    <tr>
+      <th colspan="4">NON ASN NEGERI</th>
+      <th colspan="4">SWASTA</th>
+      <th colspan="4">NON ASN NEGERI</th>
+      <th colspan="4">SWASTA</th>
+      <th colspan="4">NON ASN NEGERI</th>
+      <th colspan="4">SWASTA</th>
+    </tr>
+    <tr>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">Subtotal</th>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">Subtotal</th>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">Subtotal</th>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">Subtotal</th>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">Subtotal</th>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">Subtotal</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td data-type="number" data-number-format="0">{{no}}</td>
+      <td style="text-align:left">{{kabupatenKota}}</td>
+
+      <!-- DAPODIK NON ASN NEGERI -->
+      <td data-type="number" data-number-format="#,##0">{{dapodikData.sma}}</td>
+      <td data-type="number" data-number-format="#,##0">{{dapodikData.smk}}</td>
+      <td data-type="number" data-number-format="#,##0">{{dapodikData.slb}}</td>
+      <td class="subtotal" data-type="number" data-number-format="#,##0">{{dapodikData.subtotal}}</td>
+
+      <!-- DAPODIK SWASTA -->
+      <td data-type="number" data-number-format="#,##0">{{dapodikDataSwasta.sma}}</td>
+      <td data-type="number" data-number-format="#,##0">{{dapodikDataSwasta.smk}}</td>
+      <td data-type="number" data-number-format="#,##0">{{dapodikDataSwasta.slb}}</td>
+      <td class="subtotal" data-type="number" data-number-format="#,##0">{{dapodikDataSwasta.subtotal}}</td>
+
+      <!-- BPJS NON ASN NEGERI -->
+      <td data-type="number" data-number-format="#,##0">{{bpjsData.nonAsnNegeri.sma}}</td>
+      <td data-type="number" data-number-format="#,##0">{{bpjsData.nonAsnNegeri.smk}}</td>
+      <td data-type="number" data-number-format="#,##0">{{bpjsData.nonAsnNegeri.slb}}</td>
+      <td class="subtotal" data-type="number" data-number-format="#,##0">{{bpjsData.nonAsnNegeri.subtotal}}</td>
+
+      <!-- BPJS SWASTA -->
+      <td data-type="number" data-number-format="#,##0">{{bpjsData.swasta.sma}}</td>
+      <td data-type="number" data-number-format="#,##0">{{bpjsData.swasta.smk}}</td>
+      <td data-type="number" data-number-format="#,##0">{{bpjsData.swasta.slb}}</td>
+      <td class="subtotal" data-type="number" data-number-format="#,##0">{{bpjsData.swasta.subtotal}}</td>
+
+      <!-- % AKTIF NON ASN NEGERI (teks, tambahkan % jika > 0) -->
+      <td data-type="string">{{#if participationRates.nonAsnNegeri.sma}}{{participationRates.nonAsnNegeri.sma}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if participationRates.nonAsnNegeri.smk}}{{participationRates.nonAsnNegeri.smk}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if participationRates.nonAsnNegeri.slb}}{{participationRates.nonAsnNegeri.slb}}%{{else}}0{{/if}}</td>
+      <td class="subtotal" data-type="string">{{#if participationRates.nonAsnNegeri.subtotal}}{{participationRates.nonAsnNegeri.subtotal}}%{{else}}0{{/if}}</td>
+
+      <!-- % AKTIF SWASTA (teks, tambahkan % jika > 0) -->
+      <td data-type="string">{{#if participationRates.swasta.sma}}{{participationRates.swasta.sma}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if participationRates.swasta.smk}}{{participationRates.swasta.smk}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if participationRates.swasta.slb}}{{participationRates.swasta.slb}}%{{else}}0{{/if}}</td>
+      <td class="subtotal" data-type="string">{{#if participationRates.swasta.subtotal}}{{participationRates.swasta.subtotal}}%{{else}}0{{/if}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+  <tfoot>
+    <tr style="font-weight:700; background:#dcdcdc;">
+      <td colspan="2">TOTAL / RATA-RATA</td>
+
+      <!-- TOTAL DAPODIK NON ASN NEGERI -->
+      <td data-type="number" data-number-format="#,##0">{{summary.totalDapodikNonAsnNegeri.sma}}</td>
+      <td data-type="number" data-number-format="#,##0">{{summary.totalDapodikNonAsnNegeri.smk}}</td>
+      <td data-type="number" data-number-format="#,##0">{{summary.totalDapodikNonAsnNegeri.slb}}</td>
+      <td class="subtotal" data-type="number" data-number-format="#,##0">{{summary.totalDapodikNonAsnNegeri.subtotal}}</td>
+
+      <!-- TOTAL DAPODIK SWASTA -->
+      <td data-type="number" data-number-format="#,##0">{{summary.totalDapodikSwasta.sma}}</td>
+      <td data-type="number" data-number-format="#,##0">{{summary.totalDapodikSwasta.smk}}</td>
+      <td data-type="number" data-number-format="#,##0">{{summary.totalDapodikSwasta.slb}}</td>
+      <td class="subtotal" data-type="number" data-number-format="#,##0">{{summary.totalDapodikSwasta.subtotal}}</td>
+
+      <!-- TOTAL BPJS NON ASN NEGERI -->
+      <td data-type="number" data-number-format="#,##0">{{summary.totalBpjs.nonAsnNegeri.sma}}</td>
+      <td data-type="number" data-number-format="#,##0">{{summary.totalBpjs.nonAsnNegeri.smk}}</td>
+      <td data-type="number" data-number-format="#,##0">{{summary.totalBpjs.nonAsnNegeri.slb}}</td>
+      <td class="subtotal" data-type="number" data-number-format="#,##0">{{summary.totalBpjs.nonAsnNegeri.subtotal}}</td>
+
+      <!-- TOTAL BPJS SWASTA -->
+      <td data-type="number" data-number-format="#,##0">{{summary.totalBpjs.swasta.sma}}</td>
+      <td data-type="number" data-number-format="#,##0">{{summary.totalBpjs.swasta.smk}}</td>
+      <td data-type="number" data-number-format="#,##0">{{summary.totalBpjs.swasta.slb}}</td>
+      <td class="subtotal" data-type="number" data-number-format="#,##0">{{summary.totalBpjs.swasta.subtotal}}</td>
+
+      <!-- RATA-RATA % AKTIF (teks, tambahkan % jika > 0) -->
+      <td data-type="string">{{#if summary.averageParticipationRates.nonAsnNegeri.sma}}{{summary.averageParticipationRates.nonAsnNegeri.sma}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if summary.averageParticipationRates.nonAsnNegeri.smk}}{{summary.averageParticipationRates.nonAsnNegeri.smk}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if summary.averageParticipationRates.nonAsnNegeri.slb}}{{summary.averageParticipationRates.nonAsnNegeri.slb}}%{{else}}0{{/if}}</td>
+      <td class="subtotal" data-type="string">{{#if summary.averageParticipationRates.nonAsnNegeri.subtotal}}{{summary.averageParticipationRates.nonAsnNegeri.subtotal}}%{{else}}0{{/if}}</td>
+
+      <td data-type="string">{{#if summary.averageParticipationRates.swasta.sma}}{{summary.averageParticipationRates.swasta.sma}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if summary.averageParticipationRates.swasta.smk}}{{summary.averageParticipationRates.swasta.smk}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if summary.averageParticipationRates.swasta.slb}}{{summary.averageParticipationRates.swasta.slb}}%{{else}}0{{/if}}</td>
+      <td class="subtotal" data-type="string">{{#if summary.averageParticipationRates.swasta.subtotal}}{{summary.averageParticipationRates.swasta.subtotal}}%{{else}}0{{/if}}</td>
+    </tr>
+  </tfoot>
+</table>
+
+{{{xlsxPrint}}}

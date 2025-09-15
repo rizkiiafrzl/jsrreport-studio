@@ -1,0 +1,1254 @@
+{
+  "period": "01-07-2025",
+  "printDate": "11/09/2025",
+  "printTime": "08:43",
+  "year": "2025",
+  "data": [
+    {
+      "index": 1,
+      "kabupatenKota": "Kab. Aceh Selatan",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 25,
+          "tk": 364,
+          "sd": 3138,
+          "smp": 1412,
+          "subtotal": 4939
+        },
+        "swasta": {
+          "paud": 64,
+          "tk": 592,
+          "sd": 44,
+          "smp": 130,
+          "subtotal": 830
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 17,
+          "sd": 222,
+          "smp": 120,
+          "subtotal": 359
+        },
+        "swasta": {
+          "paud": 12,
+          "tk": 29,
+          "sd": 14,
+          "smp": 21,
+          "subtotal": 76
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 0.0,
+          "tk": 4.67,
+          "sd": 7.07,
+          "smp": 8.5,
+          "subtotal": 43.25
+        },
+        "swasta": {
+          "paud": 18.75,
+          "tk": 4.9,
+          "sd": 31.82,
+          "smp": 16.15,
+          "subtotal": 9.16
+        }
+      }
+    },
+    {
+      "index": 2,
+      "kabupatenKota": "Kab. Pidie Jaya",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 21,
+          "tk": 203,
+          "sd": 2079,
+          "smp": 945,
+          "subtotal": 3248
+        },
+        "swasta": {
+          "paud": 46,
+          "tk": 219,
+          "sd": 45,
+          "smp": 142,
+          "subtotal": 452
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 0,
+          "sd": 26,
+          "smp": 27,
+          "subtotal": 53
+        },
+        "swasta": {
+          "paud": 6,
+          "tk": 5,
+          "sd": 6,
+          "smp": 10,
+          "subtotal": 27
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 0.0,
+          "tk": 0.0,
+          "sd": 1.25,
+          "smp": 2.86,
+          "subtotal": 11.73
+        },
+        "swasta": {
+          "paud": 13.04,
+          "tk": 2.28,
+          "sd": 13.33,
+          "smp": 7.04,
+          "subtotal": 5.97
+        }
+      }
+    },
+    {
+      "index": 3,
+      "kabupatenKota": "Kota Subulussalam",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 141,
+          "sd": 1255,
+          "smp": 350,
+          "subtotal": 1746
+        },
+        "swasta": {
+          "paud": 87,
+          "tk": 284,
+          "sd": 81,
+          "smp": 208,
+          "subtotal": 660
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 1,
+          "sd": 18,
+          "smp": 4,
+          "subtotal": 23
+        },
+        "swasta": {
+          "paud": 7,
+          "tk": 8,
+          "sd": 2,
+          "smp": 13,
+          "subtotal": 30
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 0.71,
+          "sd": 1.43,
+          "smp": 1.14,
+          "subtotal": 3.48
+        },
+        "swasta": {
+          "paud": 8.05,
+          "tk": 2.82,
+          "sd": 2.47,
+          "smp": 6.25,
+          "subtotal": 4.55
+        }
+      }
+    },
+    {
+      "index": 4,
+      "kabupatenKota": "Kab. Aceh Barat Daya",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 10,
+          "tk": 78,
+          "sd": 1763,
+          "smp": 776,
+          "subtotal": 2627
+        },
+        "swasta": {
+          "paud": 16,
+          "tk": 302,
+          "sd": 102,
+          "smp": 87,
+          "subtotal": 507
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 2,
+          "tk": 3,
+          "sd": 142,
+          "smp": 60,
+          "subtotal": 207
+        },
+        "swasta": {
+          "paud": 3,
+          "tk": 31,
+          "sd": 16,
+          "smp": 12,
+          "subtotal": 62
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 20.0,
+          "tk": 3.85,
+          "sd": 8.05,
+          "smp": 7.73,
+          "subtotal": 40.83
+        },
+        "swasta": {
+          "paud": 18.75,
+          "tk": 10.26,
+          "sd": 15.69,
+          "smp": 13.79,
+          "subtotal": 12.23
+        }
+      }
+    },
+    {
+      "index": 5,
+      "kabupatenKota": "Kab. Aceh Besar",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 36,
+          "tk": 101,
+          "sd": 2991,
+          "smp": 1333,
+          "subtotal": 4461
+        },
+        "swasta": {
+          "paud": 141,
+          "tk": 1053,
+          "sd": 278,
+          "smp": 424,
+          "subtotal": 1896
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 13,
+          "tk": 8,
+          "sd": 418,
+          "smp": 172,
+          "subtotal": 611
+        },
+        "swasta": {
+          "paud": 15,
+          "tk": 74,
+          "sd": 78,
+          "smp": 84,
+          "subtotal": 251
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 36.11,
+          "tk": 7.92,
+          "sd": 13.98,
+          "smp": 12.9,
+          "subtotal": 32.23
+        },
+        "swasta": {
+          "paud": 10.64,
+          "tk": 7.03,
+          "sd": 28.06,
+          "smp": 19.81,
+          "subtotal": 13.24
+        }
+      }
+    },
+    {
+      "index": 6,
+      "kabupatenKota": "Kab. Pidie",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 25,
+          "tk": 464,
+          "sd": 4935,
+          "smp": 2230,
+          "subtotal": 7654
+        },
+        "swasta": {
+          "paud": 59,
+          "tk": 411,
+          "sd": 187,
+          "smp": 330,
+          "subtotal": 987
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 1,
+          "tk": 4,
+          "sd": 105,
+          "smp": 63,
+          "subtotal": 173
+        },
+        "swasta": {
+          "paud": 8,
+          "tk": 8,
+          "sd": 19,
+          "smp": 38,
+          "subtotal": 73
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 4.0,
+          "tk": 0.86,
+          "sd": 2.13,
+          "smp": 2.83,
+          "subtotal": 17.53
+        },
+        "swasta": {
+          "paud": 13.56,
+          "tk": 1.95,
+          "sd": 10.16,
+          "smp": 11.52,
+          "subtotal": 7.4
+        }
+      }
+    },
+    {
+      "index": 7,
+      "kabupatenKota": "Kota Sabang",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 20,
+          "tk": 115,
+          "sd": 487,
+          "smp": 257,
+          "subtotal": 879
+        },
+        "swasta": {
+          "paud": 21,
+          "tk": 45,
+          "sd": 38,
+          "smp": 21,
+          "subtotal": 125
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 2,
+          "tk": 15,
+          "sd": 32,
+          "smp": 23,
+          "subtotal": 72
+        },
+        "swasta": {
+          "paud": 3,
+          "tk": 5,
+          "sd": 4,
+          "smp": 0,
+          "subtotal": 12
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 10.0,
+          "tk": 13.04,
+          "sd": 6.57,
+          "smp": 8.95,
+          "subtotal": 57.6
+        },
+        "swasta": {
+          "paud": 14.29,
+          "tk": 11.11,
+          "sd": 10.53,
+          "smp": 0.0,
+          "subtotal": 9.6
+        }
+      }
+    },
+    {
+      "index": 8,
+      "kabupatenKota": "Kab. Aceh Jaya",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 24,
+          "tk": 260,
+          "sd": 1550,
+          "smp": 685,
+          "subtotal": 2519
+        },
+        "swasta": {
+          "paud": 155,
+          "tk": 182,
+          "sd": 2,
+          "smp": 106,
+          "subtotal": 445
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 19,
+          "sd": 149,
+          "smp": 47,
+          "subtotal": 215
+        },
+        "swasta": {
+          "paud": 37,
+          "tk": 35,
+          "sd": 0,
+          "smp": 15,
+          "subtotal": 87
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 0.0,
+          "tk": 7.31,
+          "sd": 9.61,
+          "smp": 6.86,
+          "subtotal": 48.31
+        },
+        "swasta": {
+          "paud": 23.87,
+          "tk": 19.23,
+          "sd": 0.0,
+          "smp": 14.15,
+          "subtotal": 19.55
+        }
+      }
+    },
+    {
+      "index": 9,
+      "kabupatenKota": "Kab. Bireuen",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 29,
+          "tk": 192,
+          "sd": 4456,
+          "smp": 2547,
+          "subtotal": 7224
+        },
+        "swasta": {
+          "paud": 164,
+          "tk": 1086,
+          "sd": 222,
+          "smp": 579,
+          "subtotal": 2051
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 5,
+          "tk": 74,
+          "sd": 2088,
+          "smp": 1084,
+          "subtotal": 3251
+        },
+        "swasta": {
+          "paud": 29,
+          "tk": 174,
+          "sd": 15,
+          "smp": 83,
+          "subtotal": 301
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 17.24,
+          "tk": 38.54,
+          "sd": 46.86,
+          "smp": 42.56,
+          "subtotal": 158.51
+        },
+        "swasta": {
+          "paud": 17.68,
+          "tk": 16.02,
+          "sd": 6.76,
+          "smp": 14.34,
+          "subtotal": 14.68
+        }
+      }
+    },
+    {
+      "index": 10,
+      "kabupatenKota": "Kab. Aceh Utara",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 30,
+          "tk": 365,
+          "sd": 6817,
+          "smp": 3390,
+          "subtotal": 10602
+        },
+        "swasta": {
+          "paud": 746,
+          "tk": 1249,
+          "sd": 171,
+          "smp": 702,
+          "subtotal": 2868
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 14,
+          "tk": 132,
+          "sd": 1399,
+          "smp": 705,
+          "subtotal": 2250
+        },
+        "swasta": {
+          "paud": 165,
+          "tk": 231,
+          "sd": 14,
+          "smp": 107,
+          "subtotal": 517
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 46.67,
+          "tk": 36.16,
+          "sd": 20.52,
+          "smp": 20.8,
+          "subtotal": 78.45
+        },
+        "swasta": {
+          "paud": 22.12,
+          "tk": 18.49,
+          "sd": 8.19,
+          "smp": 15.24,
+          "subtotal": 18.03
+        }
+      }
+    },
+    {
+      "index": 11,
+      "kabupatenKota": "Kab. Aceh Singkil",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 7,
+          "tk": 201,
+          "sd": 1843,
+          "smp": 752,
+          "subtotal": 2803
+        },
+        "swasta": {
+          "paud": 71,
+          "tk": 536,
+          "sd": 99,
+          "smp": 172,
+          "subtotal": 878
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 2,
+          "tk": 54,
+          "sd": 253,
+          "smp": 86,
+          "subtotal": 395
+        },
+        "swasta": {
+          "paud": 12,
+          "tk": 82,
+          "sd": 10,
+          "smp": 16,
+          "subtotal": 120
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 28.57,
+          "tk": 26.87,
+          "sd": 13.73,
+          "smp": 11.44,
+          "subtotal": 44.99
+        },
+        "swasta": {
+          "paud": 16.9,
+          "tk": 15.3,
+          "sd": 10.1,
+          "smp": 9.3,
+          "subtotal": 13.67
+        }
+      }
+    },
+    {
+      "index": 12,
+      "kabupatenKota": "Kab. Aceh Tamiang",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 24,
+          "tk": 206,
+          "sd": 2777,
+          "smp": 1425,
+          "subtotal": 4432
+        },
+        "swasta": {
+          "paud": 107,
+          "tk": 546,
+          "sd": 149,
+          "smp": 221,
+          "subtotal": 1023
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 5,
+          "sd": 223,
+          "smp": 69,
+          "subtotal": 297
+        },
+        "swasta": {
+          "paud": 9,
+          "tk": 27,
+          "sd": 22,
+          "smp": 46,
+          "subtotal": 104
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 0.0,
+          "tk": 2.43,
+          "sd": 8.03,
+          "smp": 4.84,
+          "subtotal": 29.03
+        },
+        "swasta": {
+          "paud": 8.41,
+          "tk": 4.95,
+          "sd": 14.77,
+          "smp": 20.81,
+          "subtotal": 10.17
+        }
+      }
+    },
+    {
+      "index": 13,
+      "kabupatenKota": "Kota Langsa",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 12,
+          "tk": 59,
+          "sd": 1189,
+          "smp": 692,
+          "subtotal": 1952
+        },
+        "swasta": {
+          "paud": 89,
+          "tk": 191,
+          "sd": 200,
+          "smp": 125,
+          "subtotal": 605
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 7,
+          "tk": 9,
+          "sd": 287,
+          "smp": 173,
+          "subtotal": 476
+        },
+        "swasta": {
+          "paud": 21,
+          "tk": 61,
+          "sd": 57,
+          "smp": 24,
+          "subtotal": 163
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 58.33,
+          "tk": 15.25,
+          "sd": 24.14,
+          "smp": 25.0,
+          "subtotal": 78.68
+        },
+        "swasta": {
+          "paud": 23.6,
+          "tk": 31.94,
+          "sd": 28.5,
+          "smp": 19.2,
+          "subtotal": 26.94
+        }
+      }
+    },
+    {
+      "index": 14,
+      "kabupatenKota": "Kab. Aceh Tenggara",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 29,
+          "tk": 167,
+          "sd": 2575,
+          "smp": 1236,
+          "subtotal": 4007
+        },
+        "swasta": {
+          "paud": 119,
+          "tk": 383,
+          "sd": 475,
+          "smp": 419,
+          "subtotal": 1396
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 11,
+          "tk": 73,
+          "sd": 1410,
+          "smp": 722,
+          "subtotal": 2216
+        },
+        "swasta": {
+          "paud": 15,
+          "tk": 56,
+          "sd": 75,
+          "smp": 95,
+          "subtotal": 241
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 37.93,
+          "tk": 43.71,
+          "sd": 54.76,
+          "smp": 58.41,
+          "subtotal": 158.74
+        },
+        "swasta": {
+          "paud": 12.61,
+          "tk": 14.62,
+          "sd": 15.79,
+          "smp": 22.67,
+          "subtotal": 17.26
+        }
+      }
+    },
+    {
+      "index": 15,
+      "kabupatenKota": "Kab. Nagan Raya",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 23,
+          "tk": 93,
+          "sd": 2151,
+          "smp": 846,
+          "subtotal": 3113
+        },
+        "swasta": {
+          "paud": 100,
+          "tk": 203,
+          "sd": 56,
+          "smp": 64,
+          "subtotal": 423
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 13,
+          "tk": 9,
+          "sd": 201,
+          "smp": 98,
+          "subtotal": 321
+        },
+        "swasta": {
+          "paud": 24,
+          "tk": 46,
+          "sd": 43,
+          "smp": 9,
+          "subtotal": 122
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 56.52,
+          "tk": 9.68,
+          "sd": 9.34,
+          "smp": 11.58,
+          "subtotal": 75.89
+        },
+        "swasta": {
+          "paud": 24.0,
+          "tk": 22.66,
+          "sd": 76.79,
+          "smp": 14.06,
+          "subtotal": 28.84
+        }
+      }
+    },
+    {
+      "index": 16,
+      "kabupatenKota": "Kab. Bener Meriah",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 95,
+          "tk": 345,
+          "sd": 1853,
+          "smp": 960,
+          "subtotal": 3253
+        },
+        "swasta": {
+          "paud": 48,
+          "tk": 453,
+          "sd": 167,
+          "smp": 240,
+          "subtotal": 908
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 39,
+          "tk": 91,
+          "sd": 346,
+          "smp": 178,
+          "subtotal": 654
+        },
+        "swasta": {
+          "paud": 7,
+          "tk": 122,
+          "sd": 21,
+          "smp": 69,
+          "subtotal": 219
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 41.05,
+          "tk": 26.38,
+          "sd": 18.67,
+          "smp": 18.54,
+          "subtotal": 72.03
+        },
+        "swasta": {
+          "paud": 14.58,
+          "tk": 26.93,
+          "sd": 12.57,
+          "smp": 28.75,
+          "subtotal": 24.12
+        }
+      }
+    },
+    {
+      "index": 17,
+      "kabupatenKota": "Kab. Aceh Tengah",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 32,
+          "tk": 152,
+          "sd": 2868,
+          "smp": 1211,
+          "subtotal": 4263
+        },
+        "swasta": {
+          "paud": 16,
+          "tk": 804,
+          "sd": 294,
+          "smp": 173,
+          "subtotal": 1287
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 5,
+          "tk": 38,
+          "sd": 320,
+          "smp": 161,
+          "subtotal": 524
+        },
+        "swasta": {
+          "paud": 5,
+          "tk": 147,
+          "sd": 75,
+          "smp": 37,
+          "subtotal": 264
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 15.63,
+          "tk": 25.0,
+          "sd": 11.16,
+          "smp": 13.29,
+          "subtotal": 40.71
+        },
+        "swasta": {
+          "paud": 31.25,
+          "tk": 18.28,
+          "sd": 25.51,
+          "smp": 21.39,
+          "subtotal": 20.51
+        }
+      }
+    },
+    {
+      "index": 18,
+      "kabupatenKota": "Kab. Gayo Lues",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 198,
+          "sd": 1312,
+          "smp": 589,
+          "subtotal": 2099
+        },
+        "swasta": {
+          "paud": 32,
+          "tk": 71,
+          "sd": 101,
+          "smp": 144,
+          "subtotal": 348
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 1,
+          "sd": 23,
+          "smp": 12,
+          "subtotal": 36
+        },
+        "swasta": {
+          "paud": 2,
+          "tk": 0,
+          "sd": 0,
+          "smp": 5,
+          "subtotal": 7
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 0.51,
+          "sd": 1.75,
+          "smp": 2.04,
+          "subtotal": 10.34
+        },
+        "swasta": {
+          "paud": 6.25,
+          "tk": 0.0,
+          "sd": 0.0,
+          "smp": 3.47,
+          "subtotal": 2.01
+        }
+      }
+    },
+    {
+      "index": 19,
+      "kabupatenKota": "Kab. Simeulue",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 30,
+          "tk": 589,
+          "sd": 2156,
+          "smp": 1044,
+          "subtotal": 3819
+        },
+        "swasta": {
+          "paud": 4,
+          "tk": 115,
+          "sd": 42,
+          "smp": 33,
+          "subtotal": 194
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 2,
+          "tk": 114,
+          "sd": 444,
+          "smp": 132,
+          "subtotal": 692
+        },
+        "swasta": {
+          "paud": 1,
+          "tk": 18,
+          "sd": 1,
+          "smp": 8,
+          "subtotal": 28
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 6.67,
+          "tk": 19.35,
+          "sd": 20.59,
+          "smp": 12.64,
+          "subtotal": 356.7
+        },
+        "swasta": {
+          "paud": 25.0,
+          "tk": 15.65,
+          "sd": 2.38,
+          "smp": 24.24,
+          "subtotal": 14.43
+        }
+      }
+    },
+    {
+      "index": 20,
+      "kabupatenKota": "Kab. Aceh Timur",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 19,
+          "tk": 465,
+          "sd": 5141,
+          "smp": 2195,
+          "subtotal": 7820
+        },
+        "swasta": {
+          "paud": 334,
+          "tk": 293,
+          "sd": 126,
+          "smp": 116,
+          "subtotal": 869
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 1,
+          "tk": 8,
+          "sd": 262,
+          "smp": 130,
+          "subtotal": 401
+        },
+        "swasta": {
+          "paud": 48,
+          "tk": 10,
+          "sd": 10,
+          "smp": 22,
+          "subtotal": 90
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 5.26,
+          "tk": 1.72,
+          "sd": 5.1,
+          "smp": 5.92,
+          "subtotal": 46.14
+        },
+        "swasta": {
+          "paud": 14.37,
+          "tk": 3.41,
+          "sd": 7.94,
+          "smp": 18.97,
+          "subtotal": 10.36
+        }
+      }
+    },
+    {
+      "index": 21,
+      "kabupatenKota": "Kab. Aceh Barat",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 13,
+          "tk": 478,
+          "sd": 2587,
+          "smp": 1152,
+          "subtotal": 4230
+        },
+        "swasta": {
+          "paud": 61,
+          "tk": 373,
+          "sd": 92,
+          "smp": 182,
+          "subtotal": 708
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 6,
+          "tk": 58,
+          "sd": 431,
+          "smp": 165,
+          "subtotal": 660
+        },
+        "swasta": {
+          "paud": 8,
+          "tk": 38,
+          "sd": 21,
+          "smp": 18,
+          "subtotal": 85
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 46.15,
+          "tk": 12.13,
+          "sd": 16.66,
+          "smp": 14.32,
+          "subtotal": 93.22
+        },
+        "swasta": {
+          "paud": 13.11,
+          "tk": 10.19,
+          "sd": 22.83,
+          "smp": 9.89,
+          "subtotal": 12.01
+        }
+      }
+    },
+    {
+      "index": 22,
+      "kabupatenKota": "Kota Banda Aceh",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 25,
+          "tk": 117,
+          "sd": 1527,
+          "smp": 936,
+          "subtotal": 2605
+        },
+        "swasta": {
+          "paud": 249,
+          "tk": 794,
+          "sd": 472,
+          "smp": 305,
+          "subtotal": 1820
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 0,
+          "tk": 2,
+          "sd": 37,
+          "smp": 25,
+          "subtotal": 64
+        },
+        "swasta": {
+          "paud": 19,
+          "tk": 71,
+          "sd": 121,
+          "smp": 58,
+          "subtotal": 269
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 0.0,
+          "tk": 1.71,
+          "sd": 2.42,
+          "smp": 2.67,
+          "subtotal": 3.52
+        },
+        "swasta": {
+          "paud": 7.63,
+          "tk": 8.94,
+          "sd": 25.64,
+          "smp": 19.02,
+          "subtotal": 14.78
+        }
+      }
+    },
+    {
+      "index": 23,
+      "kabupatenKota": "Kota Lhokseumawe",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 31,
+          "tk": 77,
+          "sd": 1551,
+          "smp": 806,
+          "subtotal": 2465
+        },
+        "swasta": {
+          "paud": 46,
+          "tk": 518,
+          "sd": 307,
+          "smp": 265,
+          "subtotal": 1136
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 21,
+          "tk": 35,
+          "sd": 532,
+          "smp": 208,
+          "subtotal": 796
+        },
+        "swasta": {
+          "paud": 2,
+          "tk": 42,
+          "sd": 63,
+          "smp": 54,
+          "subtotal": 161
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 67.74,
+          "tk": 45.45,
+          "sd": 34.3,
+          "smp": 25.81,
+          "subtotal": 70.07
+        },
+        "swasta": {
+          "paud": 4.35,
+          "tk": 8.11,
+          "sd": 20.52,
+          "smp": 20.38,
+          "subtotal": 14.17
+        }
+      }
+    }
+  ],
+  "totals": {
+    "dapodik": {
+      "nonAsnNegeri": {
+        "paud": 560,
+        "tk": 5430,
+        "sd": 59001,
+        "smp": 27769,
+        "subtotal": 92760
+      },
+      "swasta": {
+        "paud": 2775,
+        "tk": 10703,
+        "sd": 3750,
+        "smp": 5188,
+        "subtotal": 22416
+      }
+    },
+    "bpjsTerdaftar": {
+      "nonAsnNegeri": {
+        "paud": 144,
+        "tk": 770,
+        "sd": 9368,
+        "smp": 4464,
+        "subtotal": 14746
+      },
+      "swasta": {
+        "paud": 458,
+        "tk": 1320,
+        "sd": 687,
+        "smp": 844,
+        "subtotal": 3309
+      }
+    },
+    "aktifPercent": {
+      "nonAsnNegeri": {
+        "paud": 25.71,
+        "tk": 14.18,
+        "sd": 15.88,
+        "smp": 16.08,
+        "subtotal": 15.9
+      },
+      "swasta": {
+        "paud": 16.5,
+        "tk": 12.33,
+        "sd": 18.32,
+        "smp": 16.27,
+        "subtotal": 14.76
+      }
+    }
+  }
+}

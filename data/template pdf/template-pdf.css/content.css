@@ -1,0 +1,100 @@
+@page { size: A4 landscape; margin: 16mm 12mm 16mm 12mm; }
+html, body { margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #000; }
+
+/* Header */
+.page-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-logo {
+  width: 250px;
+  height: 100px;
+  object-fit: contain;
+}
+.brand-title {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+.brand-title .title-line-1 { font-weight: 700; }
+.brand-title .title-line-2 { font-weight: 700; }
+.brand-title .periode { margin-top: 2px; }
+
+.meta {
+  line-height: 1.25;
+  text-align: right;
+  font-size: 11px;
+}
+.meta-row { white-space: nowrap; }
+
+/* Section */
+.section {
+  margin-top: 8px;
+  margin-bottom: 6px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  align-items: center;
+}
+.section .label { font-weight: bold; }
+.section .value { font-weight: 600; }
+.section .underline {
+  grid-column: 1 / -1;
+  height: 2px;
+  background: #1e90ff;
+  margin-top: 6px;
+  margin-bottom: 2px;
+  border-radius: 2px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+thead th {
+  background: #efefef;
+  font-weight: 700;
+  border: 1px solid #cfcfcf;
+  padding: 5px 6px;
+  text-align: center;
+  font-size: 10px;
+}
+tbody td {
+  border: 1px solid #d9d9d9;
+  padding: 5px 6px;
+  vertical-align: middle;
+  font-size: 10px;
+  text-align: center;
+}
+tbody td:first-child, 
+thead th:first-child { text-align: center; width: 30px; }
+tbody td:nth-child(2), 
+thead th:nth-child(2) { text-align: left; width: 140px; }
+
+/* Footer */
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 11px;
+}
+.code-left { font-weight: 600; }
+.code-right {
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+  border: 2px solid #27ae60;
+  color: #27ae60;
+}

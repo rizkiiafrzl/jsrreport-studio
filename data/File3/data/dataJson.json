@@ -1,0 +1,2034 @@
+{
+  "period": "01-07-2025",
+  "printDate": "11/09/2025",
+  "printTime": "08:37",
+  "year": "2025",
+  "provinces": [
+    {
+      "index": 1,
+      "province": "Prov. Sumatera Selatan",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 260,
+          "tk": 1184,
+          "sd": 72245,
+          "smp": 28842,
+          "subtotal": 102531
+        },
+        "swasta": {
+          "paud": 2364,
+          "tk": 10391,
+          "sd": 7522,
+          "smp": 6969,
+          "subtotal": 27246
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 96,
+          "tk": 249,
+          "sd": 14222,
+          "smp": 6341,
+          "subtotal": 20908
+        },
+        "swasta": {
+          "paud": 362,
+          "tk": 1816,
+          "sd": 1909,
+          "smp": 1519,
+          "subtotal": 5606
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 36.92,
+          "tk": 21.03,
+          "sd": 19.69,
+          "smp": 21.99,
+          "subtotal": 76.74
+        },
+        "swasta": {
+          "paud": 15.31,
+          "tk": 17.48,
+          "sd": 25.38,
+          "smp": 21.8,
+          "subtotal": 20.58
+        }
+      }
+    },
+    {
+      "index": 2,
+      "province": "Prov. Maluku Utara",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 90,
+          "tk": 1197,
+          "sd": 16505,
+          "smp": 8414,
+          "subtotal": 26206
+        },
+        "swasta": {
+          "paud": 815,
+          "tk": 2245,
+          "sd": 1771,
+          "smp": 1432,
+          "subtotal": 6263
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 8,
+          "tk": 198,
+          "sd": 1799,
+          "smp": 947,
+          "subtotal": 2952
+        },
+        "swasta": {
+          "paud": 88,
+          "tk": 347,
+          "sd": 101,
+          "smp": 188,
+          "subtotal": 724
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 8.89,
+          "tk": 16.54,
+          "sd": 10.9,
+          "smp": 11.26,
+          "subtotal": 47.13
+        },
+        "swasta": {
+          "paud": 10.8,
+          "tk": 15.46,
+          "sd": 5.7,
+          "smp": 13.13,
+          "subtotal": 11.56
+        }
+      }
+    },
+    {
+      "index": 3,
+      "province": "Prov. Maluku",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 156,
+          "tk": 794,
+          "sd": 21207,
+          "smp": 13944,
+          "subtotal": 36101
+        },
+        "swasta": {
+          "paud": 667,
+          "tk": 3218,
+          "sd": 4855,
+          "smp": 1733,
+          "subtotal": 10473
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 12,
+          "tk": 114,
+          "sd": 3168,
+          "smp": 2288,
+          "subtotal": 5582
+        },
+        "swasta": {
+          "paud": 98,
+          "tk": 907,
+          "sd": 478,
+          "smp": 362,
+          "subtotal": 1845
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 7.69,
+          "tk": 14.36,
+          "sd": 14.94,
+          "smp": 16.41,
+          "subtotal": 53.3
+        },
+        "swasta": {
+          "paud": 14.69,
+          "tk": 28.19,
+          "sd": 9.85,
+          "smp": 20.89,
+          "subtotal": 17.62
+        }
+      }
+    },
+    {
+      "index": 4,
+      "province": "Prov. Kalimantan Barat",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 196,
+          "tk": 980,
+          "sd": 47199,
+          "smp": 18268,
+          "subtotal": 66643
+        },
+        "swasta": {
+          "paud": 1560,
+          "tk": 3950,
+          "sd": 4428,
+          "smp": 3615,
+          "subtotal": 13553
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 54,
+          "tk": 81,
+          "sd": 4640,
+          "smp": 1857,
+          "subtotal": 6632
+        },
+        "swasta": {
+          "paud": 208,
+          "tk": 842,
+          "sd": 1272,
+          "smp": 996,
+          "subtotal": 3318
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 27.55,
+          "tk": 8.27,
+          "sd": 9.83,
+          "smp": 10.17,
+          "subtotal": 48.93
+        },
+        "swasta": {
+          "paud": 13.33,
+          "tk": 21.32,
+          "sd": 28.73,
+          "smp": 27.55,
+          "subtotal": 24.48
+        }
+      }
+    },
+    {
+      "index": 5,
+      "province": "Prov. Jambi",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 179,
+          "tk": 905,
+          "sd": 35578,
+          "smp": 13870,
+          "subtotal": 50532
+        },
+        "swasta": {
+          "paud": 1967,
+          "tk": 6273,
+          "sd": 2995,
+          "smp": 1979,
+          "subtotal": 13214
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 52,
+          "tk": 180,
+          "sd": 7962,
+          "smp": 2986,
+          "subtotal": 11180
+        },
+        "swasta": {
+          "paud": 517,
+          "tk": 2452,
+          "sd": 747,
+          "smp": 532,
+          "subtotal": 4248
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 29.05,
+          "tk": 19.89,
+          "sd": 22.38,
+          "smp": 21.53,
+          "subtotal": 84.61
+        },
+        "swasta": {
+          "paud": 26.28,
+          "tk": 39.09,
+          "sd": 24.94,
+          "smp": 26.88,
+          "subtotal": 32.15
+        }
+      }
+    },
+    {
+      "index": 6,
+      "province": "Prov. Papua Barat Daya",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 34,
+          "tk": 117,
+          "sd": 4680,
+          "smp": 2610,
+          "subtotal": 7441
+        },
+        "swasta": {
+          "paud": 187,
+          "tk": 666,
+          "sd": 2193,
+          "smp": 746,
+          "subtotal": 3792
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 2,
+          "tk": 16,
+          "sd": 893,
+          "smp": 423,
+          "subtotal": 1334
+        },
+        "swasta": {
+          "paud": 45,
+          "tk": 228,
+          "sd": 375,
+          "smp": 189,
+          "subtotal": 837
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 5.88,
+          "tk": 13.68,
+          "sd": 19.08,
+          "smp": 16.21,
+          "subtotal": 35.18
+        },
+        "swasta": {
+          "paud": 24.06,
+          "tk": 34.23,
+          "sd": 17.1,
+          "smp": 25.34,
+          "subtotal": 22.07
+        }
+      }
+    },
+    {
+      "index": 7,
+      "province": "Prov. Sumatera Utara",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 374,
+          "tk": 1589,
+          "sd": 118735,
+          "smp": 41805,
+          "subtotal": 162503
+        },
+        "swasta": {
+          "paud": 4350,
+          "tk": 15347,
+          "sd": 23844,
+          "smp": 18434,
+          "subtotal": 61975
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 71,
+          "tk": 223,
+          "sd": 12431,
+          "smp": 3219,
+          "subtotal": 15944
+        },
+        "swasta": {
+          "paud": 946,
+          "tk": 4341,
+          "sd": 7318,
+          "smp": 5398,
+          "subtotal": 18003
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 18.98,
+          "tk": 14.03,
+          "sd": 10.47,
+          "smp": 7.7,
+          "subtotal": 25.73
+        },
+        "swasta": {
+          "paud": 21.75,
+          "tk": 28.29,
+          "sd": 30.69,
+          "smp": 29.28,
+          "subtotal": 29.05
+        }
+      }
+    },
+    {
+      "index": 8,
+      "province": "Prov. Bengkulu",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 241,
+          "tk": 952,
+          "sd": 20645,
+          "smp": 10581,
+          "subtotal": 32419
+        },
+        "swasta": {
+          "paud": 1341,
+          "tk": 4755,
+          "sd": 2377,
+          "smp": 1078,
+          "subtotal": 9551
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 46,
+          "tk": 161,
+          "sd": 2657,
+          "smp": 1388,
+          "subtotal": 4252
+        },
+        "swasta": {
+          "paud": 141,
+          "tk": 627,
+          "sd": 679,
+          "smp": 268,
+          "subtotal": 1715
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 19.09,
+          "tk": 16.91,
+          "sd": 12.87,
+          "smp": 13.12,
+          "subtotal": 44.52
+        },
+        "swasta": {
+          "paud": 10.51,
+          "tk": 13.19,
+          "sd": 28.57,
+          "smp": 24.86,
+          "subtotal": 17.96
+        }
+      }
+    },
+    {
+      "index": 9,
+      "province": "Prov. Banten",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 183,
+          "tk": 784,
+          "sd": 59100,
+          "smp": 19242,
+          "subtotal": 79309
+        },
+        "swasta": {
+          "paud": 6658,
+          "tk": 13321,
+          "sd": 15309,
+          "smp": 14112,
+          "subtotal": 49400
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 41,
+          "tk": 153,
+          "sd": 7908,
+          "smp": 3281,
+          "subtotal": 11383
+        },
+        "swasta": {
+          "paud": 1086,
+          "tk": 3503,
+          "sd": 5830,
+          "smp": 4585,
+          "subtotal": 15004
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 22.4,
+          "tk": 19.52,
+          "sd": 13.38,
+          "smp": 17.05,
+          "subtotal": 23.04
+        },
+        "swasta": {
+          "paud": 16.31,
+          "tk": 26.3,
+          "sd": 38.08,
+          "smp": 32.49,
+          "subtotal": 30.37
+        }
+      }
+    },
+    {
+      "index": 10,
+      "province": "Prov. Gorontalo",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 231,
+          "tk": 1156,
+          "sd": 10603,
+          "smp": 5355,
+          "subtotal": 17345
+        },
+        "swasta": {
+          "paud": 530,
+          "tk": 2164,
+          "sd": 440,
+          "smp": 309,
+          "subtotal": 3443
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 90,
+          "tk": 437,
+          "sd": 4744,
+          "smp": 2391,
+          "subtotal": 7662
+        },
+        "swasta": {
+          "paud": 167,
+          "tk": 682,
+          "sd": 95,
+          "smp": 104,
+          "subtotal": 1048
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 38.96,
+          "tk": 37.8,
+          "sd": 44.74,
+          "smp": 44.65,
+          "subtotal": 222.54
+        },
+        "swasta": {
+          "paud": 31.51,
+          "tk": 31.52,
+          "sd": 21.59,
+          "smp": 33.66,
+          "subtotal": 30.44
+        }
+      }
+    },
+    {
+      "index": 11,
+      "province": "Prov. Kepulauan Bangka Belitung",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 167,
+          "tk": 675,
+          "sd": 12393,
+          "smp": 4805,
+          "subtotal": 18040
+        },
+        "swasta": {
+          "paud": 620,
+          "tk": 1750,
+          "sd": 1618,
+          "smp": 953,
+          "subtotal": 4941
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 69,
+          "tk": 143,
+          "sd": 2121,
+          "smp": 885,
+          "subtotal": 3218
+        },
+        "swasta": {
+          "paud": 149,
+          "tk": 655,
+          "sd": 615,
+          "smp": 348,
+          "subtotal": 1767
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 41.32,
+          "tk": 21.19,
+          "sd": 17.11,
+          "smp": 18.42,
+          "subtotal": 65.13
+        },
+        "swasta": {
+          "paud": 24.03,
+          "tk": 37.43,
+          "sd": 38.01,
+          "smp": 36.52,
+          "subtotal": 35.76
+        }
+      }
+    },
+    {
+      "index": 12,
+      "province": "Prov. Aceh",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 560,
+          "tk": 5430,
+          "sd": 59001,
+          "smp": 27769,
+          "subtotal": 92760
+        },
+        "swasta": {
+          "paud": 2775,
+          "tk": 10703,
+          "sd": 3750,
+          "smp": 5188,
+          "subtotal": 22416
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 144,
+          "tk": 770,
+          "sd": 9368,
+          "smp": 4464,
+          "subtotal": 14746
+        },
+        "swasta": {
+          "paud": 458,
+          "tk": 1320,
+          "sd": 687,
+          "smp": 844,
+          "subtotal": 3309
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 25.71,
+          "tk": 14.18,
+          "sd": 15.88,
+          "smp": 16.08,
+          "subtotal": 65.78
+        },
+        "swasta": {
+          "paud": 16.5,
+          "tk": 12.33,
+          "sd": 18.32,
+          "smp": 16.27,
+          "subtotal": 14.76
+        }
+      }
+    },
+    {
+      "index": 13,
+      "province": "Prov. Nusa Tenggara Timur",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 461,
+          "tk": 1817,
+          "sd": 52289,
+          "smp": 33293,
+          "subtotal": 87860
+        },
+        "swasta": {
+          "paud": 2508,
+          "tk": 5302,
+          "sd": 21812,
+          "smp": 7361,
+          "subtotal": 36983
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 54,
+          "tk": 326,
+          "sd": 4803,
+          "smp": 2807,
+          "subtotal": 7990
+        },
+        "swasta": {
+          "paud": 277,
+          "tk": 882,
+          "sd": 2944,
+          "smp": 1333,
+          "subtotal": 5436
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 11.71,
+          "tk": 17.94,
+          "sd": 9.19,
+          "smp": 8.43,
+          "subtotal": 21.6
+        },
+        "swasta": {
+          "paud": 11.04,
+          "tk": 16.64,
+          "sd": 13.5,
+          "smp": 18.11,
+          "subtotal": 14.7
+        }
+      }
+    },
+    {
+      "index": 14,
+      "province": "Prov. Sulawesi Selatan",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 976,
+          "tk": 2263,
+          "sd": 86905,
+          "smp": 36141,
+          "subtotal": 126285
+        },
+        "swasta": {
+          "paud": 4133,
+          "tk": 17676,
+          "sd": 6287,
+          "smp": 5895,
+          "subtotal": 33991
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 314,
+          "tk": 933,
+          "sd": 34622,
+          "smp": 14218,
+          "subtotal": 50087
+        },
+        "swasta": {
+          "paud": 1044,
+          "tk": 5731,
+          "sd": 1740,
+          "smp": 1840,
+          "subtotal": 10355
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 32.17,
+          "tk": 41.23,
+          "sd": 39.84,
+          "smp": 39.34,
+          "subtotal": 147.35
+        },
+        "swasta": {
+          "paud": 25.26,
+          "tk": 32.42,
+          "sd": 27.68,
+          "smp": 31.21,
+          "subtotal": 30.46
+        }
+      }
+    },
+    {
+      "index": 15,
+      "province": "Prov. Bali",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 152,
+          "tk": 1119,
+          "sd": 31363,
+          "smp": 13777,
+          "subtotal": 46411
+        },
+        "swasta": {
+          "paud": 715,
+          "tk": 6445,
+          "sd": 3553,
+          "smp": 2547,
+          "subtotal": 13260
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 45,
+          "tk": 325,
+          "sd": 3066,
+          "smp": 1589,
+          "subtotal": 5025
+        },
+        "swasta": {
+          "paud": 165,
+          "tk": 2136,
+          "sd": 1300,
+          "smp": 915,
+          "subtotal": 4516
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 29.61,
+          "tk": 29.04,
+          "sd": 9.78,
+          "smp": 11.53,
+          "subtotal": 37.9
+        },
+        "swasta": {
+          "paud": 23.08,
+          "tk": 33.14,
+          "sd": 36.59,
+          "smp": 35.92,
+          "subtotal": 34.06
+        }
+      }
+    },
+    {
+      "index": 16,
+      "province": "Prov. Kepulauan Riau",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 74,
+          "tk": 787,
+          "sd": 13086,
+          "smp": 6138,
+          "subtotal": 20085
+        },
+        "swasta": {
+          "paud": 982,
+          "tk": 2999,
+          "sd": 6083,
+          "smp": 2672,
+          "subtotal": 12736
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 18,
+          "tk": 109,
+          "sd": 1304,
+          "smp": 540,
+          "subtotal": 1971
+        },
+        "swasta": {
+          "paud": 333,
+          "tk": 937,
+          "sd": 2194,
+          "smp": 833,
+          "subtotal": 4297
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 24.32,
+          "tk": 13.85,
+          "sd": 9.96,
+          "smp": 8.8,
+          "subtotal": 15.48
+        },
+        "swasta": {
+          "paud": 33.91,
+          "tk": 31.24,
+          "sd": 36.07,
+          "smp": 31.18,
+          "subtotal": 33.74
+        }
+      }
+    },
+    {
+      "index": 17,
+      "province": "Prov. Papua",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 71,
+          "tk": 211,
+          "sd": 6749,
+          "smp": 4304,
+          "subtotal": 11335
+        },
+        "swasta": {
+          "paud": 887,
+          "tk": 1231,
+          "sd": 3814,
+          "smp": 1240,
+          "subtotal": 7172
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 16,
+          "tk": 5,
+          "sd": 712,
+          "smp": 336,
+          "subtotal": 1069
+        },
+        "swasta": {
+          "paud": 104,
+          "tk": 194,
+          "sd": 600,
+          "smp": 248,
+          "subtotal": 1146
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 22.54,
+          "tk": 2.37,
+          "sd": 10.55,
+          "smp": 7.81,
+          "subtotal": 14.91
+        },
+        "swasta": {
+          "paud": 11.72,
+          "tk": 15.76,
+          "sd": 15.73,
+          "smp": 20.0,
+          "subtotal": 15.98
+        }
+      }
+    },
+    {
+      "index": 18,
+      "province": "Prov. Kalimantan Timur",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 535,
+          "tk": 1179,
+          "sd": 31991,
+          "smp": 12652,
+          "subtotal": 46357
+        },
+        "swasta": {
+          "paud": 1520,
+          "tk": 6987,
+          "sd": 5057,
+          "smp": 2931,
+          "subtotal": 16495
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 143,
+          "tk": 223,
+          "sd": 4240,
+          "smp": 1824,
+          "subtotal": 6430
+        },
+        "swasta": {
+          "paud": 408,
+          "tk": 2151,
+          "sd": 1696,
+          "smp": 989,
+          "subtotal": 5244
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 26.73,
+          "tk": 18.91,
+          "sd": 13.25,
+          "smp": 14.42,
+          "subtotal": 38.98
+        },
+        "swasta": {
+          "paud": 26.84,
+          "tk": 30.79,
+          "sd": 33.54,
+          "smp": 33.74,
+          "subtotal": 31.79
+        }
+      }
+    },
+    {
+      "index": 19,
+      "province": "Prov. Sulawesi Tenggara",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 345,
+          "tk": 2367,
+          "sd": 35894,
+          "smp": 18141,
+          "subtotal": 56747
+        },
+        "swasta": {
+          "paud": 1811,
+          "tk": 7140,
+          "sd": 1167,
+          "smp": 1069,
+          "subtotal": 11187
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 75,
+          "tk": 367,
+          "sd": 4423,
+          "smp": 2448,
+          "subtotal": 7313
+        },
+        "swasta": {
+          "paud": 264,
+          "tk": 1476,
+          "sd": 138,
+          "smp": 157,
+          "subtotal": 2035
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 21.74,
+          "tk": 15.5,
+          "sd": 12.32,
+          "smp": 13.49,
+          "subtotal": 65.37
+        },
+        "swasta": {
+          "paud": 14.58,
+          "tk": 20.67,
+          "sd": 11.83,
+          "smp": 14.69,
+          "subtotal": 18.19
+        }
+      }
+    },
+    {
+      "index": 20,
+      "province": "Prov. Riau",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 188,
+          "tk": 1312,
+          "sd": 56270,
+          "smp": 22740,
+          "subtotal": 80510
+        },
+        "swasta": {
+          "paud": 1915,
+          "tk": 11665,
+          "sd": 11198,
+          "smp": 5827,
+          "subtotal": 30605
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 63,
+          "tk": 137,
+          "sd": 6422,
+          "smp": 2936,
+          "subtotal": 9558
+        },
+        "swasta": {
+          "paud": 328,
+          "tk": 2140,
+          "sd": 2742,
+          "smp": 1424,
+          "subtotal": 6634
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 33.51,
+          "tk": 10.44,
+          "sd": 11.41,
+          "smp": 12.91,
+          "subtotal": 31.23
+        },
+        "swasta": {
+          "paud": 17.13,
+          "tk": 18.35,
+          "sd": 24.49,
+          "smp": 24.44,
+          "subtotal": 21.68
+        }
+      }
+    },
+    {
+      "index": 21,
+      "province": "Prov. Sumatera Barat",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 433,
+          "tk": 924,
+          "sd": 58451,
+          "smp": 21568,
+          "subtotal": 81376
+        },
+        "swasta": {
+          "paud": 3298,
+          "tk": 10071,
+          "sd": 6044,
+          "smp": 2942,
+          "subtotal": 22355
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 95,
+          "tk": 159,
+          "sd": 6850,
+          "smp": 2375,
+          "subtotal": 9479
+        },
+        "swasta": {
+          "paud": 822,
+          "tk": 3294,
+          "sd": 2188,
+          "smp": 822,
+          "subtotal": 7126
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 21.94,
+          "tk": 17.21,
+          "sd": 11.72,
+          "smp": 11.01,
+          "subtotal": 42.4
+        },
+        "swasta": {
+          "paud": 24.92,
+          "tk": 32.71,
+          "sd": 36.2,
+          "smp": 27.94,
+          "subtotal": 31.88
+        }
+      }
+    },
+    {
+      "index": 22,
+      "province": "Prov. Papua Pegunungan",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 33,
+          "tk": 130,
+          "sd": 4283,
+          "smp": 2132,
+          "subtotal": 6578
+        },
+        "swasta": {
+          "paud": 610,
+          "tk": 352,
+          "sd": 1278,
+          "smp": 486,
+          "subtotal": 2726
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 1,
+          "tk": 1,
+          "sd": 44,
+          "smp": 16,
+          "subtotal": 62
+        },
+        "swasta": {
+          "paud": 8,
+          "tk": 11,
+          "sd": 58,
+          "smp": 6,
+          "subtotal": 83
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 3.03,
+          "tk": 0.77,
+          "sd": 1.03,
+          "smp": 0.75,
+          "subtotal": 2.27
+        },
+        "swasta": {
+          "paud": 1.31,
+          "tk": 3.13,
+          "sd": 4.54,
+          "smp": 1.23,
+          "subtotal": 3.04
+        }
+      }
+    },
+    {
+      "index": 23,
+      "province": "Prov. D.K.I. Jakarta",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 684,
+          "tk": 587,
+          "sd": 32162,
+          "smp": 15162,
+          "subtotal": 48595
+        },
+        "swasta": {
+          "paud": 10938,
+          "tk": 11056,
+          "sd": 20162,
+          "smp": 13797,
+          "subtotal": 55953
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 489,
+          "tk": 265,
+          "sd": 9419,
+          "smp": 3797,
+          "subtotal": 13970
+        },
+        "swasta": {
+          "paud": 2549,
+          "tk": 3192,
+          "sd": 8373,
+          "smp": 5510,
+          "subtotal": 19624
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 71.49,
+          "tk": 45.14,
+          "sd": 29.29,
+          "smp": 25.04,
+          "subtotal": 24.97
+        },
+        "swasta": {
+          "paud": 23.3,
+          "tk": 28.87,
+          "sd": 41.53,
+          "smp": 39.94,
+          "subtotal": 35.07
+        }
+      }
+    },
+    {
+      "index": 24,
+      "province": "Prov. Papua Barat",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 40,
+          "tk": 201,
+          "sd": 5314,
+          "smp": 2516,
+          "subtotal": 8071
+        },
+        "swasta": {
+          "paud": 135,
+          "tk": 978,
+          "sd": 1700,
+          "smp": 666,
+          "subtotal": 3479
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 3,
+          "tk": 12,
+          "sd": 519,
+          "smp": 175,
+          "subtotal": 709
+        },
+        "swasta": {
+          "paud": 11,
+          "tk": 251,
+          "sd": 258,
+          "smp": 131,
+          "subtotal": 651
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 7.5,
+          "tk": 5.97,
+          "sd": 9.77,
+          "smp": 6.96,
+          "subtotal": 20.38
+        },
+        "swasta": {
+          "paud": 8.15,
+          "tk": 25.66,
+          "sd": 15.18,
+          "smp": 19.67,
+          "subtotal": 18.71
+        }
+      }
+    },
+    {
+      "index": 25,
+      "province": "Prov. D.I. Yogyakarta",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 180,
+          "tk": 440,
+          "sd": 19777,
+          "smp": 8172,
+          "subtotal": 28569
+        },
+        "swasta": {
+          "paud": 5193,
+          "tk": 9428,
+          "sd": 8153,
+          "smp": 4601,
+          "subtotal": 27375
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 52,
+          "tk": 100,
+          "sd": 3672,
+          "smp": 1938,
+          "subtotal": 5762
+        },
+        "swasta": {
+          "paud": 2181,
+          "tk": 3943,
+          "sd": 4229,
+          "smp": 2429,
+          "subtotal": 12782
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 28.89,
+          "tk": 22.73,
+          "sd": 18.57,
+          "smp": 23.72,
+          "subtotal": 21.05
+        },
+        "swasta": {
+          "paud": 42.0,
+          "tk": 41.82,
+          "sd": 51.87,
+          "smp": 52.79,
+          "subtotal": 46.69
+        }
+      }
+    },
+    {
+      "index": 26,
+      "province": "Prov. Kalimantan Tengah",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 169,
+          "tk": 904,
+          "sd": 30041,
+          "smp": 11683,
+          "subtotal": 42797
+        },
+        "swasta": {
+          "paud": 1102,
+          "tk": 7689,
+          "sd": 3218,
+          "smp": 1683,
+          "subtotal": 13692
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 53,
+          "tk": 168,
+          "sd": 2880,
+          "smp": 1094,
+          "subtotal": 4195
+        },
+        "swasta": {
+          "paud": 190,
+          "tk": 2272,
+          "sd": 671,
+          "smp": 328,
+          "subtotal": 3461
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 31.36,
+          "tk": 18.58,
+          "sd": 9.59,
+          "smp": 9.36,
+          "subtotal": 30.64
+        },
+        "swasta": {
+          "paud": 17.24,
+          "tk": 29.55,
+          "sd": 20.85,
+          "smp": 19.49,
+          "subtotal": 25.28
+        }
+      }
+    },
+    {
+      "index": 27,
+      "province": "Prov. Kalimantan Selatan",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 386,
+          "tk": 1642,
+          "sd": 35867,
+          "smp": 11435,
+          "subtotal": 49330
+        },
+        "swasta": {
+          "paud": 1783,
+          "tk": 10075,
+          "sd": 3413,
+          "smp": 1480,
+          "subtotal": 16751
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 116,
+          "tk": 623,
+          "sd": 7054,
+          "smp": 2032,
+          "subtotal": 9825
+        },
+        "swasta": {
+          "paud": 634,
+          "tk": 5035,
+          "sd": 1308,
+          "smp": 578,
+          "subtotal": 7555
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 30.05,
+          "tk": 37.94,
+          "sd": 19.67,
+          "smp": 17.77,
+          "subtotal": 58.65
+        },
+        "swasta": {
+          "paud": 35.56,
+          "tk": 49.98,
+          "sd": 38.32,
+          "smp": 39.05,
+          "subtotal": 45.1
+        }
+      }
+    },
+    {
+      "index": 28,
+      "province": "Prov. Nusa Tenggara Barat",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 252,
+          "tk": 2096,
+          "sd": 51747,
+          "smp": 24572,
+          "subtotal": 78667
+        },
+        "swasta": {
+          "paud": 3098,
+          "tk": 9734,
+          "sd": 3989,
+          "smp": 5629,
+          "subtotal": 22450
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 58,
+          "tk": 516,
+          "sd": 8527,
+          "smp": 4681,
+          "subtotal": 13782
+        },
+        "swasta": {
+          "paud": 687,
+          "tk": 2052,
+          "sd": 851,
+          "smp": 1086,
+          "subtotal": 4676
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 23.02,
+          "tk": 24.62,
+          "sd": 16.48,
+          "smp": 19.05,
+          "subtotal": 61.39
+        },
+        "swasta": {
+          "paud": 22.18,
+          "tk": 21.08,
+          "sd": 21.33,
+          "smp": 19.29,
+          "subtotal": 20.83
+        }
+      }
+    },
+    {
+      "index": 29,
+      "province": "Prov. Sulawesi Barat",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 165,
+          "tk": 652,
+          "sd": 21044,
+          "smp": 8257,
+          "subtotal": 30118
+        },
+        "swasta": {
+          "paud": 1110,
+          "tk": 3333,
+          "sd": 504,
+          "smp": 679,
+          "subtotal": 5626
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 16,
+          "tk": 146,
+          "sd": 4044,
+          "smp": 1691,
+          "subtotal": 5897
+        },
+        "swasta": {
+          "paud": 254,
+          "tk": 580,
+          "sd": 178,
+          "smp": 183,
+          "subtotal": 1195
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 9.7,
+          "tk": 22.39,
+          "sd": 19.22,
+          "smp": 20.48,
+          "subtotal": 104.82
+        },
+        "swasta": {
+          "paud": 22.88,
+          "tk": 17.4,
+          "sd": 35.32,
+          "smp": 26.95,
+          "subtotal": 21.24
+        }
+      }
+    },
+    {
+      "index": 30,
+      "province": "Prov. Papua Selatan",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 103,
+          "tk": 265,
+          "sd": 4020,
+          "smp": 2175,
+          "subtotal": 6563
+        },
+        "swasta": {
+          "paud": 246,
+          "tk": 672,
+          "sd": 2063,
+          "smp": 600,
+          "subtotal": 3581
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 9,
+          "tk": 20,
+          "sd": 393,
+          "smp": 158,
+          "subtotal": 580
+        },
+        "swasta": {
+          "paud": 6,
+          "tk": 62,
+          "sd": 178,
+          "smp": 63,
+          "subtotal": 309
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 8.74,
+          "tk": 7.55,
+          "sd": 9.78,
+          "smp": 7.26,
+          "subtotal": 16.2
+        },
+        "swasta": {
+          "paud": 2.44,
+          "tk": 9.23,
+          "sd": 8.63,
+          "smp": 10.5,
+          "subtotal": 8.63
+        }
+      }
+    },
+    {
+      "index": 31,
+      "province": "Prov. Papua Tengah",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 24,
+          "tk": 295,
+          "sd": 4202,
+          "smp": 2405,
+          "subtotal": 6926
+        },
+        "swasta": {
+          "paud": 547,
+          "tk": 1034,
+          "sd": 2822,
+          "smp": 982,
+          "subtotal": 5385
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 2,
+          "tk": 46,
+          "sd": 377,
+          "smp": 156,
+          "subtotal": 581
+        },
+        "swasta": {
+          "paud": 23,
+          "tk": 138,
+          "sd": 379,
+          "smp": 156,
+          "subtotal": 696
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 8.33,
+          "tk": 15.59,
+          "sd": 8.97,
+          "smp": 6.49,
+          "subtotal": 10.79
+        },
+        "swasta": {
+          "paud": 4.2,
+          "tk": 13.35,
+          "sd": 13.43,
+          "smp": 15.89,
+          "subtotal": 12.92
+        }
+      }
+    },
+    {
+      "index": 32,
+      "province": "Prov. Jawa Barat",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 693,
+          "tk": 1286,
+          "sd": 228051,
+          "smp": 77809,
+          "subtotal": 307839
+        },
+        "swasta": {
+          "paud": 45222,
+          "tk": 45629,
+          "sd": 47242,
+          "smp": 59234,
+          "subtotal": 197327
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 179,
+          "tk": 201,
+          "sd": 38703,
+          "smp": 15145,
+          "subtotal": 54228
+        },
+        "swasta": {
+          "paud": 14816,
+          "tk": 12174,
+          "sd": 19799,
+          "smp": 20640,
+          "subtotal": 67429
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 25.83,
+          "tk": 15.63,
+          "sd": 16.97,
+          "smp": 19.46,
+          "subtotal": 27.48
+        },
+        "swasta": {
+          "paud": 32.76,
+          "tk": 26.68,
+          "sd": 41.91,
+          "smp": 34.84,
+          "subtotal": 34.17
+        }
+      }
+    },
+    {
+      "index": 33,
+      "province": "Prov. Sulawesi Tengah",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 383,
+          "tk": 1523,
+          "sd": 41265,
+          "smp": 16491,
+          "subtotal": 59662
+        },
+        "swasta": {
+          "paud": 1285,
+          "tk": 8538,
+          "sd": 2759,
+          "smp": 1437,
+          "subtotal": 14019
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 97,
+          "tk": 466,
+          "sd": 11336,
+          "smp": 4174,
+          "subtotal": 16073
+        },
+        "swasta": {
+          "paud": 267,
+          "tk": 1670,
+          "sd": 572,
+          "smp": 401,
+          "subtotal": 2910
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 25.33,
+          "tk": 30.6,
+          "sd": 27.47,
+          "smp": 25.31,
+          "subtotal": 114.65
+        },
+        "swasta": {
+          "paud": 20.78,
+          "tk": 19.56,
+          "sd": 20.73,
+          "smp": 27.91,
+          "subtotal": 20.76
+        }
+      }
+    },
+    {
+      "index": 34,
+      "province": "Prov. Lampung",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 256,
+          "tk": 793,
+          "sd": 64975,
+          "smp": 23288,
+          "subtotal": 89312
+        },
+        "swasta": {
+          "paud": 2969,
+          "tk": 14716,
+          "sd": 6864,
+          "smp": 9350,
+          "subtotal": 33899
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 48,
+          "tk": 124,
+          "sd": 8500,
+          "smp": 3733,
+          "subtotal": 12405
+        },
+        "swasta": {
+          "paud": 478,
+          "tk": 2009,
+          "sd": 1826,
+          "smp": 1832,
+          "subtotal": 6145
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 18.75,
+          "tk": 15.64,
+          "sd": 13.08,
+          "smp": 16.03,
+          "subtotal": 36.59
+        },
+        "swasta": {
+          "paud": 16.1,
+          "tk": 13.65,
+          "sd": 26.6,
+          "smp": 19.59,
+          "subtotal": 18.13
+        }
+      }
+    },
+    {
+      "index": 35,
+      "province": "Prov. Sulawesi Utara",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 427,
+          "tk": 805,
+          "sd": 17944,
+          "smp": 10753,
+          "subtotal": 29929
+        },
+        "swasta": {
+          "paud": 808,
+          "tk": 4441,
+          "sd": 6836,
+          "smp": 2533,
+          "subtotal": 14618
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 128,
+          "tk": 195,
+          "sd": 4755,
+          "smp": 2641,
+          "subtotal": 7719
+        },
+        "swasta": {
+          "paud": 154,
+          "tk": 1157,
+          "sd": 2459,
+          "smp": 974,
+          "subtotal": 4744
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 29.98,
+          "tk": 24.22,
+          "sd": 26.5,
+          "smp": 24.56,
+          "subtotal": 52.8
+        },
+        "swasta": {
+          "paud": 19.06,
+          "tk": 26.05,
+          "sd": 35.97,
+          "smp": 38.45,
+          "subtotal": 32.45
+        }
+      }
+    },
+    {
+      "index": 36,
+      "province": "Prov. Jawa Tengah",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 877,
+          "tk": 1423,
+          "sd": 191534,
+          "smp": 71664,
+          "subtotal": 265498
+        },
+        "swasta": {
+          "paud": 15891,
+          "tk": 50421,
+          "sd": 23435,
+          "smp": 24403,
+          "subtotal": 114150
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 230,
+          "tk": 272,
+          "sd": 26628,
+          "smp": 10753,
+          "subtotal": 37883
+        },
+        "swasta": {
+          "paud": 5189,
+          "tk": 21894,
+          "sd": 10818,
+          "smp": 10415,
+          "subtotal": 48316
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 26.23,
+          "tk": 19.11,
+          "sd": 13.9,
+          "smp": 15.0,
+          "subtotal": 33.19
+        },
+        "swasta": {
+          "paud": 32.65,
+          "tk": 43.42,
+          "sd": 46.16,
+          "smp": 42.68,
+          "subtotal": 42.33
+        }
+      }
+    },
+    {
+      "index": 37,
+      "province": "Prov. Jawa Timur",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 396,
+          "tk": 1488,
+          "sd": 199433,
+          "smp": 68136,
+          "subtotal": 269453
+        },
+        "swasta": {
+          "paud": 21269,
+          "tk": 73935,
+          "sd": 31476,
+          "smp": 41793,
+          "subtotal": 168473
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 126,
+          "tk": 320,
+          "sd": 36565,
+          "smp": 12453,
+          "subtotal": 49464
+        },
+        "swasta": {
+          "paud": 11616,
+          "tk": 35958,
+          "sd": 13915,
+          "smp": 15209,
+          "subtotal": 76698
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 31.82,
+          "tk": 21.51,
+          "sd": 18.33,
+          "smp": 18.28,
+          "subtotal": 29.36
+        },
+        "swasta": {
+          "paud": 54.61,
+          "tk": 48.63,
+          "sd": 44.21,
+          "smp": 36.39,
+          "subtotal": 45.53
+        }
+      }
+    },
+    {
+      "index": 38,
+      "province": "Prov. Kalimantan Utara",
+      "dapodik": {
+        "nonAsnNegeri": {
+          "paud": 85,
+          "tk": 224,
+          "sd": 7463,
+          "smp": 3503,
+          "subtotal": 11275
+        },
+        "swasta": {
+          "paud": 328,
+          "tk": 965,
+          "sd": 937,
+          "smp": 506,
+          "subtotal": 2736
+        }
+      },
+      "bpjsTerdaftar": {
+        "nonAsnNegeri": {
+          "paud": 46,
+          "tk": 21,
+          "sd": 609,
+          "smp": 318,
+          "subtotal": 994
+        },
+        "swasta": {
+          "paud": 69,
+          "tk": 330,
+          "sd": 310,
+          "smp": 187,
+          "subtotal": 896
+        }
+      },
+      "aktifPercent": {
+        "nonAsnNegeri": {
+          "paud": 54.12,
+          "tk": 9.38,
+          "sd": 8.16,
+          "smp": 9.08,
+          "subtotal": 36.33
+        },
+        "swasta": {
+          "paud": 21.04,
+          "tk": 34.2,
+          "sd": 33.08,
+          "smp": 36.96,
+          "subtotal": 32.75
+        }
+      }
+    }
+  ],
+  "totals": {
+    "dapodik": {
+      "nonAsnNegeri": {
+        "paud": 11059,
+        "tk": 42496,
+        "sd": 1810011,
+        "smp": 724412,
+        "subtotal": 2587978
+      },
+      "swasta": {
+        "paud": 154137,
+        "tk": 397295,
+        "sd": 302968,
+        "smp": 258891,
+        "subtotal": 1113291
+      }
+    },
+    "bpjsTerdaftar": {
+      "nonAsnNegeri": {
+        "paud": 3161,
+        "tk": 8805,
+        "sd": 302380,
+        "smp": 124498,
+        "subtotal": 438844
+      },
+      "swasta": {
+        "paud": 47142,
+        "tk": 129389,
+        "sd": 101830,
+        "smp": 84022,
+        "subtotal": 362383
+      }
+    },
+    "aktifPercent": {
+      "nonAsnNegeri": {
+        "paud": 28.58,
+        "tk": 20.72,
+        "sd": 16.71,
+        "smp": 17.19,
+        "subtotal": 16.96
+      },
+      "swasta": {
+        "paud": 30.58,
+        "tk": 32.57,
+        "sd": 33.61,
+        "smp": 32.45,
+        "subtotal": 32.55
+      }
+    }
+  }
+}

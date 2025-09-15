@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>{{reportInfo.title}}</title>
+  <style>
+    /* ====== A4 landscape & tata letak ====== */
+    @page { size: A4 landscape; margin: 8mm; }
+    html, body { margin: 0; font-family: Arial, Helvetica, sans-serif; }
+
+    /* ====== Header: logo kiri, judul tengah, meta kanan (GRID) ====== */
+    .page-header{
+      display: grid;
+      grid-template-columns: auto 1fr auto; /* kiri | tengah fleksibel | kanan */
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 12px;
+    }
+
+    /* kiri (logo) */
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .brand-logo{
+      height: 100px;       /* besarkan sesuai kebutuhan (80–110px) */
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* tengah (judul) */
+    .brand-title{
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .brand-title .title-line-1{ font-size: 16px; }
+    .brand-title .title-line-2{ font-size: 14px; }
+    .brand-title .periode{ font-size: 12px; margin-top: 2px; }
+
+    /* kanan (meta) */
+    .meta{
+      font-size: 10px;
+      text-align: right;
+      line-height: 1.25;
+    }
+
+    /* ====== Section info kecil di bawah header ====== */
+    .section{
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin: 6px 0 8px;
+      font-size: 11px;
+    }
+    .section .label{ font-weight: 700; }
+    .section .underline{
+      flex: 1;
+      border-bottom: 1px solid #000;
+      margin-left: 6px;
+    }
+
+    /* ====== Tabel ====== */
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 9.5px; }
+    th, td { border: 1px solid #000; padding: 3px 4px; text-align: center; vertical-align: middle; }
+
+    thead th {
+      white-space: normal; word-break: break-word; line-height: 1.15;
+      font-size: 9px; background: #f8f8f8;
+    }
+
+    /* Kolom teks (nama kab/kota) tetap kiri agar mudah dibaca */
+    td.wrap { text-align: left; }
+
+    /* Angka rapi */
+    td { font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    /* Lebar kolom (opsional, jika pakai <colgroup>) */
+    col.idx  { width: 28px; }
+    col.prov { width: 170px; }
+    col.num  { width: 45px; }
+    col.sub  { width: 54px; }
+
+    /* Kolom persen lebih kecil */
+    td.percent, th.percent { font-size: 8px; padding: 2px; }
+    col.num.percent { width: 52px; }
+    col.sub.percent { width: 60px; }
+
+    /* Total & hindari pecah halaman */
+    tfoot { display: table-row-group; }
+    .row-total { font-weight: 700; background: #f0f0f0; page-break-inside: avoid; }
+
+    /* Footer */
+    .page-footer {
+      margin-top: 8mm;
+      display: flex; justify-content: space-between;
+      font-size: 10px; color: #444;
+    }
+
+    /* Amankan gambar */
+    img { max-width: 100%; height: auto; }
+  </style>
+</head>
+<body>
+
+  <!-- Header (3 kolom sejajar) -->
+  <div class="page-header">
+    <!-- kiri: logo -->
+    <div class="brand">
+      <!-- GANTI path aset sesuai lokasi di jsreport: 
+           - jika file ada di root Assets → cukup pakai nama file
+           - jika ada di folder /assets → pakai '/assets/NAMA_FILE.png' -->
+      <img src="{{asset 'Logo BPJS Ketenagakerjaan.png' 'dataURI'}}" alt="BPJS Ketenagakerjaan" class="brand-logo" />
+    </div>
+
+    <!-- tengah: judul -->
+    <div class="brand-title">
+      <div class="title-line-1">{{reportInfo.title}}</div>
+      <div class="title-line-2">Provinsi: {{reportInfo.province}}</div>
+      <div class="periode">Periode: {{reportInfo.period}}</div>
+    </div>
+
+    <!-- kanan: meta -->
+    <div class="meta">
+      <div class="meta-row">Tanggal Cetak : {{printDate}}</div>
+      <div class="meta-row">Waktu Cetak : {{printTime}}</div>
+    </div>
+  </div>
+
+  <!-- Section -->
+  <div class="section">
+    <div class="label">NAMA KANTOR :</div>
+    <div class="value">KANTOR PUSAT</div>
+    <div class="underline"></div>
+  </div>
+
+  <!-- Table -->
+  <table>
+    <colgroup>
+      <col class="idx">
+      <col class="prov">
+      <!-- DAPODIK NON ASN NEGERI -->
+      <col class="num"><col class="num"><col class="num"><col class="sub">
+      <!-- DAPODIK SWASTA -->
+      <col class="num"><col class="num"><col class="num"><col class="sub">
+      <!-- BPJS NON ASN NEGERI -->
+      <col class="num"><col class="num"><col class="num"><col class="sub">
+      <!-- BPJS SWASTA -->
+      <col class="num"><col class="num"><col class="num"><col class="sub">
+      <!-- % NON ASN NEGERI -->
+      <col class="num percent"><col class="num percent"><col class="num percent"><col class="sub percent">
+      <!-- % SWASTA -->
+      <col class="num percent"><col class="num percent"><col class="num percent"><col class="sub percent">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th rowspan="3">No</th>
+        <th rowspan="3">Nama Kabupaten/Kota</th>
+        <th colspan="8">JUMLAH GTK DAPODIK KEMENDIKBUD</th>
+        <th colspan="8">JUMLAH GTK TERDAFTAR BPJS KETENAGAKERJAAN</th>
+        <th class="percent" colspan="8">% Kepesertaan Aktif</th>
+      </tr>
+      <tr>
+        <th colspan="4">NON ASN NEGERI</th>
+        <th colspan="4">SWASTA</th>
+        <th colspan="4">NON ASN NEGERI</th>
+        <th colspan="4">SWASTA</th>
+        <th class="percent" colspan="4">NON ASN NEGERI</th>
+        <th class="percent" colspan="4">SWASTA</th>
+      </tr>
+      <tr>
+        <th>SMA</th><th>SMK</th><th>SLB</th><th>Subtotal</th>
+        <th>SMA</th><th>SMK</th><th>SLB</th><th>Subtotal</th>
+        <th>SMA</th><th>SMK</th><th>SLB</th><th>Subtotal</th>
+        <th>SMA</th><th>SMK</th><th>SLB</th><th>Subtotal</th>
+        <th class="percent">SMA</th><th class="percent">SMK</th><th class="percent">SLB</th><th class="percent">Subtotal</th>
+        <th class="percent">SMA</th><th class="percent">SMK</th><th class="percent">SLB</th><th class="percent">Subtotal</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td>{{no}}</td>
+        <td class="wrap">{{kabupatenKota}}</td>
+
+        <!-- DAPODIK NON ASN NEGERI -->
+        <td>{{formatID dapodikData.sma}}</td>
+        <td>{{formatID dapodikData.smk}}</td>
+        <td>{{formatID dapodikData.slb}}</td>
+        <td>{{formatID dapodikData.subtotal}}</td>
+
+        <!-- DAPODIK SWASTA -->
+        <td>{{formatID dapodikDataSwasta.sma}}</td>
+        <td>{{formatID dapodikDataSwasta.smk}}</td>
+        <td>{{formatID dapodikDataSwasta.slb}}</td>
+        <td>{{formatID dapodikDataSwasta.subtotal}}</td>
+
+        <!-- BPJS TERDAFTAR NON ASN NEGERI -->
+        <td>{{formatID bpjsData.nonAsnNegeri.sma}}</td>
+        <td>{{formatID bpjsData.nonAsnNegeri.smk}}</td>
+        <td>{{formatID bpjsData.nonAsnNegeri.slb}}</td>
+        <td>{{formatID bpjsData.nonAsnNegeri.subtotal}}</td>
+
+        <!-- BPJS TERDAFTAR SWASTA -->
+        <td>{{formatID bpjsData.swasta.sma}}</td>
+        <td>{{formatID bpjsData.swasta.smk}}</td>
+        <td>{{formatID bpjsData.swasta.slb}}</td>
+        <td>{{formatID bpjsData.swasta.subtotal}}</td>
+
+        <!-- % AKTIF NON ASN NEGERI -->
+        <td class="percent">{{formatPercent participationRates.nonAsnNegeri.sma digits=2}}</td>
+        <td class="percent">{{formatPercent participationRates.nonAsnNegeri.smk digits=2}}</td>
+        <td class="percent">{{formatPercent participationRates.nonAsnNegeri.slb digits=2}}</td>
+        <td class="percent">{{formatPercent participationRates.nonAsnNegeri.subtotal digits=2}}</td>
+
+        <!-- % AKTIF SWASTA -->
+        <td class="percent">{{formatPercent participationRates.swasta.sma digits=2}}</td>
+        <td class="percent">{{formatPercent participationRates.swasta.smk digits=2}}</td>
+        <td class="percent">{{formatPercent participationRates.swasta.slb digits=2}}</td>
+        <td class="percent">{{formatPercent participationRates.swasta.subtotal digits=2}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+    <tfoot>
+      <tr class="row-total">
+        <td colspan="2">TOTAL / RATA-RATA</td>
+
+        <!-- TOTAL DAPODIK NON ASN NEGERI -->
+        <td>{{formatID summary.totalDapodikNonAsnNegeri.sma}}</td>
+        <td>{{formatID summary.totalDapodikNonAsnNegeri.smk}}</td>
+        <td>{{formatID summary.totalDapodikNonAsnNegeri.slb}}</td>
+        <td>{{formatID summary.totalDapodikNonAsnNegeri.subtotal}}</td>
+
+        <!-- TOTAL DAPODIK SWASTA -->
+        <td>{{formatID summary.totalDapodikSwasta.sma}}</td>
+        <td>{{formatID summary.totalDapodikSwasta.smk}}</td>
+        <td>{{formatID summary.totalDapodikSwasta.slb}}</td>
+        <td>{{formatID summary.totalDapodikSwasta.subtotal}}</td>
+
+        <!-- TOTAL BPJS TERDAFTAR NON ASN NEGERI -->
+        <td>{{formatID summary.totalBpjs.nonAsnNegeri.sma}}</td>
+        <td>{{formatID summary.totalBpjs.nonAsnNegeri.smk}}</td>
+        <td>{{formatID summary.totalBpjs.nonAsnNegeri.slb}}</td>
+        <td>{{formatID summary.totalBpjs.nonAsnNegeri.subtotal}}</td>
+
+        <!-- TOTAL BPJS TERDAFTAR SWASTA -->
+        <td>{{formatID summary.totalBpjs.swasta.sma}}</td>
+        <td>{{formatID summary.totalBpjs.swasta.smk}}</td>
+        <td>{{formatID summary.totalBpjs.swasta.slb}}</td>
+        <td>{{formatID summary.totalBpjs.swasta.subtotal}}</td>
+
+        <!-- RATA2 % AKTIF NON ASN NEGERI -->
+        <td class="percent">{{formatPercent summary.averageParticipationRates.nonAsnNegeri.sma digits=2}}</td>
+        <td class="percent">{{formatPercent summary.averageParticipationRates.nonAsnNegeri.smk digits=2}}</td>
+        <td class="percent">{{formatPercent summary.averageParticipationRates.nonAsnNegeri.slb digits=2}}</td>
+        <td class="percent">{{formatPercent summary.averageParticipationRates.nonAsnNegeri.subtotal digits=2}}</td>
+
+        <!-- RATA2 % AKTIF SWASTA -->
+        <td class="percent">{{formatPercent summary.averageParticipationRates.swasta.sma digits=2}}</td>
+        <td class="percent">{{formatPercent summary.averageParticipationRates.swasta.smk digits=2}}</td>
+        <td class="percent">{{formatPercent summary.averageParticipationRates.swasta.slb digits=2}}</td>
+        <td class="percent">{{formatPercent summary.averageParticipationRates.swasta.subtotal digits=2}}</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="page-footer">
+    <div class="code-left">REKAP {{yearFrom reportInfo.period}}</div>
+    <div class="code-right">KNODIK006</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+    "name": "excel",
+    "engine": "handlebars",
+    "recipe": "html-to-xlsx",
+    "data": {
+        "shortid": "OFbMFs8-k"
+    },
+    "shortid": "_NDnJbHl9",
+    "htmlToXlsx": {
+        "htmlEngine": "chrome"
+    },
+    "creationDate": {
+        "$$date": 1757646565011
+    },
+    "modificationDate": {
+        "$$date": 1757646565011
+    },
+    "_id": "ja0CXzcQoBGttAOg",
+    "$entitySet": "templates"
+}

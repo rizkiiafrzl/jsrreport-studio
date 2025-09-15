@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# jsreport temporary files
+logs/
+temp/
+
+# Database file (jangan dibawa ke GitHub, cukup template/asset aja)
+data/*.db
+data/*.db-journal
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets
+.env
