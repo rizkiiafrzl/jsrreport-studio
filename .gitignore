@@ -15,8 +15,6 @@ yarn-error.log*
 logs/
 *.log
 
-# JsReport data directory
-jsreport-data/
 
 # Runtime data
 pids

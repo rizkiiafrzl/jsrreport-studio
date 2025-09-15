@@ -1,0 +1,128 @@
+<style>
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    font-family: Arial, sans-serif; 
+    font-size: 11px;
+    table-layout: fixed !important;
+  }
+  col {
+    width: inherit !important;
+  }
+  th, td { 
+    border: 1px solid #333; 
+    padding: 6px; 
+    text-align: center !important;
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .col-alamat, .col-email, .col-hp {
+    text-align: left !important;
+  }
+  th { 
+    background-color: #e6f3ff; 
+    font-weight: bold;
+    font-size: 10px;
+    color: #000;
+  }
+  .title-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: white;
+    border: none;
+  }
+  .header-no-border {
+    border: none !important;
+    background: white !important;
+  }
+  .col-no { width: 40px !important; }
+  .col-prov { width: 100px !important; }
+  .col-kab { width: 140px !important; }
+  .col-sekolah { width: 250px !important; }
+  .col-jumlah-gtk { 
+    width: 20px !important; 
+    min-width: 20px !important; 
+    max-width: 20px !important; 
+  }
+  .col-bpjs { 
+    width: 60px !important; 
+    min-width: 60px !important; 
+    max-width: 60px !important; 
+  }
+  .col-belum-terdaftar { 
+    width: 60px !important; 
+    min-width: 60px !important; 
+    max-width: 60px !important; 
+  }
+  .col-persen { 
+    width: 60px !important; 
+    min-width: 60px !important; 
+    max-width: 60px !important; 
+  }
+  .col-alamat { width: 360px !important; }
+  .col-email { width: 250px !important; }
+  .col-hp { width: 120px !important; }
+</style>
+<table>
+  <colgroup>
+    <col class="col-no" style="width: 40px;" />
+    <col class="col-prov" style="width: 100px;" />
+    <col class="col-kab" style="width: 140px;" />
+    <col class="col-sekolah" style="width: 250px;" />
+    <col class="col-jumlah-gtk" style="width: 20px; min-width: 20px; max-width: 20px;" />
+    <col class="col-bpjs" style="width: 60px; min-width: 60px; max-width: 60px;" />
+    <col class="col-belum-terdaftar" style="width: 60px; min-width: 60px; max-width: 60px;" />
+    <col class="col-persen" style="width: 60px; min-width: 60px; max-width: 60px;" />
+    <col class="col-alamat" style="width: 360px; min-width: 360px; max-width: 360px;" />
+    <col class="col-email" style="width: 250px; min-width: 250px; max-width: 250px;" />
+    <col class="col-hp" style="width: 120px; min-width: 120px; max-width: 120px;" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th colspan="10" style="border: none; background: white;"></th>
+      <th style="border: none; background: white; text-align: right;">KNODIK002</th>
+    </tr>
+    <tr>
+      <th colspan="11" class="title-header">REKAP DAFTAR SATUAN PENDIDIKAN BY PPPK</th>
+    </tr>
+    <tr>
+      <th colspan="10" style="border: none; background: white;"></th>
+      <th style="border: none; background: white; text-align: right;">Periode : 01-07-2025</th>
+    </tr>
+    <tr>
+      <th rowspan="2">No</th>
+      <th rowspan="2">NAMA PROVINSI</th>
+      <th rowspan="2">NAMA KAB KOTA</th>
+      <th rowspan="2">NAMA SATUAN PENDIDIKAN</th>
+      <th colspan="7">PTK DAPODIK</th>
+    </tr>
+    <tr>
+      <th>JUMLAH GTK</th>
+      <th>TERDAFTAR BPJS KETENAGAKERJAAN</th>
+      <th>PTK BELUM TERDAFTAR</th>
+      <th>% TERDAFTAR</th>
+      <th>Alamat</th>
+      <th>Email</th>
+      <th>No HP</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td>{{No}}</td>
+      <td>{{Provinsi}}</td>
+      <td>{{Kabupaten_Kota}}</td>
+      <td>{{Nama_Satuan_Pendidikan}}</td>
+      <td class="col-jumlah-gtk">{{PTK_Dapodik}}</td>
+      <td class="col-bpjs">{{Terdaftar_BPJS}}</td>
+      <td class="col-belum-terdaftar">{{Belum_Terdaftar}}</td>
+      <td class="col-persen">{{Persen_Terdaftar}}</td>
+      <td class="col-alamat">{{Alamat}}</td>
+      <td class="col-email">{{Email}}</td>
+      <td class="col-hp">{{No_HP}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

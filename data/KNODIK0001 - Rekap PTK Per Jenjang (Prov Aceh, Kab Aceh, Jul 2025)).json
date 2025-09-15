@@ -1,0 +1,34 @@
+[
+  {
+    "No": 1,
+    "Provinsi": "Prov. Aceh",
+    "Kabupaten_Kota": "Kab. Aceh Barat",
+    "Jumlah": {
+      "ASN": 159,
+      "PPPK": 2,
+      "Non_ASN": {
+        "Negeri": 0,
+        "Swasta": 427
+      },
+      "Subtotal": 137
+    },
+    "BPJS": {
+      "ASN": 51,
+      "PPPK": 33,
+      "Non_ASN": {
+        "Negeri": 3,
+        "Swasta": 812
+      },
+      "Subtotal": 129
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 16,
+      "PPPK": 71,
+      "Non_ASN": {
+        "Negeri": 12,
+        "Swasta": 28
+      },
+      "Subtotal": 12
+    }
+  }
+]

@@ -1,0 +1,1218 @@
+[
+  {
+    "No": 1,
+    "Provinsi": "Prov. Sumatera Selatan",
+    "Kabupaten_Kota": "Prov. Sumatera Selatan",
+    "Jumlah": {
+      "ASN": 16.276,
+      "PPPK": 8.12,
+      "Non_ASN": {
+        "Negeri": 455,
+        "Swasta": 24.851
+      },
+      "Subtotal": 4.987
+    },
+    "BPJS": {
+      "ASN": 4.382,
+      "PPPK": 287,
+      "Non_ASN": {
+        "Negeri": 9.656,
+        "Swasta": 833
+      },
+      "Subtotal": 329
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 144,
+      "PPPK": 1.306,
+      "Non_ASN": {
+        "Negeri": 849,
+        "Swasta": 537
+      },
+      "Subtotal": 5
+    }
+  },
+  {
+    "No": 2,
+    "Provinsi": "Prov. Maluku Utara",
+    "Kabupaten_Kota": "Prov. Maluku Utara",
+    "Jumlah": {
+      "ASN": 4.405,
+      "PPPK": 1.852,
+      "Non_ASN": {
+        "Negeri": 360,
+        "Swasta": 6.617
+      },
+      "Subtotal": 857
+    },
+    "BPJS": {
+      "ASN": 900,
+      "PPPK": 55,
+      "Non_ASN": {
+        "Negeri": 1.812,
+        "Swasta": 164
+      },
+      "Subtotal": 69
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 20,
+      "PPPK": 253,
+      "Non_ASN": {
+        "Negeri": 50,
+        "Swasta": 57
+      },
+      "Subtotal": 2
+    }
+  },
+  {
+    "No": 3,
+    "Provinsi": "Prov. Maluku",
+    "Kabupaten_Kota": "Prov. Maluku",
+    "Jumlah": {
+      "ASN": 7.223,
+      "PPPK": 2.88,
+      "Non_ASN": {
+        "Negeri": 181,
+        "Swasta": 10.284
+      },
+      "Subtotal": 1.403
+    },
+    "BPJS": {
+      "ASN": 647,
+      "PPPK": 47,
+      "Non_ASN": {
+        "Negeri": 2.097,
+        "Swasta": 360
+      },
+      "Subtotal": 133
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 21,
+      "PPPK": 514,
+      "Non_ASN": {
+        "Negeri": 108,
+        "Swasta": 46
+      },
+      "Subtotal": 1
+    }
+  },
+  {
+    "No": 4,
+    "Provinsi": "Prov. Kalimantan Barat",
+    "Kabupaten_Kota": "Prov. Kalimantan Barat",
+    "Jumlah": {
+      "ASN": 8.253,
+      "PPPK": 4.565,
+      "Non_ASN": {
+        "Negeri": 224,
+        "Swasta": 13.042
+      },
+      "Subtotal": 2.685
+    },
+    "BPJS": {
+      "ASN": 1.706,
+      "PPPK": 171,
+      "Non_ASN": {
+        "Negeri": 4.562,
+        "Swasta": 776
+      },
+      "Subtotal": 393
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 27,
+      "PPPK": 1.196,
+      "Non_ASN": {
+        "Negeri": 838,
+        "Swasta": 384
+      },
+      "Subtotal": 8
+    }
+  },
+  {
+    "No": 5,
+    "Provinsi": "Prov. Jambi",
+    "Kabupaten_Kota": "Prov. Jambi",
+    "Jumlah": {
+      "ASN": 7.302,
+      "PPPK": 4.947,
+      "Non_ASN": {
+        "Negeri": 565,
+        "Swasta": 12.814
+      },
+      "Subtotal": 1.108
+    },
+    "BPJS": {
+      "ASN": 1.281,
+      "PPPK": 83,
+      "Non_ASN": {
+        "Negeri": 2.472,
+        "Swasta": 2.239
+      },
+      "Subtotal": 1.784
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 250,
+      "PPPK": 4.273,
+      "Non_ASN": {
+        "Negeri": 374,
+        "Swasta": 478
+      },
+      "Subtotal": 11
+    }
+  },
+  {
+    "No": 6,
+    "Provinsi": "Prov. Papua Barat Daya",
+    "Kabupaten_Kota": "Prov. Papua Barat Daya",
+    "Jumlah": {
+      "ASN": 1.354,
+      "PPPK": 698,
+      "Non_ASN": {
+        "Negeri": 50,
+        "Swasta": 2.102
+      },
+      "Subtotal": 484
+    },
+    "BPJS": {
+      "ASN": 369,
+      "PPPK": 0,
+      "Non_ASN": {
+        "Negeri": 853,
+        "Swasta": 184
+      },
+      "Subtotal": 62
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 3,
+      "PPPK": 249,
+      "Non_ASN": {
+        "Negeri": 83,
+        "Swasta": 96
+      },
+      "Subtotal": 0
+    }
+  },
+  {
+    "No": 7,
+    "Provinsi": "Prov. Sumatera Utara",
+    "Kabupaten_Kota": "Prov. Sumatera Utara",
+    "Jumlah": {
+      "ASN": 21.181,
+      "PPPK": 13.953,
+      "Non_ASN": {
+        "Negeri": 751,
+        "Swasta": 35.885
+      },
+      "Subtotal": 11.35
+    },
+    "BPJS": {
+      "ASN": 13.945,
+      "PPPK": 398,
+      "Non_ASN": {
+        "Negeri": 25.693,
+        "Swasta": 4.167
+      },
+      "Subtotal": 3.7
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 260,
+      "PPPK": 8.127,
+      "Non_ASN": {
+        "Negeri": 3.498,
+        "Swasta": 4.067
+      },
+      "Subtotal": 65
+    }
+  },
+  {
+    "No": 8,
+    "Provinsi": "Prov. Bengkulu",
+    "Kabupaten_Kota": "Prov. Bengkulu",
+    "Jumlah": {
+      "ASN": 5.784,
+      "PPPK": 3.637,
+      "Non_ASN": {
+        "Negeri": 418,
+        "Swasta": 9.839
+      },
+      "Subtotal": 512
+    },
+    "BPJS": {
+      "ASN": 621,
+      "PPPK": 53,
+      "Non_ASN": {
+        "Negeri": 1.186,
+        "Swasta": 1.83
+      },
+      "Subtotal": 1.115
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 156,
+      "PPPK": 3.101,
+      "Non_ASN": {
+        "Negeri": 116,
+        "Swasta": 81
+      },
+      "Subtotal": 0
+    }
+  },
+  {
+    "No": 9,
+    "Provinsi": "Prov. Banten",
+    "Kabupaten_Kota": "Prov. Banten",
+    "Jumlah": {
+      "ASN": 9.602,
+      "PPPK": 6.441,
+      "Non_ASN": {
+        "Negeri": 576,
+        "Swasta": 16.619
+      },
+      "Subtotal": 9.139
+    },
+    "BPJS": {
+      "ASN": 15.145,
+      "PPPK": 1.358,
+      "Non_ASN": {
+        "Negeri": 25.642,
+        "Swasta": 4.53
+      },
+      "Subtotal": 3.474
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 313,
+      "PPPK": 8.317,
+      "Non_ASN": {
+        "Negeri": 3.278,
+        "Swasta": 4.629
+      },
+      "Subtotal": 431
+    }
+  },
+  {
+    "No": 10,
+    "Provinsi": "Prov. Gorontalo",
+    "Kabupaten_Kota": "Prov. Gorontalo",
+    "Jumlah": {
+      "ASN": 2.49,
+      "PPPK": 1.84,
+      "Non_ASN": {
+        "Negeri": 259,
+        "Swasta": 4.589
+      },
+      "Subtotal": 142
+    },
+    "BPJS": {
+      "ASN": 367,
+      "PPPK": 0,
+      "Non_ASN": {
+        "Negeri": 509,
+        "Swasta": 1.455
+      },
+      "Subtotal": 1.069
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 180,
+      "PPPK": 2.704,
+      "Non_ASN": {
+        "Negeri": 56,
+        "Swasta": 90
+      },
+      "Subtotal": 0
+    }
+  },
+  {
+    "No": 11,
+    "Provinsi": "Prov. Aceh",
+    "Kabupaten_Kota": "Prov. Aceh",
+    "Jumlah": {
+      "ASN": 17.66,
+      "PPPK": 9.064,
+      "Non_ASN": {
+        "Negeri": 1.032,
+        "Swasta": 27.756
+      },
+      "Subtotal": 2.139
+    },
+    "BPJS": {
+      "ASN": 1.09,
+      "PPPK": 596,
+      "Non_ASN": {
+        "Negeri": 3.825,
+        "Swasta": 2.814
+      },
+      "Subtotal": 1.486
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 351,
+      "PPPK": 4.651,
+      "Non_ASN": {
+        "Negeri": 251,
+        "Swasta": 140
+      },
+      "Subtotal": 50
+    }
+  },
+  {
+    "No": 12,
+    "Provinsi": "Prov. Kepulauan Bangka Belitung",
+    "Kabupaten_Kota": "Prov. Kepulauan Bangka Belitung",
+    "Jumlah": {
+      "ASN": 2.186,
+      "PPPK": 1.912,
+      "Non_ASN": {
+        "Negeri": 231,
+        "Swasta": 4.329
+      },
+      "Subtotal": 487
+    },
+    "BPJS": {
+      "ASN": 539,
+      "PPPK": 30,
+      "Non_ASN": {
+        "Negeri": 1.056,
+        "Swasta": 1.887
+      },
+      "Subtotal": 1.681
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 188,
+      "PPPK": 3.756,
+      "Non_ASN": {
+        "Negeri": 165,
+        "Swasta": 101
+      },
+      "Subtotal": 0
+    }
+  },
+  {
+    "No": 13,
+    "Provinsi": "Prov. Nusa Tenggara Timur",
+    "Kabupaten_Kota": "Prov. Nusa Tenggara Timur",
+    "Jumlah": {
+      "ASN": 16.399,
+      "PPPK": 7.995,
+      "Non_ASN": {
+        "Negeri": 1.143,
+        "Swasta": 25.537
+      },
+      "Subtotal": 5.578
+    },
+    "BPJS": {
+      "ASN": 3.924,
+      "PPPK": 192,
+      "Non_ASN": {
+        "Negeri": 9.694,
+        "Swasta": 1.21
+      },
+      "Subtotal": 570
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 406,
+      "PPPK": 2.186,
+      "Non_ASN": {
+        "Negeri": 1.115,
+        "Swasta": 1.034
+      },
+      "Subtotal": 49
+    }
+  },
+  {
+    "No": 14,
+    "Provinsi": "Prov. Sulawesi Selatan",
+    "Kabupaten_Kota": "Prov. Sulawesi Selatan",
+    "Jumlah": {
+      "ASN": 17.087,
+      "PPPK": 9.892,
+      "Non_ASN": {
+        "Negeri": 779,
+        "Swasta": 27.758
+      },
+      "Subtotal": 3.9
+    },
+    "BPJS": {
+      "ASN": 3.78,
+      "PPPK": 789,
+      "Non_ASN": {
+        "Negeri": 8.469,
+        "Swasta": 1.378
+      },
+      "Subtotal": 937
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 155,
+      "PPPK": 2.47,
+      "Non_ASN": {
+        "Negeri": 1.091,
+        "Swasta": 1.079
+      },
+      "Subtotal": 179
+    }
+  },
+  {
+    "No": 15,
+    "Provinsi": "Prov. Bali",
+    "Kabupaten_Kota": "Prov. Bali",
+    "Jumlah": {
+      "ASN": 7.601,
+      "PPPK": 5.192,
+      "Non_ASN": {
+        "Negeri": 610,
+        "Swasta": 13.403
+      },
+      "Subtotal": 1.574
+    },
+    "BPJS": {
+      "ASN": 3.032,
+      "PPPK": 25,
+      "Non_ASN": {
+        "Negeri": 4.631,
+        "Swasta": 1.161
+      },
+      "Subtotal": 590
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 62,
+      "PPPK": 1.813,
+      "Non_ASN": {
+        "Negeri": 444,
+        "Swasta": 898
+      },
+      "Subtotal": 0
+    }
+  },
+  {
+    "No": 16,
+    "Provinsi": "Prov. Kepulauan Riau",
+    "Kabupaten_Kota": "Prov. Kepulauan Riau",
+    "Jumlah": {
+      "ASN": 4.344,
+      "PPPK": 2.59,
+      "Non_ASN": {
+        "Negeri": 265,
+        "Swasta": 7.199
+      },
+      "Subtotal": 1.103
+    },
+    "BPJS": {
+      "ASN": 1.109,
+      "PPPK": 181,
+      "Non_ASN": {
+        "Negeri": 2.393,
+        "Swasta": 1.496
+      },
+      "Subtotal": 974
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 130,
+      "PPPK": 2.6,
+      "Non_ASN": {
+        "Negeri": 269,
+        "Swasta": 358
+      },
+      "Subtotal": 74
+    }
+  },
+  {
+    "No": 17,
+    "Provinsi": "Prov. Kalimantan Timur",
+    "Kabupaten_Kota": "Prov. Kalimantan Timur",
+    "Jumlah": {
+      "ASN": 6.368,
+      "PPPK": 5.1,
+      "Non_ASN": {
+        "Negeri": 438,
+        "Swasta": 11.906
+      },
+      "Subtotal": 1.542
+    },
+    "BPJS": {
+      "ASN": 2.655,
+      "PPPK": 268,
+      "Non_ASN": {
+        "Negeri": 4.465,
+        "Swasta": 581
+      },
+      "Subtotal": 499
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 97,
+      "PPPK": 1.177,
+      "Non_ASN": {
+        "Negeri": 553,
+        "Swasta": 711
+      },
+      "Subtotal": 76
+    }
+  },
+  {
+    "No": 18,
+    "Provinsi": "Prov. Papua",
+    "Kabupaten_Kota": "Prov. Papua",
+    "Jumlah": {
+      "ASN": 2.073,
+      "PPPK": 1.372,
+      "Non_ASN": {
+        "Negeri": 100,
+        "Swasta": 3.545
+      },
+      "Subtotal": 1.122
+    },
+    "BPJS": {
+      "ASN": 409,
+      "PPPK": 14,
+      "Non_ASN": {
+        "Negeri": 1.545,
+        "Swasta": 193
+      },
+      "Subtotal": 54
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 0,
+      "PPPK": 247,
+      "Non_ASN": {
+        "Negeri": 234,
+        "Swasta": 64
+      },
+      "Subtotal": 0
+    }
+  },
+  {
+    "No": 19,
+    "Provinsi": "Prov. Sulawesi Tenggara",
+    "Kabupaten_Kota": "Prov. Sulawesi Tenggara",
+    "Jumlah": {
+      "ASN": 10.72,
+      "PPPK": 4.631,
+      "Non_ASN": {
+        "Negeri": 292,
+        "Swasta": 15.643
+      },
+      "Subtotal": 685
+    },
+    "BPJS": {
+      "ASN": 806,
+      "PPPK": 560,
+      "Non_ASN": {
+        "Negeri": 2.051,
+        "Swasta": 933
+      },
+      "Subtotal": 400
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 38,
+      "PPPK": 1.371,
+      "Non_ASN": {
+        "Negeri": 51,
+        "Swasta": 95
+      },
+      "Subtotal": 42
+    }
+  },
+  {
+    "No": 20,
+    "Provinsi": "Prov. Riau",
+    "Kabupaten_Kota": "Prov. Riau",
+    "Jumlah": {
+      "ASN": 13.866,
+      "PPPK": 7.124,
+      "Non_ASN": {
+        "Negeri": 487,
+        "Swasta": 21.477
+      },
+      "Subtotal": 2.699
+    },
+    "BPJS": {
+      "ASN": 4.041,
+      "PPPK": 348,
+      "Non_ASN": {
+        "Negeri": 7.088,
+        "Swasta": 3.209
+      },
+      "Subtotal": 1.491
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 144,
+      "PPPK": 4.844,
+      "Non_ASN": {
+        "Negeri": 901,
+        "Swasta": 1.627
+      },
+      "Subtotal": 155
+    }
+  },
+  {
+    "No": 21,
+    "Provinsi": "Prov. Sumatera Barat",
+    "Kabupaten_Kota": "Prov. Sumatera Barat",
+    "Jumlah": {
+      "ASN": 13.033,
+      "PPPK": 7.839,
+      "Non_ASN": {
+        "Negeri": 756,
+        "Swasta": 21.628
+      },
+      "Subtotal": 1.76
+    },
+    "BPJS": {
+      "ASN": 1.865,
+      "PPPK": 1.299,
+      "Non_ASN": {
+        "Negeri": 4.924,
+        "Swasta": 1.864
+      },
+      "Subtotal": 1.197
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 90,
+      "PPPK": 3.151,
+      "Non_ASN": {
+        "Negeri": 562,
+        "Swasta": 494
+      },
+      "Subtotal": 376
+    }
+  },
+  {
+    "No": 22,
+    "Provinsi": "Prov. Papua Pegunungan",
+    "Kabupaten_Kota": "Prov. Papua Pegunungan",
+    "Jumlah": {
+      "ASN": 811,
+      "PPPK": 182,
+      "Non_ASN": {
+        "Negeri": 0,
+        "Swasta": 993
+      },
+      "Subtotal": 322
+    },
+    "BPJS": {
+      "ASN": 172,
+      "PPPK": 0,
+      "Non_ASN": {
+        "Negeri": 494,
+        "Swasta": 15
+      },
+      "Subtotal": 2
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 0,
+      "PPPK": 17,
+      "Non_ASN": {
+        "Negeri": 3,
+        "Swasta": 1
+      },
+      "Subtotal": 0
+    }
+  },
+  {
+    "No": 23,
+    "Provinsi": "Prov. D.K.I. Jakarta",
+    "Kabupaten_Kota": "Prov. D.K.I. Jakarta",
+    "Jumlah": {
+      "ASN": 7.541,
+      "PPPK": 5.022,
+      "Non_ASN": {
+        "Negeri": 805,
+        "Swasta": 13.368
+      },
+      "Subtotal": 10.267
+    },
+    "BPJS": {
+      "ASN": 12.229,
+      "PPPK": 1.022,
+      "Non_ASN": {
+        "Negeri": 23.518,
+        "Swasta": 1.831
+      },
+      "Subtotal": 1.395
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 237,
+      "PPPK": 3.463,
+      "Non_ASN": {
+        "Negeri": 4.3,
+        "Swasta": 3.937
+      },
+      "Subtotal": 300
+    }
+  },
+  {
+    "No": 24,
+    "Provinsi": "Prov. Papua Barat",
+    "Kabupaten_Kota": "Prov. Papua Barat",
+    "Jumlah": {
+      "ASN": 1.279,
+      "PPPK": 659,
+      "Non_ASN": {
+        "Negeri": 0,
+        "Swasta": 1.938
+      },
+      "Subtotal": 389
+    },
+    "BPJS": {
+      "ASN": 134,
+      "PPPK": 15,
+      "Non_ASN": {
+        "Negeri": 538,
+        "Swasta": 112
+      },
+      "Subtotal": 71
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 0,
+      "PPPK": 183,
+      "Non_ASN": {
+        "Negeri": 98,
+        "Swasta": 18
+      },
+      "Subtotal": 0
+    }
+  },
+  {
+    "No": 25,
+    "Provinsi": "Prov. D.I. Yogyakarta",
+    "Kabupaten_Kota": "Prov. D.I. Yogyakarta",
+    "Jumlah": {
+      "ASN": 3.936,
+      "PPPK": 4.608,
+      "Non_ASN": {
+        "Negeri": 490,
+        "Swasta": 9.034
+      },
+      "Subtotal": 2.528
+    },
+    "BPJS": {
+      "ASN": 4.553,
+      "PPPK": 956,
+      "Non_ASN": {
+        "Negeri": 8.037,
+        "Swasta": 139
+      },
+      "Subtotal": 193
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 13,
+      "PPPK": 345,
+      "Non_ASN": {
+        "Negeri": 1.33,
+        "Swasta": 2.706
+      },
+      "Subtotal": 217
+    }
+  },
+  {
+    "No": 26,
+    "Provinsi": "Prov. Kalimantan Tengah",
+    "Kabupaten_Kota": "Prov. Kalimantan Tengah",
+    "Jumlah": {
+      "ASN": 5.742,
+      "PPPK": 3.377,
+      "Non_ASN": {
+        "Negeri": 472,
+        "Swasta": 9.591
+      },
+      "Subtotal": 800
+    },
+    "BPJS": {
+      "ASN": 731,
+      "PPPK": 49,
+      "Non_ASN": {
+        "Negeri": 1.58,
+        "Swasta": 957
+      },
+      "Subtotal": 513
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 129,
+      "PPPK": 1.599,
+      "Non_ASN": {
+        "Negeri": 294,
+        "Swasta": 306
+      },
+      "Subtotal": 13
+    }
+  },
+  {
+    "No": 27,
+    "Provinsi": "Prov. Kalimantan Selatan",
+    "Kabupaten_Kota": "Prov. Kalimantan Selatan",
+    "Jumlah": {
+      "ASN": 6.436,
+      "PPPK": 4.66,
+      "Non_ASN": {
+        "Negeri": 991,
+        "Swasta": 12.087
+      },
+      "Subtotal": 975
+    },
+    "BPJS": {
+      "ASN": 1.519,
+      "PPPK": 50,
+      "Non_ASN": {
+        "Negeri": 2.544,
+        "Swasta": 2.31
+      },
+      "Subtotal": 1.826
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 345,
+      "PPPK": 4.481,
+      "Non_ASN": {
+        "Negeri": 266,
+        "Swasta": 392
+      },
+      "Subtotal": 5
+    }
+  },
+  {
+    "No": 28,
+    "Provinsi": "Prov. Nusa Tenggara Barat",
+    "Kabupaten_Kota": "Prov. Nusa Tenggara Barat",
+    "Jumlah": {
+      "ASN": 10.743,
+      "PPPK": 7.627,
+      "Non_ASN": {
+        "Negeri": 668,
+        "Swasta": 19.038
+      },
+      "Subtotal": 2.812
+    },
+    "BPJS": {
+      "ASN": 3.267,
+      "PPPK": 427,
+      "Non_ASN": {
+        "Negeri": 6.506,
+        "Swasta": 3.091
+      },
+      "Subtotal": 2.287
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 187,
+      "PPPK": 5.565,
+      "Non_ASN": {
+        "Negeri": 554,
+        "Swasta": 616
+      },
+      "Subtotal": 40
+    }
+  },
+  {
+    "No": 29,
+    "Provinsi": "Prov. Sulawesi Barat",
+    "Kabupaten_Kota": "Prov. Sulawesi Barat",
+    "Jumlah": {
+      "ASN": 3.342,
+      "PPPK": 2.866,
+      "Non_ASN": {
+        "Negeri": 335,
+        "Swasta": 6.543
+      },
+      "Subtotal": 140
+    },
+    "BPJS": {
+      "ASN": 993,
+      "PPPK": 120,
+      "Non_ASN": {
+        "Negeri": 1.253,
+        "Swasta": 999
+      },
+      "Subtotal": 871
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 127,
+      "PPPK": 1.997,
+      "Non_ASN": {
+        "Negeri": 22,
+        "Swasta": 176
+      },
+      "Subtotal": 21
+    }
+  },
+  {
+    "No": 30,
+    "Provinsi": "Prov. Papua Selatan",
+    "Kabupaten_Kota": "Prov. Papua Selatan",
+    "Jumlah": {
+      "ASN": 906,
+      "PPPK": 763,
+      "Non_ASN": {
+        "Negeri": 38,
+        "Swasta": 1.707
+      },
+      "Subtotal": 295
+    },
+    "BPJS": {
+      "ASN": 77,
+      "PPPK": 0,
+      "Non_ASN": {
+        "Negeri": 372,
+        "Swasta": 57
+      },
+      "Subtotal": 67
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 5,
+      "PPPK": 129,
+      "Non_ASN": {
+        "Negeri": 25,
+        "Swasta": 7
+      },
+      "Subtotal": 0
+    }
+  },
+  {
+    "No": 31,
+    "Provinsi": "Prov. Papua Tengah",
+    "Kabupaten_Kota": "Prov. Papua Tengah",
+    "Jumlah": {
+      "ASN": 1,
+      "PPPK": 658,
+      "Non_ASN": {
+        "Negeri": 17,
+        "Swasta": 1.675
+      },
+      "Subtotal": 511
+    },
+    "BPJS": {
+      "ASN": 718,
+      "PPPK": 29,
+      "Non_ASN": {
+        "Negeri": 1.258,
+        "Swasta": 58
+      },
+      "Subtotal": 58
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 0,
+      "PPPK": 116,
+      "Non_ASN": {
+        "Negeri": 68,
+        "Swasta": 38
+      },
+      "Subtotal": 0
+    }
+  },
+  {
+    "No": 32,
+    "Provinsi": "Prov. Jawa Barat",
+    "Kabupaten_Kota": "Prov. Jawa Barat",
+    "Jumlah": {
+      "ASN": 38.419,
+      "PPPK": 26.082,
+      "Non_ASN": {
+        "Negeri": 2.677,
+        "Swasta": 67.178
+      },
+      "Subtotal": 25.1
+    },
+    "BPJS": {
+      "ASN": 58.701,
+      "PPPK": 3.556,
+      "Non_ASN": {
+        "Negeri": 87.357,
+        "Swasta": 12.049
+      },
+      "Subtotal": 9.496
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 856,
+      "PPPK": 22.401,
+      "Non_ASN": {
+        "Negeri": 9.368,
+        "Swasta": 18.816
+      },
+      "Subtotal": 735
+    }
+  },
+  {
+    "No": 33,
+    "Provinsi": "Prov. Sulawesi Tengah",
+    "Kabupaten_Kota": "Prov. Sulawesi Tengah",
+    "Jumlah": {
+      "ASN": 7.035,
+      "PPPK": 4.248,
+      "Non_ASN": {
+        "Negeri": 346,
+        "Swasta": 11.629
+      },
+      "Subtotal": 716
+    },
+    "BPJS": {
+      "ASN": 1.063,
+      "PPPK": 162,
+      "Non_ASN": {
+        "Negeri": 1.941,
+        "Swasta": 4.991
+      },
+      "Subtotal": 3.077
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 144,
+      "PPPK": 8.212,
+      "Non_ASN": {
+        "Negeri": 257,
+        "Swasta": 293
+      },
+      "Subtotal": 44
+    }
+  },
+  {
+    "No": 34,
+    "Provinsi": "Prov. Lampung",
+    "Kabupaten_Kota": "Prov. Lampung",
+    "Jumlah": {
+      "ASN": 12.728,
+      "PPPK": 7.621,
+      "Non_ASN": {
+        "Negeri": 412,
+        "Swasta": 20.761
+      },
+      "Subtotal": 4.234
+    },
+    "BPJS": {
+      "ASN": 7.17,
+      "PPPK": 224,
+      "Non_ASN": {
+        "Negeri": 11.628,
+        "Swasta": 513
+      },
+      "Subtotal": 302
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 9,
+      "PPPK": 824,
+      "Non_ASN": {
+        "Negeri": 958,
+        "Swasta": 1.443
+      },
+      "Subtotal": 47
+    }
+  },
+  {
+    "No": 35,
+    "Provinsi": "Prov. Sulawesi Utara",
+    "Kabupaten_Kota": "Prov. Sulawesi Utara",
+    "Jumlah": {
+      "ASN": 4.747,
+      "PPPK": 3.932,
+      "Non_ASN": {
+        "Negeri": 131,
+        "Swasta": 8.81
+      },
+      "Subtotal": 1.318
+    },
+    "BPJS": {
+      "ASN": 1.356,
+      "PPPK": 247,
+      "Non_ASN": {
+        "Negeri": 2.921,
+        "Swasta": 1.021
+      },
+      "Subtotal": 927
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 29,
+      "PPPK": 1.977,
+      "Non_ASN": {
+        "Negeri": 419,
+        "Swasta": 256
+      },
+      "Subtotal": 36
+    }
+  },
+  {
+    "No": 36,
+    "Provinsi": "Prov. Jawa Tengah",
+    "Kabupaten_Kota": "Prov. Jawa Tengah",
+    "Jumlah": {
+      "ASN": 25.766,
+      "PPPK": 22.718,
+      "Non_ASN": {
+        "Negeri": 1.72,
+        "Swasta": 50.204
+      },
+      "Subtotal": 10.626
+    },
+    "BPJS": {
+      "ASN": 39.175,
+      "PPPK": 1.873,
+      "Non_ASN": {
+        "Negeri": 51.674,
+        "Swasta": 6.395
+      },
+      "Subtotal": 6.21
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 600,
+      "PPPK": 13.205,
+      "Non_ASN": {
+        "Negeri": 5,
+        "Swasta": 19.235
+      },
+      "Subtotal": 404
+    }
+  },
+  {
+    "No": 37,
+    "Provinsi": "Prov. Jawa Timur",
+    "Kabupaten_Kota": "Prov. Jawa Timur",
+    "Jumlah": {
+      "ASN": 31.282,
+      "PPPK": 29.571,
+      "Non_ASN": {
+        "Negeri": 1.743,
+        "Swasta": 62.596
+      },
+      "Subtotal": 19.644
+    },
+    "BPJS": {
+      "ASN": 37.483,
+      "PPPK": 3.073,
+      "Non_ASN": {
+        "Negeri": 60.2,
+        "Swasta": 8.025
+      },
+      "Subtotal": 8.109
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 474,
+      "PPPK": 16.608,
+      "Non_ASN": {
+        "Negeri": 7.106,
+        "Swasta": 13.425
+      },
+      "Subtotal": 742
+    }
+  },
+  {
+    "No": 38,
+    "Provinsi": "Prov. Kalimantan Utara",
+    "Kabupaten_Kota": "Prov. Kalimantan Utara",
+    "Jumlah": {
+      "ASN": 1.708,
+      "PPPK": 1.14,
+      "Non_ASN": {
+        "Negeri": 167,
+        "Swasta": 3.015
+      },
+      "Subtotal": 383
+    },
+    "BPJS": {
+      "ASN": 206,
+      "PPPK": 5,
+      "Non_ASN": {
+        "Negeri": 594,
+        "Swasta": 494
+      },
+      "Subtotal": 374
+    },
+    "Kepesertaan_Aktif": {
+      "ASN": 74,
+      "PPPK": 942,
+      "Non_ASN": {
+        "Negeri": 144,
+        "Swasta": 56
+      },
+      "Subtotal": 0
+    }
+  }
+]

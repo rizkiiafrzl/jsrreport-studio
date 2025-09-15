@@ -148,7 +148,7 @@ class Service {
                 try {
                     const report = await jsreportInstance.render({
                         template: {
-                            name: 'crops-report-excel' // Template name in jsreport studio
+                            name: 'template-excel' // Template name in jsreport studio
                         },
                         data: reportData.data
                     });

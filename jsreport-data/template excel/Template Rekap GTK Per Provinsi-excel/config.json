@@ -1,0 +1,20 @@
+{
+    "name": "Template Rekap GTK Per Provinsi-excel",
+    "engine": "handlebars",
+    "recipe": "html-to-xlsx",
+    "shortid": "r-jN4Z0Y0",
+    "creationDate": {
+        "$$date": 1757475619481
+    },
+    "modificationDate": {
+        "$$date": 1757646401059
+    },
+    "_id": "Y1S059sPE1F8G3fl",
+    "$entitySet": "templates",
+    "data": {
+        "shortid": "X0KrU1kh7"
+    },
+    "htmlToXlsx": {
+        "htmlEngine": "chrome"
+    }
+}

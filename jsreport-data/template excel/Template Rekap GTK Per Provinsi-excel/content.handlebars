@@ -1,0 +1,136 @@
+<style>
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    font-family: Arial, sans-serif; 
+    font-size: 11px;
+    table-layout: fixed;
+  }
+  th, td { 
+    border: 1px solid #333; 
+    padding: 6px; 
+    text-align: center !important;
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  th { 
+    background-color: #e6f3ff; 
+    font-weight: bold;
+    font-size: 10px;
+    color: #000;
+  }
+  .title-header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #f0f0f0;
+    border: none;
+  }
+  .header-no-border {
+    border: none !important;
+    background: white !important;
+  }
+  .subtotal-header {
+    background-color: #d9d9d9 !important;
+    font-weight: bold;
+  }
+  .subtotal-data {
+    background-color: #f0f0f0 !important;
+    font-weight: bold;
+  }
+  .col-no { width: 40px; }
+  .col-prov { width: 200px; }
+  .col-asn { width: 60px; }
+  .col-pppk { width: 60px; }
+  .col-non-asn { width: 60px; }
+  .col-subtotal { width: 70px; }
+</style>
+<table border="1">
+  <colgroup>
+    <col class="col-no" />
+    <col class="col-prov" />
+    <col class="col-asn" />
+    <col class="col-pppk" />
+    <col class="col-non-asn" />
+    <col class="col-non-asn" />
+    <col class="col-subtotal" />
+    <col class="col-asn" />
+    <col class="col-pppk" />
+    <col class="col-non-asn" />
+    <col class="col-non-asn" />
+    <col class="col-subtotal" />
+    <col class="col-asn" />
+    <col class="col-pppk" />
+    <col class="col-non-asn" />
+    <col class="col-non-asn" />
+    <col class="col-subtotal" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th colspan="16" style="border: none; background: white;"></th>
+      <th style="border: none; background: white; text-align: right;">KNODIK0003</th>
+    </tr>
+    <tr>
+      <th colspan="17" class="title-header" style="border: none; background: white;">REKAP GTK PER PROVINSI "ALL"</th>
+    </tr>
+    <tr>
+      <th colspan="16" style="border: none; background: white;"></th>
+      <th style="border: none; background: white; text-align: right;">Periode : 01-07-2025</th>
+    </tr>
+    <tr>
+        <th rowspan="3">No</th>
+        <th rowspan="3">NAMA PROVINSI</th>
+        <th colspan="5">JUMLAH GTK DAPODIK</th>
+        <th colspan="5">GTK TERDAFTAR BPJS KETENAGAKERJAAN</th>
+        <th colspan="5">%KEPESERTAAN AKTIF</th>
+    </tr>
+    <tr>
+      <th rowspan="2">ASN</th>
+      <th rowspan="2">PPPK</th>
+      <th colspan="2">NON ASN</th>
+      <th rowspan="2" class="subtotal-header">SUB TOTAL</th>
+      <th rowspan="2">ASN</th>
+      <th rowspan="2">PPPK</th>
+      <th colspan="2">NON ASN</th>
+      <th rowspan="2" class="subtotal-header">SUB TOTAL</th>
+      <th rowspan="2">ASN</th>
+      <th rowspan="2">PPPK</th>
+      <th colspan="2">NON ASN</th>
+      <th rowspan="2" class="subtotal-header">SUB TOTAL</th>
+    </tr>
+    <tr>
+      <th>NEGERI</th>
+      <th>SWASTA</th>
+      <th>NEGERI</th>
+      <th>SWASTA</th>
+      <th>NEGERI</th>
+      <th>SWASTA</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td>{{No}}</td>
+      <td>{{Provinsi}}</td>
+      <td>{{Jumlah.ASN}}</td>
+      <td>{{Jumlah.PPPK}}</td>
+      <td>{{Jumlah.Non_ASN.Negeri}}</td>
+      <td>{{Jumlah.Non_ASN.Swasta}}</td>
+      <td class="subtotal-data">{{Jumlah.Subtotal}}</td>
+
+      <td>{{BPJS.ASN}}</td>
+      <td>{{BPJS.PPPK}}</td>
+      <td>{{BPJS.Non_ASN.Negeri}}</td>
+      <td>{{BPJS.Non_ASN.Swasta}}</td>
+      <td class="subtotal-data">{{BPJS.Subtotal}}</td>
+
+      <td>{{Kepesertaan_Aktif.ASN}}</td>
+      <td>{{Kepesertaan_Aktif.PPPK}}</td>
+      <td>{{Kepesertaan_Aktif.Non_ASN.Negeri}}</td>
+      <td>{{Kepesertaan_Aktif.Non_ASN.Swasta}}</td>
+      <td class="subtotal-data">{{Kepesertaan_Aktif.Subtotal}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

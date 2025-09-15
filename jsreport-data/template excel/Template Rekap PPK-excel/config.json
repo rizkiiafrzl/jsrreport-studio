@@ -1,0 +1,20 @@
+{
+    "name": "Template Rekap PPK-excel",
+    "recipe": "html-to-xlsx",
+    "shortid": "aCVCavXyV",
+    "engine": "handlebars",
+    "creationDate": {
+        "$$date": 1757565993815
+    },
+    "modificationDate": {
+        "$$date": 1757646750721
+    },
+    "data": {
+        "shortid": "DtPzsMq"
+    },
+    "htmlToXlsx": {
+        "htmlEngine": "chrome"
+    },
+    "_id": "huJGAbdcPvUcK8C4",
+    "$entitySet": "templates"
+}

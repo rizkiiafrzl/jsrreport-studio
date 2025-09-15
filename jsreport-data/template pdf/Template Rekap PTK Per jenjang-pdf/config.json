@@ -1,0 +1,20 @@
+{
+    "name": "Template Rekap PTK Per jenjang-pdf",
+    "recipe": "chrome-pdf",
+    "shortid": "t7MxfRBSq",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "data": {
+        "shortid": "itpEvDJUC"
+    },
+    "creationDate": {
+        "$$date": 1757494411367
+    },
+    "modificationDate": {
+        "$$date": 1757579153924
+    },
+    "_id": "3Ds1MNZdLUhjsEsC",
+    "$entitySet": "templates"
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>REKAP Daftar Satuan Pendidikan By PPPK</title>
+  <style>
+    {{asset 'template-pdf.css'}}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="brand">
+      <img src="{{asset "Log BPJS Ketenagakerjaan.png" "dataURI"}}" alt="BPJS Ketenagakerjaan" class="brand-logo" />
+      <div class="brand-title">
+        <div class="title-line-1">REKAP DAFTAR SATUAN PENDIDIKAN</div>
+        <div class="title-line-2">BY PPPK</div>
+        <div class="periode">Periode: 01-07-2025</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">Halaman : 1/1</div>
+      <div class="meta-row">Tanggal Cetak : 09-09-2025</div>
+      <div class="meta-row">Waktu Cetak : 15:45</div>
+    </div>
+  </div>
+
+  <!-- Section -->
+  <div class="section">
+    <div class="label">NAMA KANTOR :</div>
+    <div class="value">KANTOR PUSAT</div>
+    <div class="underline"></div>
+  </div>
+
+  <!-- Table -->
+  <table class="table-pppk">
+    <colgroup>
+      <col style="width: 40px;">  <!-- No -->
+      <col style="width: 80px;">  <!-- Provinsi -->
+      <col style="width: 80px;">  <!-- Kab Kota -->
+      <col style="width: 120px;"> <!-- Nama Satuan Pendidikan -->
+      <col style="width: 60px;">  <!-- JUMLAH GTK -->
+      <col style="width: 120px;">  <!-- TERDAFTAR BPJS -->
+      <col style="width: 70px;">  <!-- PTK BELUM TERDAFTAR -->
+      <col style="width: 100px;">  <!-- % TERDAFTAR -->
+      <col style="width: 250px;"> <!-- Alamat -->
+      <col style="width: 180px;"> <!-- Email -->
+      <col style="width: 80px;"> <!-- No HP -->
+    </colgroup>
+    <thead>
+      <tr>
+        <th rowspan="2">No</th>
+        <th rowspan="2">Nama Provinsi</th>
+        <th rowspan="2">Nama Kab Kota</th>
+        <th rowspan="2">Nama Satuan Pendidikan</th>
+        <th colspan="7">Jumlah GTK DAPODIK</th>
+      </tr>
+      <tr>
+        <th>JUMLAH GTK</th>
+        <th>TERDAFTAR BPJS KETENAGAKERJAAN</th>
+        <th>PTK BELUM TERDAFTAR</th>
+        <th>% TERDAFTAR</th>
+        <th>Alamat</th>
+        <th>Email</th>
+        <th>No HP</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td>{{No}}</td>
+        <td>{{Provinsi}}</td>
+        <td>{{Kabupaten_Kota}}</td>
+        <td>{{Nama_Satuan_Pendidikan}}</td>
+        <td>{{PTK_Dapodik}}</td>
+        <td>{{Terdaftar_BPJS}}</td>
+        <td>{{Belum_Terdaftar}}</td>
+        <td>{{Persen_Terdaftar}}</td>
+        <td>{{Alamat}}</td>
+        <td>{{Email}}</td>
+        <td>{{No_HP}}</td>
+      </tr>
+      {{/each}}
+      <!-- Baris Total -->
+      <tr style="font-weight: bold; background-color: #f0f0f0;">
+        <td colspan="4">TOTAL</td>
+        <td>{{summary.totalJumlahSubtotal}}</td>
+        <td>{{summary.totalBPJSSubtotal}}</td>
+        <td></td>
+        <td>{{summary.avgKepesertaanSubtotal}}</td>
+        <td colspan="3"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Footer -->
+  <div class="page-footer">
+    <div class="code-left">REKAP 2025</div>
+    <div class="code-right">KNODIK002</div>
+  </div>
+
+</body>
+</html>

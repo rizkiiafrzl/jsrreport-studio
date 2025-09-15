@@ -1,0 +1,20 @@
+{
+    "name": "Template Rekap GTK Per Provinsi-pdf",
+    "engine": "handlebars",
+    "recipe": "chrome-pdf",
+    "shortid": "14haxLsUy",
+    "chrome": {
+        "printBackground": true
+    },
+    "data": {
+        "shortid": "X0KrU1kh7"
+    },
+    "creationDate": {
+        "$$date": 1757402456204
+    },
+    "modificationDate": {
+        "$$date": 1757496946803
+    },
+    "_id": "Udpc0N6odaWkq3Kv",
+    "$entitySet": "templates"
+}
