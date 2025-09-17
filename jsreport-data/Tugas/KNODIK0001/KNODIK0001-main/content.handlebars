@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>{{@root.title}}</title>
+  <style>
+    {{ asset "assets/style.css" "utf8" }}
+  </style>
+</head>
+<body>
+
+  <!-- Header (sebaris: kiri - tengah - kanan) -->
+  <div class="page-header">
+    <!-- Logo kiri -->
+    <div class="brand-left">
+      <img src="{{asset 'assets/Logo BPJS Ketenagakerjaan.png' 'dataURI'}}" alt="BPJS Ketenagakerjaan" class="brand-logo" />
+    </div>
+
+    <!-- Judul tengah -->
+    <div class="brand-title">
+      <div class="title-line-1">{{@root.title}}</div>
+      <div class="title-line-2">{{@root.subtitle}}</div>
+      <div class="periode">Periode: {{@root.period}}</div>
+    </div>
+
+    <!-- Meta kanan -->
+    <div class="meta">
+      <div class="meta-row">Halaman : {{getPageNumber @index}} / {{getTotalPages $pdf.pages}}</div>
+      <div class="meta-row">Tanggal Cetak : {{getFormattedDateWithTimezone}}</div>
+    </div>
+  </div>
+
+  <!-- Section kecil -->
+  <div class="section">
+    <div class="label">NAMA KANTOR :</div>
+    <div class="value">KANTOR PUSAT</div>
+    <div class="underline"></div>
+  </div>
+
+   <!-- Table -->
+   <table class="table-kabkot">
+    <thead>
+      <tr>
+        <th colspan="18">JUMLAH GTK BERDASARKAN JENJANG</th>
+      </tr>
+      <tr>
+        <th colspan="9">NEGERI</th>
+        <th colspan="9">SWASTA</th>
+      </tr>
+      <tr>
+        <th>TK</th><th>PAUD</th><th>KB</th><th>SD</th><th>SMP</th><th>SMA</th><th>SMK</th><th>SLB</th><th>SUB TOTAL</th>
+        <th>TK</th><th>PAUD</th><th>KB</th><th>SD</th><th>SMP</th><th>SMA</th><th>SMK</th><th>SLB</th><th>SUB TOTAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td>{{Jumlah.Non_ASN.Negeri.TK}}</td>
+        <td>{{Jumlah.Non_ASN.Negeri.PAUD}}</td>
+        <td>{{Jumlah.Non_ASN.Negeri.KB}}</td>
+        <td>{{Jumlah.Non_ASN.Negeri.SD}}</td>
+        <td>{{Jumlah.Non_ASN.Negeri.SMP}}</td>
+        <td>{{Jumlah.Non_ASN.Negeri.SMA}}</td>
+        <td>{{Jumlah.Non_ASN.Negeri.SMK}}</td>
+        <td>{{Jumlah.Non_ASN.Negeri.SLB}}</td>
+        <td>{{Jumlah.Subtotal_Non_ASN_Negeri}}</td>
+        <td>{{Jumlah.Non_ASN.Swasta.TK}}</td>
+        <td>{{Jumlah.Non_ASN.Swasta.PAUD}}</td>
+        <td>{{Jumlah.Non_ASN.Swasta.KB}}</td>
+        <td>{{Jumlah.Non_ASN.Swasta.SD}}</td>
+        <td>{{Jumlah.Non_ASN.Swasta.SMP}}</td>
+        <td>{{Jumlah.Non_ASN.Swasta.SMA}}</td>
+        <td>{{Jumlah.Non_ASN.Swasta.SMK}}</td>
+        <td>{{Jumlah.Non_ASN.Swasta.SLB}}</td>
+        <td>{{Jumlah.Subtotal_Non_ASN_Swasta}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <!-- TABLE 2: GTK TERDAFTAR BPJS KETENAGAKERJAAN (split NEGERI/SWASTA) -->
+  <table class="table-kabkot" style="margin-top: 10px;">
+    <thead>
+      <tr>
+        <th colspan="18">GTK TERDAFTAR BPJS KETENAGAKERJAAN</th>
+      </tr>
+      <tr>
+        <th colspan="9">NEGERI</th>
+        <th colspan="9">SWASTA</th>
+      </tr>
+      <tr>
+        <th>TK</th><th>PAUD</th><th>KB</th><th>SD</th><th>SMP</th><th>SMA</th><th>SMK</th><th>SLB</th><th>SUB TOTAL</th>
+        <th>TK</th><th>PAUD</th><th>KB</th><th>SD</th><th>SMP</th><th>SMA</th><th>SMK</th><th>SLB</th><th>SUB TOTAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td>{{BPJS.Non_ASN.Negeri.TK}}</td>
+        <td>{{BPJS.Non_ASN.Negeri.PAUD}}</td>
+        <td>{{BPJS.Non_ASN.Negeri.KB}}</td>
+        <td>{{BPJS.Non_ASN.Negeri.SD}}</td>
+        <td>{{BPJS.Non_ASN.Negeri.SMP}}</td>
+        <td>{{BPJS.Non_ASN.Negeri.SMA}}</td>
+        <td>{{BPJS.Non_ASN.Negeri.SMK}}</td>
+        <td>{{BPJS.Non_ASN.Negeri.SLB}}</td>
+        <td>{{BPJS.Subtotal_Non_ASN_Negeri}}</td>
+        <td>{{BPJS.Non_ASN.Swasta.TK}}</td>
+        <td>{{BPJS.Non_ASN.Swasta.PAUD}}</td>
+        <td>{{BPJS.Non_ASN.Swasta.KB}}</td>
+        <td>{{BPJS.Non_ASN.Swasta.SD}}</td>
+        <td>{{BPJS.Non_ASN.Swasta.SMP}}</td>
+        <td>{{BPJS.Non_ASN.Swasta.SMA}}</td>
+        <td>{{BPJS.Non_ASN.Swasta.SMK}}</td>
+        <td>{{BPJS.Non_ASN.Swasta.SLB}}</td>
+        <td>{{BPJS.Subtotal_Non_ASN_Swasta}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <!-- TABLE 3: %KEPESERTAAN AKTIF (split NEGERI/SWASTA) -->
+  <table class="table-kabkot" style="margin-top: 10px;">
+    <thead>
+      <tr>
+        <th colspan="18">%KEPESERTAAN AKTIF</th>
+      </tr>
+      <tr>
+        <th colspan="9">NEGERI</th>
+        <th colspan="9">SWASTA</th>
+      </tr>
+      <tr>
+        <th>TK</th><th>PAUD</th><th>KB</th><th>SD</th><th>SMP</th><th>SMA</th><th>SMK</th><th>SLB</th><th>SUB TOTAL</th>
+        <th>TK</th><th>PAUD</th><th>KB</th><th>SD</th><th>SMP</th><th>SMA</th><th>SMK</th><th>SLB</th><th>SUB TOTAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Negeri.TK}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Negeri.PAUD}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Negeri.KB}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Negeri.SD}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Negeri.SMP}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Negeri.SMA}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Negeri.SMK}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Negeri.SLB}}</td>
+        <td>{{Kepesertaan_Aktif.Subtotal_Non_ASN_Negeri}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Swasta.TK}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Swasta.PAUD}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Swasta.KB}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Swasta.SD}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Swasta.SMP}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Swasta.SMA}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Swasta.SMK}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Swasta.SLB}}</td>
+        <td>{{Kepesertaan_Aktif.Subtotal_Non_ASN_Swasta}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+  <!-- Footer (muncul SEKALI di akhir dokumen) -->
+  <div class="page-footer">
+    <div class="code-left">REKAP {{year}}</div>
+    <div class="code-right">{{@root.code}}</div>
+  </div>
+
+</body>
+</html>

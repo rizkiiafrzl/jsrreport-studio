@@ -1,0 +1,14 @@
+{
+    "name": "Tugas",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "tugas-folder",
+    "creationDate": {
+        "$$date": 1757993130196
+    },
+    "modificationDate": {
+        "$$date": 1757993130196
+    },
+    "shortid": "tugas1",
+    "$entitySet": "folders"
+}

@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+          {{ asset "assets/style_header_footer.css" "utf8" }}
+        </style>
+    </head>
+    <body>
+      <div class="header">
+        {{#each $pdf.pages}}
+          <header>
+            <div class="row">
+                <div class="logo">
+                    <img src="{{asset "assets/Logo BPJS Ketenagakerjaan.png" "dataURI"}}" alt="BPJS Ketenagakerjaan Logo" />
+                </div>
+                <div class="report-title">
+                  <strong>
+                    {{@root.title}}
+                    </br>
+                    {{@root.subtitle}}
+                  </strong>
+                  </br>
+                  Periode: {{@root.period}}
+                </div>
+                <div class="header-info">
+                    <table class="table-header-info">
+                      <tr>
+                        <td>Halaman</td>
+                        <td>:</td>
+                        <td>{{getPageNumber @index}} / {{getTotalPages ../$pdf.pages}}</td>
+                      </tr>
+                      <tr>
+                        <td>Tanggal</td>
+                        <td>:</td>
+                        <td>{{getFormattedDateWithTimezone}}</td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+          </header>
+
+          <main class="main">
+            <!-- Main Content Goes Here -->
+          </main>
+        
+        <div class="page-break"></div>
+        {{/each}}
+        <footer class="footer">
+          <div style="float:left;">{{@root.user}}</div>
+          <div style="float:right;text-align:right;">{{@root.code}}</div>
+        </footer>
+      </div>
+    </body>
+</html>

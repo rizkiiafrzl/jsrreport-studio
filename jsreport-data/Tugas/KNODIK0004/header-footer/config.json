@@ -1,0 +1,16 @@
+{
+    "name": "header-footer",
+    "engine": "handlebars",
+    "recipe": "html",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1757997970152
+    },
+    "modificationDate": {
+        "$$date": 1757997970152
+    },
+    "shortid": "Acdv8s6",
+    "_id": "RyE5fhE9DJwFDBgy",
+    "$entitySet": "templates"
+}

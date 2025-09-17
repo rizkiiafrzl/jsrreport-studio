@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>{{@root.title}}</title>
+  <style>
+    {{ asset "assets/style.css" "utf8" }}
+  </style>
+</head>
+<body>
+
+  <!-- Header (sebaris: kiri - tengah - kanan) -->
+  <div class="page-header">
+    <!-- Logo kiri -->
+    <div class="brand-left">
+      <img src="{{asset 'assets/Logo BPJS Ketenagakerjaan.png' 'dataURI'}}" alt="BPJS Ketenagakerjaan" class="brand-logo" />
+    </div>
+
+    <!-- Judul tengah -->
+    <div class="brand-title">
+      <div class="title-line-1">{{@root.title}}</div>
+      <div class="title-line-2">{{@root.subtitle}}</div>
+      <div class="periode">Periode: {{@root.period}}</div>
+    </div>
+
+    <!-- Meta kanan -->
+    <div class="meta">
+      <div class="meta-row">Halaman : {{getPageNumber @index}} / {{getTotalPages $pdf.pages}}</div>
+      <div class="meta-row">Tanggal Cetak : {{getFormattedDateWithTimezone}}</div>
+    </div>
+  </div>
+
+  <!-- Section kecil -->
+  <div class="section">
+    <div class="label">NAMA KANTOR :</div>
+    <div class="value">KANTOR PUSAT</div>
+    <div class="underline"></div>
+  </div>
+
+   <!-- Table -->
+  <table>
+    <colgroup>
+      <col class="idx" />
+      <col class="prov" />
+    </colgroup>
+    <thead>
+      <tr>
+        <th rowspan="3">No</th>
+        <th rowspan="3">Nama Provinsi</th>
+        <th colspan="5">Jumlah GTK</th>
+        <th colspan="5">GTK Terdaftar BPJS Ketenagakerjaan</th>
+        <th colspan="5">% Kepesertaan Aktif</th>
+      </tr>
+      <tr>
+        <th rowspan="2">ASN</th>
+        <th rowspan="2">PPPK</th>
+        <th colspan="2">NON ASN</th>
+        <th rowspan="2">Sub Total</th>
+        <th rowspan="2">ASN</th>
+        <th rowspan="2">PPPK</th>
+        <th colspan="2">NON ASN</th>
+        <th rowspan="2">Sub Total</th>
+        <th rowspan="2">ASN</th>
+        <th rowspan="2">PPPK</th>
+        <th colspan="2">NON ASN</th>
+        <th rowspan="2">Sub Total</th>
+      </tr>
+      <tr>
+        <th>Negeri</th><th>Swasta</th>
+        <th>Negeri</th><th>Swasta</th>
+        <th>Negeri</th><th>Swasta</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td>{{No}}</td>
+        <td class="wrap">{{Provinsi}}</td>
+        <td>{{Jumlah.ASN}}</td>
+        <td>{{Jumlah.PPPK}}</td>
+        <td>{{Jumlah.Non_ASN.Negeri}}</td>
+        <td>{{Jumlah.Non_ASN.Swasta}}</td>
+        <td>{{Jumlah.Subtotal}}</td>
+        <td>{{BPJS.ASN}}</td>
+        <td>{{BPJS.PPPK}}</td>
+        <td>{{BPJS.Non_ASN.Negeri}}</td>
+        <td>{{BPJS.Non_ASN.Swasta}}</td>
+        <td>{{BPJS.Subtotal}}</td>
+        <td>{{Kepesertaan_Aktif.ASN}}</td>
+        <td>{{Kepesertaan_Aktif.PPPK}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Negeri}}</td>
+        <td>{{Kepesertaan_Aktif.Non_ASN.Swasta}}</td>
+        <td>{{Kepesertaan_Aktif.Subtotal}}</td>
+      </tr>
+      {{/each}}
+      <!-- Baris Total -->
+      <tr style="font-weight: bold; background-color: #f0f0f0;">
+        <td colspan="2">TOTAL</td>
+        <td>{{summary.totalJumlahASN}}</td>
+        <td>{{summary.totalJumlahPPPK}}</td>
+        <td>{{summary.totalJumlahNonASNNegeri}}</td>
+        <td>{{summary.totalJumlahNonASNSwasta}}</td>
+        <td>{{summary.totalJumlahSubtotal}}</td>
+        <td>{{summary.totalBPJSASN}}</td>
+        <td>{{summary.totalBPJSPPPK}}</td>
+        <td>{{summary.totalBPJSNonASNNegeri}}</td>
+        <td>{{summary.totalBPJSNonASNSwasta}}</td>
+        <td>{{summary.totalBPJSSubtotal}}</td>
+        <td>{{summary.avgKepesertaanASN}}</td>
+        <td>{{summary.avgKepesertaanPPPK}}</td>
+        <td>{{summary.avgKepesertaanNonASNNegeri}}</td>
+        <td>{{summary.avgKepesertaanNonASNSwasta}}</td>
+        <td>{{summary.avgKepesertaanSubtotal}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Footer (muncul SEKALI di akhir dokumen) -->
+  <div class="page-footer">
+    <div class="code-left">REKAP {{year}}</div>
+    <div class="code-right">{{@root.code}}</div>
+  </div>
+
+</body>
+</html>
