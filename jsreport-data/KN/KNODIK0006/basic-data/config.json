@@ -1,0 +1,21 @@
+{
+    "name": "basic-data",
+    "data": {
+        "reportInfo": {
+            "title": "Rekap GTK per Kabupaten / Kota (SMA,SMK,SLB)",
+            "province": "Provinsi Aceh",
+            "period": "01-07-2025"
+        }
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "basic-data-file2",
+    "creationDate": {
+        "$$date": 1758252558135
+    },
+    "modificationDate": {
+        "$$date": 1758252558135
+    },
+    "shortid": "bd2",
+    "$entitySet": "data"
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>{{@root.title}}</title>
+  <style>
+    {{ asset "assets/style.css" "utf8" }}
+  </style>
+</head>
+<body>
+
+  <!-- Header (sebaris: kiri - tengah - kanan) -->
+  <div class="page-header">
+    <!-- Logo kiri -->
+    <div class="brand-left">
+      <img src="{{asset 'assets/Logo BPJS Ketenagakerjaan.png' 'dataURI'}}" alt="BPJS Ketenagakerjaan" class="brand-logo" />
+    </div>
+
+    <!-- Judul tengah -->
+    <div class="brand-title">
+      <div class="title-line-1">{{@root.title}}</div>
+      <div class="title-line-2">{{@root.subtitle}}</div>
+      <div class="periode">Periode: {{@root.period}}</div>
+    </div>
+
+    <!-- Meta kanan -->
+    <div class="meta">
+      <div class="meta-row">Halaman : {{getPageNumber @index}} / {{getTotalPages $pdf.pages}}</div>
+      <div class="meta-row">Tanggal Cetak : {{getFormattedDateWithTimezone}}</div>
+    </div>
+  </div>
+
+  <!-- Section kecil -->
+  <div class="section">
+    <div class="label">NAMA KANTOR :</div>
+    <div class="value">KANTOR PUSAT</div>
+    <div class="underline"></div>
+  </div>
+
+  <!-- Table -->
+  <table class="table-pppk">
+    <colgroup>
+      <col class="idx">
+      <col class="prov">
+      <col class="kab">
+      <col class="nsp">
+      <col class="jumlah">
+      <col class="bpjs">
+      <col class="belum">
+      <col class="persen">
+      <col class="alamat">
+      <col class="email">
+      <col class="hp">
+    </colgroup>
+    <thead>
+      <tr>
+        <th rowspan="2">No</th>
+        <th rowspan="2">Nama Provinsi</th>
+        <th rowspan="2">Nama Kab Kota</th>
+        <th rowspan="2">Nama Satuan Pendidikan</th>
+        <th colspan="7">Jumlah GTK DAPODIK</th>
+      </tr>
+      <tr>
+        <th>JUMLAH GTK</th>
+        <th>TERDAFTAR BPJS KETENAGAKERJAAN</th>
+        <th>PTK BELUM TERDAFTAR</th>
+        <th>% TERDAFTAR</th>
+        <th>Alamat</th>
+        <th>Email</th>
+        <th>No HP</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+      <tr>
+        <td>{{No}}</td>
+        <td class="wrap" style="text-align: left;">{{Provinsi}}</td>
+        <td class="wrap" style="text-align: left;">{{Kabupaten_Kota}}</td>
+        <td class="wrap" style="text-align: left;">{{Nama_Satuan_Pendidikan}}</td>
+        <td>{{PTK_Dapodik}}</td>
+        <td>{{Terdaftar_BPJS}}</td>
+        <td>{{Belum_Terdaftar}}</td>
+        <td>{{Persen_Terdaftar}}</td>
+        <td class="wrap" style="text-align: left;"><span style="text-transform: uppercase;">{{Alamat}}</span></td>
+        <td class="wrap" style="text-align: left;"><span style="text-transform: lowercase;">{{Email}}</span></td>
+        <td class="wrap">{{No_HP}}</td>
+      </tr>
+      {{/each}}
+      <!-- Baris Total -->
+      <tr style="font-weight: bold; background-color: #f0f0f0;">
+        <td colspan="4">TOTAL</td>
+        <td>{{summary.totalJumlahSubtotal}}</td>
+        <td>{{summary.totalBPJSSubtotal}}</td>
+        <td></td>
+        <td>{{summary.avgKepesertaanSubtotal}}</td>
+        <td colspan="3"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Footer (muncul SEKALI di akhir dokumen) -->
+  <div class="page-footer">
+    <div class="code-left">REKAP {{year}}</div>
+    <div class="code-right">{{@root.code}}</div>
+  </div>
+
+</body>
+</html>

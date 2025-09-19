@@ -1,0 +1,14 @@
+{
+    "name": "Logo BPJS Ketenagakerjaan.png",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "logo-bpjs-file1",
+    "creationDate": {
+        "$$date": 1758252558146
+    },
+    "modificationDate": {
+        "$$date": 1758252558146
+    },
+    "shortid": "logo1",
+    "$entitySet": "assets"
+}

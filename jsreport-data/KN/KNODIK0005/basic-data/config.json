@@ -1,0 +1,22 @@
+{
+    "name": "basic-data",
+    "data": {
+        "code": "KNODIK0005",
+        "title": "REKAP GTK PER PROVINSI",
+        "subtitle": "(SMA, SMK, SLB)",
+        "period": "01-07-2025",
+        "user": "EK262740",
+        "year": "2025"
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "basic-data-file1",
+    "creationDate": {
+        "$$date": 1758252558135
+    },
+    "modificationDate": {
+        "$$date": 1758252558135
+    },
+    "shortid": "bd1",
+    "$entitySet": "data"
+}

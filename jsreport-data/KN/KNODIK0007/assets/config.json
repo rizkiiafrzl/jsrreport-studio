@@ -1,0 +1,12 @@
+{
+    "name": "assets",
+    "creationDate": {
+        "$$date": 1758252558101
+    },
+    "modificationDate": {
+        "$$date": 1758252558101
+    },
+    "shortid": "a3",
+    "_id": "assets-file3",
+    "$entitySet": "folders"
+}

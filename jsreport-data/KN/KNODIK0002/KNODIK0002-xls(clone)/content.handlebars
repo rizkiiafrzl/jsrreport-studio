@@ -1,0 +1,134 @@
+<style>
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    table-layout: fixed; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 10pt;
+  }
+  
+  th, td { 
+    border: 1px solid #000000; 
+    padding: 4px 6px; 
+    vertical-align: middle;
+  }
+  
+  th { 
+    background-color: #f2f2f2; 
+    font-weight: bold; 
+    text-align: center;
+  }
+  
+  td { 
+    text-align: left;
+  }
+  
+  /* Center align numeric columns */
+  .col-no,
+  .col-jumlah-gtk,
+  .col-bpjs,
+  .col-belum-terdaftar,
+  .col-persen,
+  .col-hp { 
+    text-align: center; 
+  }
+  
+  /* Column widths - using percentages for better control */
+  .col-no { width: 3%; min-width: 30px; max-width: 50px; }
+  .col-prov { width: 10%; min-width: 100px; max-width: 150px; }
+  .col-kab { width: 10%; min-width: 100px; max-width: 150px; }
+  .col-sekolah { width: 15%; min-width: 150px; max-width: 250px; }
+  .col-jumlah-gtk { width: 6%; min-width: 60px; max-width: 80px; }
+  .col-bpjs { width: 10%; min-width: 100px; max-width: 150px; }
+  .col-belum-terdaftar { width: 8%; min-width: 80px; max-width: 120px; }
+  .col-persen { width: 6%; min-width: 60px; max-width: 80px; }
+  .col-alamat { width: 40%; min-width: 200px; max-width: 400px; }
+  .col-email { width: 12%; min-width: 120px; max-width: 200px; }
+  .col-hp { width: 8%; min-width: 80px; max-width: 120px; }
+  
+  .title-header {
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffffff;
+    border: none;
+  }
+  
+  .period-header {
+    font-size: 10pt;
+    text-align: right;
+    background-color: #ffffff;
+    border: none;
+  }
+  
+  .code-header {
+    font-size: 10pt;
+    text-align: right;
+    background-color: #ffffff;
+    border: none;
+  }
+</style>
+
+<table>
+  <colgroup>
+    <col class="col-no" style="width: 3%;" />
+    <col class="col-prov" style="width: 10%;" />
+    <col class="col-kab" style="width: 10%;" />
+    <col class="col-sekolah" style="width: 15%;" />
+    <col class="col-jumlah-gtk" style="width: 6%;" />
+    <col class="col-bpjs" style="width: 10%;" />
+    <col class="col-belum-terdaftar" style="width: 8%;" />
+    <col class="col-persen" style="width: 6%;" />
+    <col class="col-alamat" style="width: 400%;" />
+    <col class="col-email" style="width: 12%;" />
+    <col class="col-hp" style="width: 8%;" />
+  </colgroup>
+  
+  <!-- Header rows -->
+  <tr>
+    <td colspan="11" class="code-header">{{@root.code}}</td>
+  </tr>
+  <tr>
+    <td colspan="11" class="title-header">{{@root.title}} ({{@root.subtitle}})</td>
+  </tr>
+  <tr>
+    <td colspan="11" class="period-header">Periode: {{@root.period}}</td>
+  </tr>
+  
+  <!-- Table headers -->
+  <tr>
+    <th rowspan="2">NO</th>
+    <th rowspan="2">NAMA PROVINSI</th>
+    <th rowspan="2">NAMA KAB KOTA</th>
+    <th rowspan="2">NAMA SATUAN PENDIDIKAN</th>
+    <th colspan="7">PTK DAPODIK</th>
+  </tr>
+  <tr>
+    <th>JUMLAH GTK</th>
+    <th>TERDAFTAR BPJS KETENAGAKERJAAN</th>
+    <th>PTK BELUM TERDAFTAR</th>
+    <th>% TERDAFTAR</th>
+    <th>ALAMAT</th>
+    <th>EMAIL</th>
+    <th>NO HP</th>
+  </tr>
+  
+  <!-- Data rows -->
+  {{#each data}}
+  <tr>
+    <td class="col-no">{{No}}</td>
+    <td class="col-prov">{{Provinsi}}</td>
+    <td class="col-kab">{{Kabupaten_Kota}}</td>
+    <td class="col-sekolah">{{Nama_Satuan_Pendidikan}}</td>
+    <td class="col-jumlah-gtk">{{PTK_Dapodik}}</td>
+    <td class="col-bpjs">{{Terdaftar_BPJS}}</td>
+    <td class="col-belum-terdaftar">{{Belum_Terdaftar}}</td>
+    <td class="col-persen">{{Persen_Terdaftar}}</td>
+    <td class="col-alamat">{{Alamat}}</td>
+    <td class="col-email">{{Email}}</td>
+    <td class="col-hp">{{No_HP}}</td>
+  </tr>
+  {{/each}}
+</table>
+
+{{{xlsxPrint}}}

@@ -1,0 +1,14 @@
+{
+    "name": "basic-data",
+    "_id": "basic-data-file4",
+    "shortid": "bd4",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1758252558137
+    },
+    "modificationDate": {
+        "$$date": 1758252558137
+    },
+    "$entitySet": "data"
+}

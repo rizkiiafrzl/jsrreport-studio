@@ -1,0 +1,99 @@
+/* ====== A4 landscape & tata letak ====== */
+@page { size: A4 landscape; margin: 8mm; }
+html, body { margin: 0; font-family: Arial, Helvetica, sans-serif; }
+
+/* ====== Header: logo kiri, judul tengah, meta kanan (GRID) ====== */
+.page-header{
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* kiri | tengah fleksibel | kanan */
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 12px;
+}
+
+/* kiri (logo) */
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.brand-logo{
+  height: 100px;       /* besarkan sesuai kebutuhan (80–110px) */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* tengah (judul) */
+.brand-title{
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.brand-title .title-line-1{ font-size: 16px; }
+.brand-title .title-line-2{ font-size: 14px; }
+.brand-title .periode{ font-size: 12px; margin-top: 2px; }
+
+/* kanan (meta) */
+.meta{
+  font-size: 10px;
+  text-align: right;
+  line-height: 1.25;
+}
+
+/* ====== Section info kecil di bawah header ====== */
+.section{
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 6px 0 8px;
+  font-size: 11px;
+}
+.section .label{ font-weight: 700; }
+.section .underline{
+  flex: 1;
+  border-bottom: 1px solid #000;
+  margin-left: 6px;
+}
+
+/* ====== Tabel ====== */
+table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 9.5px; }
+th, td { border: 1px solid #000; padding: 3px 4px; text-align: center; vertical-align: middle; }
+
+thead th {
+  white-space: normal; word-break: break-word; line-height: 1.15;
+  font-size: 9px; background: #f8f8f8;
+}
+
+/* Kolom teks (nama kab/kota) tetap kiri agar mudah dibaca */
+td.wrap { text-align: left; }
+
+/* Angka rapi */
+td { font-variant-numeric: tabular-nums; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Lebar kolom (opsional, jika pakai <colgroup>) */
+col.idx  { width: 28px; }
+col.prov { width: 130px; }
+col.num  { width: 45px; }
+col.sub  { width: 54px; }
+
+/* Kolom persen lebih kecil */
+td.percent, th.percent { font-size: 8px; padding: 2px; }
+col.num.percent { width: 52px; }
+col.sub.percent { width: 60px; }
+
+/* Total & hindari pecah halaman */
+tfoot { display: table-row-group; }
+.row-total { font-weight: 700; background: #f0f0f0; page-break-inside: avoid; }
+
+/* Footer */
+.page-footer {
+  margin-top: 8mm;
+  display: flex; justify-content: space-between;
+  font-size: 10px; color: #444;
+}
+
+/* Amankan gambar */
+img { max-width: 100%; height: auto; }
+
+

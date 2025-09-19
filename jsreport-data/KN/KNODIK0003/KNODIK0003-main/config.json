@@ -1,0 +1,31 @@
+{
+    "name": "KNODIK0003-main",
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "data": {
+        "shortid": "6IG7ffl"
+    },
+    "chrome": {
+        "displayHeaderFooter": false,
+        "printBackground": true,
+        "landscape": true,
+        "format": "A4",
+        "width": "297mm",
+        "height": "210mm",
+        "marginTop": "8mm",
+        "marginRight": "8mm",
+        "marginBottom": "8mm",
+        "marginLeft": "8mm"
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1758177763632
+    },
+    "modificationDate": {
+        "$$date": 1758252558108
+    },
+    "shortid": "q4UVKZg",
+    "_id": "aHyDiOg9cyijX1ho",
+    "$entitySet": "templates"
+}

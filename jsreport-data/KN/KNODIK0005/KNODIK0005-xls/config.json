@@ -1,0 +1,23 @@
+{
+    "name": "KNODIK0005-xls",
+    "recipe": "html-to-xlsx",
+    "engine": "handlebars",
+    "data": {
+        "shortid": "bd1"
+    },
+    "xlsx": null,
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "file1-xls",
+    "creationDate": {
+        "$$date": 1758252558119
+    },
+    "modificationDate": {
+        "$$date": 1758252692040
+    },
+    "shortid": "f1x",
+    "$entitySet": "templates",
+    "htmlToXlsx": {
+        "htmlEngine": "chrome"
+    }
+}

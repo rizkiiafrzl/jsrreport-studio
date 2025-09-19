@@ -1,0 +1,128 @@
+{{{xlsxPrint}}}
+<style>
+  table { width:100%; border-collapse:collapse; table-layout:fixed; font-family: Arial, Helvetica, sans-serif; }
+  table, th, td { font-size:10pt !important; }
+  th, td { padding:3px 6px; border:1px solid #cfcfcf; vertical-align:middle; }
+  th { text-align:center; }
+  td { text-align:left; }
+  thead th { background:#f5f5f5; font-weight:700; }
+  thead th.title-lite { font-weight:400; }
+
+  /* Judul */
+  .title { background:#fff; font-size:12pt !important; text-align:left; }
+  .title-center { text-align:center; }
+  .title-right { text-align:right; }
+
+  /* Alignment */
+  .num { text-align:center !important; }
+
+  /* Column widths */
+  .col-no { width:40px; }
+  .col-prov { width:200px; }
+  .col-kab { width:220px; }
+  .col-asn { width:90px; }
+  .col-pppk { width:90px; }
+  .col-non-asn { width:100px; }
+  .col-subtotal { width:110px; }
+
+  /* Subtotal highlight */
+  .subtotal { background:#f0f0f0; font-weight:bold; }
+</style>
+
+<table>
+  <colgroup>
+    <col class="col-no" />
+    <col class="col-prov" />
+    <col class="col-kab" />
+    <col class="col-asn" />
+    <col class="col-pppk" />
+    <col class="col-non-asn" />
+    <col class="col-non-asn" />
+    <col class="col-subtotal" />
+    <col class="col-asn" />
+    <col class="col-pppk" />
+    <col class="col-non-asn" />
+    <col class="col-non-asn" />
+    <col class="col-subtotal" />
+    <col class="col-asn" />
+    <col class="col-pppk" />
+    <col class="col-non-asn" />
+    <col class="col-non-asn" />
+    <col class="col-subtotal" />
+  </colgroup>
+
+  <thead>
+    <tr>
+      <th colspan="18" class="title title-lite title-right">{{@root.code}}</th>
+    </tr>
+    <tr>
+      <th colspan="18" class="title title-center">{{@root.title}} ({{@root.subtitle}})</th>
+    </tr>
+    <tr>
+      <th colspan="18" class="title title-lite title-right">Periode: {{@root.period}}</th>
+    </tr>
+    <tr>
+      <th rowspan="3">No</th>
+      <th rowspan="3">NAMA PROVINSI</th>
+      <th rowspan="3">NAMA KABUPATEN/KOTA</th>
+      <th colspan="5">JUMLAH GTK DAPODIK</th>
+      <th colspan="5">GTK TERDAFTAR BPJS KETENAGAKERJAAN</th>
+      <th colspan="5">%KEPESERTAAN AKTIF</th>
+    </tr>
+    <tr>
+      <th rowspan="2">ASN</th>
+      <th rowspan="2">PPPK</th>
+      <th colspan="2">NON ASN</th>
+      <th rowspan="2" class="subtotal">SUB TOTAL</th>
+
+      <th rowspan="2">ASN</th>
+      <th rowspan="2">PPPK</th>
+      <th colspan="2">NON ASN</th>
+      <th rowspan="2" class="subtotal">SUB TOTAL</th>
+
+      <th rowspan="2">ASN</th>
+      <th rowspan="2">PPPK</th>
+      <th colspan="2">NON ASN</th>
+      <th rowspan="2" class="subtotal">SUB TOTAL</th>
+    </tr>
+    <tr>
+      <th>NEGERI</th>
+      <th>SWASTA</th>
+      <th>NEGERI</th>
+      <th>SWASTA</th>
+      <th>NEGERI</th>
+      <th>SWASTA</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td class="num" data-type="number" data-format="0">{{No}}</td>
+      <td>{{Provinsi}}</td>
+      <td>{{Kabupaten_Kota}}</td>
+
+      <!-- Dapodik -->
+      <td class="num" data-type="number" data-format="#,##0">{{Jumlah.ASN}}</td>
+      <td class="num" data-type="number" data-format="#,##0">{{Jumlah.PPPK}}</td>
+      <td class="num" data-type="number" data-format="#,##0">{{Jumlah.Non_ASN.Negeri}}</td>
+      <td class="num" data-type="number" data-format="#,##0">{{Jumlah.Non_ASN.Swasta}}</td>
+      <td class="num subtotal" data-type="number" data-format="#,##0">{{Jumlah.Subtotal}}</td>
+
+      <!-- BPJS -->
+      <td class="num" data-type="number" data-format="#,##0">{{BPJS.ASN}}</td>
+      <td class="num" data-type="number" data-format="#,##0">{{BPJS.PPPK}}</td>
+      <td class="num" data-type="number" data-format="#,##0">{{BPJS.Non_ASN.Negeri}}</td>
+      <td class="num" data-type="number" data-format="#,##0">{{BPJS.Non_ASN.Swasta}}</td>
+      <td class="num subtotal" data-type="number" data-format="#,##0">{{BPJS.Subtotal}}</td>
+
+      <!-- % -->
+      <td class="num" data-type="number" data-format="0%">{{Kepesertaan_Aktif.ASN}}</td>
+      <td class="num" data-type="number" data-format="0%">{{Kepesertaan_Aktif.PPPK}}</td>
+      <td class="num" data-type="number" data-format="0%">{{Kepesertaan_Aktif.Non_ASN.Negeri}}</td>
+      <td class="num" data-type="number" data-format="0%">{{Kepesertaan_Aktif.Non_ASN.Swasta}}</td>
+      <td class="num subtotal" data-type="number" data-format="0%">{{Kepesertaan_Aktif.Subtotal}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

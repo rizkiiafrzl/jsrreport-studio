@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>REKAP GTK PER PROVINSI</title>
+  <style>
+    {{ asset "assets/style.css" "utf8" }}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="page-header">
+    <div class="brand">
+      <img src="{{asset 'assets/Logo BPJS Ketenagakerjaan.png' 'dataURI'}}" alt="BPJS Ketenagakerjaan" class="brand-logo" />
+    </div>
+    <div class="brand-title">
+      <div class="title-line-1">REKAP GTK PER PROVINSI</div>
+      <div class="title-line-2">(PAUD, TK, SD, SMP)</div>
+      <div class="periode">PERIODE: {{period}}</div>
+    </div>
+    <div class="meta">
+      <div class="meta-row">HALAMAN : 1/1</div>
+      <div class="meta-row">TANGGAL CETAK : {{printDate}}</div>
+    </div>
+  </div>
+
+    <!-- Section kecil -->
+  <div class="section">
+    <div class="label">NAMA KANTOR :</div>
+    <div class="value">KANTOR PUSAT</div>
+  </div>
+
+  <table>
+    <colgroup>
+      <col class="idx">
+      <col class="prov">
+
+      <!-- DAPODIK NON ASN NEGERI (5 kolom) -->
+      <col class="num"><col class="num"><col class="num"><col class="num"><col class="sub sep-r">
+
+      <!-- DAPODIK SWASTA (5 kolom) -->
+      <col class="num"><col class="num"><col class="num"><col class="num"><col class="sub sep-r">
+
+      <!-- BPJS NON ASN NEGERI (5 kolom) -->
+      <col class="num"><col class="num"><col class="num"><col class="num"><col class="sub sep-r">
+
+      <!-- BPJS SWASTA (5 kolom) -->
+      <col class="num"><col class="num"><col class="num"><col class="num"><col class="sub sep-r">
+
+      <!-- % NON ASN NEGERI (5 kolom) -->
+      <col class="num percent"><col class="num percent"><col class="num percent"><col class="num percent"><col class="sub percent sep-r">
+
+      <!-- % SWASTA (5 kolom) -->
+      <col class="num percent"><col class="num percent"><col class="num percent"><col class="num percent"><col class="sub percent">
+    </colgroup>
+
+    <thead>
+      <tr>
+        <th rowspan="3">No</th>
+        <th rowspan="3">Nama Provinsi</th>
+        <th colspan="10">JUMLAH GTK DAPODIK KEMENDIKBUD</th>
+        <th colspan="10">JUMLAH GTK TERDAFTAR BPJS KETENAGAKERJAAN</th>
+        <th class="percent" colspan="10">KEPESERTAAN AKTIF</th>
+      </tr>
+      <tr>
+        <th colspan="5">NON ASN NEGERI</th>
+        <th colspan="5">SWASTA</th>
+        <th colspan="5">NON ASN NEGERI</th>
+        <th colspan="5">SWASTA</th>
+        <th class="percent" colspan="5">NON ASN NEGERI</th>
+        <th class="percent" colspan="5">SWASTA</th>
+      </tr>
+      <tr>
+        <th>PAUD</th><th>TK</th><th>SD</th><th>SMP</th><th>Subtotal</th>
+        <th>PAUD</th><th>TK</th><th>SD</th><th>SMP</th><th>Subtotal</th>
+        <th>PAUD</th><th>TK</th><th>SD</th><th>SMP</th><th>Subtotal</th>
+        <th>PAUD</th><th>TK</th><th>SD</th><th>SMP</th><th>Subtotal</th>
+        <th class="percent">PAUD</th><th class="percent">TK</th><th class="percent">SD</th><th class="percent">SMP</th><th class="percent">Subtotal</th>
+        <th class="percent">PAUD</th><th class="percent">TK</th><th class="percent">SD</th><th class="percent">SMP</th><th class="percent">Subtotal</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each provinces}}
+      <tr>
+        <td>{{index}}</td>
+        <td class="wrap">{{province}}</td>
+
+        <!-- DAPODIK NON ASN NEGERI -->
+        <td>{{#if dapodik.nonAsnNegeri.paud}}{{dapodik.nonAsnNegeri.paud}}{{else}}-{{/if}}</td>
+        <td>{{#if dapodik.nonAsnNegeri.tk}}{{dapodik.nonAsnNegeri.tk}}{{else}}-{{/if}}</td>
+        <td>{{#if dapodik.nonAsnNegeri.sd}}{{dapodik.nonAsnNegeri.sd}}{{else}}-{{/if}}</td>
+        <td>{{#if dapodik.nonAsnNegeri.smp}}{{dapodik.nonAsnNegeri.smp}}{{else}}-{{/if}}</td>
+        <td class="sep-r subtotal">{{#if dapodik.nonAsnNegeri.subtotal}}{{dapodik.nonAsnNegeri.subtotal}}{{else}}-{{/if}}</td>
+
+        <!-- DAPODIK SWASTA -->
+        <td>{{#if dapodik.swasta.paud}}{{dapodik.swasta.paud}}{{else}}-{{/if}}</td>
+        <td>{{#if dapodik.swasta.tk}}{{dapodik.swasta.tk}}{{else}}-{{/if}}</td>
+        <td>{{#if dapodik.swasta.sd}}{{dapodik.swasta.sd}}{{else}}-{{/if}}</td>
+        <td>{{#if dapodik.swasta.smp}}{{dapodik.swasta.smp}}{{else}}-{{/if}}</td>
+        <td class="sep-r subtotal">{{#if dapodik.swasta.subtotal}}{{dapodik.swasta.subtotal}}{{else}}-{{/if}}</td>
+
+        <!-- BPJS NON ASN NEGERI -->
+        <td>{{#if bpjsTerdaftar.nonAsnNegeri.paud}}{{bpjsTerdaftar.nonAsnNegeri.paud}}{{else}}-{{/if}}</td>
+        <td>{{#if bpjsTerdaftar.nonAsnNegeri.tk}}{{bpjsTerdaftar.nonAsnNegeri.tk}}{{else}}-{{/if}}</td>
+        <td>{{#if bpjsTerdaftar.nonAsnNegeri.sd}}{{bpjsTerdaftar.nonAsnNegeri.sd}}{{else}}-{{/if}}</td>
+        <td>{{#if bpjsTerdaftar.nonAsnNegeri.smp}}{{bpjsTerdaftar.nonAsnNegeri.smp}}{{else}}-{{/if}}</td>
+        <td class="sep-r subtotal">{{#if bpjsTerdaftar.nonAsnNegeri.subtotal}}{{bpjsTerdaftar.nonAsnNegeri.subtotal}}{{else}}-{{/if}}</td>
+
+        <!-- BPJS SWASTA -->
+        <td>{{#if bpjsTerdaftar.swasta.paud}}{{bpjsTerdaftar.swasta.paud}}{{else}}-{{/if}}</td>
+        <td>{{#if bpjsTerdaftar.swasta.tk}}{{bpjsTerdaftar.swasta.tk}}{{else}}-{{/if}}</td>
+        <td>{{#if bpjsTerdaftar.swasta.sd}}{{bpjsTerdaftar.swasta.sd}}{{else}}-{{/if}}</td>
+        <td>{{#if bpjsTerdaftar.swasta.smp}}{{bpjsTerdaftar.swasta.smp}}{{else}}-{{/if}}</td>
+        <td class="sep-r subtotal">{{#if bpjsTerdaftar.swasta.subtotal}}{{bpjsTerdaftar.swasta.subtotal}}{{else}}-{{/if}}</td>
+
+        <!-- % AKTIF NON ASN NEGERI -->
+        <td class="percent">{{#if aktifPercent.nonAsnNegeri.paud}}{{aktifPercent.nonAsnNegeri.paud}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if aktifPercent.nonAsnNegeri.tk}}{{aktifPercent.nonAsnNegeri.tk}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if aktifPercent.nonAsnNegeri.sd}}{{aktifPercent.nonAsnNegeri.sd}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if aktifPercent.nonAsnNegeri.smp}}{{aktifPercent.nonAsnNegeri.smp}}%{{else}}-{{/if}}</td>
+        <td class="percent sep-r subtotal">{{#if aktifPercent.nonAsnNegeri.subtotal}}{{aktifPercent.nonAsnNegeri.subtotal}}%{{else}}-{{/if}}</td>
+
+        <!-- % AKTIF SWASTA -->
+        <td class="percent">{{#if aktifPercent.swasta.paud}}{{aktifPercent.swasta.paud}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if aktifPercent.swasta.tk}}{{aktifPercent.swasta.tk}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if aktifPercent.swasta.sd}}{{aktifPercent.swasta.sd}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if aktifPercent.swasta.smp}}{{aktifPercent.swasta.smp}}%{{else}}-{{/if}}</td>
+        <td class="percent subtotal">{{#if aktifPercent.swasta.subtotal}}{{aktifPercent.swasta.subtotal}}%{{else}}-{{/if}}</td>
+      </tr>
+      {{/each}}
+    </tbody>
+
+    <tfoot>
+      <tr class="row-total">
+        <td colspan="2">TOTAL</td>
+
+        <!-- TOTAL DAPODIK NON ASN NEGERI -->
+        <td>{{#if totals.dapodik.nonAsnNegeri.paud}}{{totals.dapodik.nonAsnNegeri.paud}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.dapodik.nonAsnNegeri.tk}}{{totals.dapodik.nonAsnNegeri.tk}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.dapodik.nonAsnNegeri.sd}}{{totals.dapodik.nonAsnNegeri.sd}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.dapodik.nonAsnNegeri.smp}}{{totals.dapodik.nonAsnNegeri.smp}}{{else}}-{{/if}}</td>
+        <td class="sep-r">{{#if totals.dapodik.nonAsnNegeri.subtotal}}{{totals.dapodik.nonAsnNegeri.subtotal}}{{else}}-{{/if}}</td>
+
+        <!-- TOTAL DAPODIK SWASTA -->
+        <td>{{#if totals.dapodik.swasta.paud}}{{totals.dapodik.swasta.paud}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.dapodik.swasta.tk}}{{totals.dapodik.swasta.tk}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.dapodik.swasta.sd}}{{totals.dapodik.swasta.sd}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.dapodik.swasta.smp}}{{totals.dapodik.swasta.smp}}{{else}}-{{/if}}</td>
+        <td class="sep-r">{{#if totals.dapodik.swasta.subtotal}}{{totals.dapodik.swasta.subtotal}}{{else}}-{{/if}}</td>
+
+        <!-- TOTAL BPJS NON ASN NEGERI -->
+        <td>{{#if totals.bpjsTerdaftar.nonAsnNegeri.paud}}{{totals.bpjsTerdaftar.nonAsnNegeri.paud}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.bpjsTerdaftar.nonAsnNegeri.tk}}{{totals.bpjsTerdaftar.nonAsnNegeri.tk}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.bpjsTerdaftar.nonAsnNegeri.sd}}{{totals.bpjsTerdaftar.nonAsnNegeri.sd}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.bpjsTerdaftar.nonAsnNegeri.smp}}{{totals.bpjsTerdaftar.nonAsnNegeri.smp}}{{else}}-{{/if}}</td>
+        <td class="sep-r">{{#if totals.bpjsTerdaftar.nonAsnNegeri.subtotal}}{{totals.bpjsTerdaftar.nonAsnNegeri.subtotal}}{{else}}-{{/if}}</td>
+
+        <!-- TOTAL BPJS SWASTA -->
+        <td>{{#if totals.bpjsTerdaftar.swasta.paud}}{{totals.bpjsTerdaftar.swasta.paud}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.bpjsTerdaftar.swasta.tk}}{{totals.bpjsTerdaftar.swasta.tk}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.bpjsTerdaftar.swasta.sd}}{{totals.bpjsTerdaftar.swasta.sd}}{{else}}-{{/if}}</td>
+        <td>{{#if totals.bpjsTerdaftar.swasta.smp}}{{totals.bpjsTerdaftar.swasta.smp}}{{else}}-{{/if}}</td>
+        <td class="sep-r">{{#if totals.bpjsTerdaftar.swasta.subtotal}}{{totals.bpjsTerdaftar.swasta.subtotal}}{{else}}-{{/if}}</td>
+
+        <!-- RATA2 % AKTIF NON ASN NEGERI -->
+        <td class="percent">{{#if totals.aktifPercent.nonAsnNegeri.paud}}{{totals.aktifPercent.nonAsnNegeri.paud}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if totals.aktifPercent.nonAsnNegeri.tk}}{{totals.aktifPercent.nonAsnNegeri.tk}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if totals.aktifPercent.nonAsnNegeri.sd}}{{totals.aktifPercent.nonAsnNegeri.sd}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if totals.aktifPercent.nonAsnNegeri.smp}}{{totals.aktifPercent.nonAsnNegeri.smp}}%{{else}}-{{/if}}</td>
+        <td class="percent sep-r">{{#if totals.aktifPercent.nonAsnNegeri.subtotal}}{{totals.aktifPercent.nonAsnNegeri.subtotal}}%{{else}}-{{/if}}</td>
+
+        <!-- RATA2 % AKTIF SWASTA -->
+        <td class="percent">{{#if totals.aktifPercent.swasta.paud}}{{totals.aktifPercent.swasta.paud}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if totals.aktifPercent.swasta.tk}}{{totals.aktifPercent.swasta.tk}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if totals.aktifPercent.swasta.sd}}{{totals.aktifPercent.swasta.sd}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if totals.aktifPercent.swasta.smp}}{{totals.aktifPercent.swasta.smp}}%{{else}}-{{/if}}</td>
+        <td class="percent">{{#if totals.aktifPercent.swasta.subtotal}}{{totals.aktifPercent.swasta.subtotal}}%{{else}}-{{/if}}</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="page-footer">
+    <div class="code-left">REKAP {{year}}</div>
+    <div class="code-right">KNODIK007</div>
+  </div>
+
+</body>
+</html>
+
+

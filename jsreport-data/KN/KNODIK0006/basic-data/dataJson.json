@@ -1,0 +1,1064 @@
+{
+  "reportInfo": {
+    "title": "REKAP GTK PER KABUPATEN / KOTA (SMA,SMK,SLB)",
+    "code": "KNODIK0006",
+    "province": "PROVINSI ACEH",
+    "period": "01-07-2025"
+  },
+  "data": [
+    {
+      "no": 1,
+      "kabupatenKota": "Kab. Aceh Selatan",
+      "dapodikData": {
+        "sma": 1256,
+        "smk": 475,
+        "slb": 32,
+        "subtotal": 1763
+      },
+      "dapodikDataSwasta": {
+        "sma": 97,
+        "smk": 32,
+        "slb": 12,
+        "subtotal": 141
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 152,
+          "smk": 58,
+          "slb": 16,
+          "subtotal": 226
+        },
+        "swasta": {
+          "sma": 15,
+          "smk": 1,
+          "slb": 0,
+          "subtotal": 16
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 12.1,
+          "smk": 12.21,
+          "slb": 50.0,
+          "subtotal": 160.28
+        },
+        "swasta": {
+          "sma": 15.46,
+          "smk": 3.13,
+          "slb": 0.0,
+          "subtotal": 11.35
+        }
+      }
+    },
+    {
+      "no": 2,
+      "kabupatenKota": "Kab. Pidie Jaya",
+      "dapodikData": {
+        "sma": 549,
+        "smk": 249,
+        "slb": 35,
+        "subtotal": 833
+      },
+      "dapodikDataSwasta": {
+        "sma": 57,
+        "smk": 54,
+        "slb": 19,
+        "subtotal": 130
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 95,
+          "smk": 50,
+          "slb": 19,
+          "subtotal": 164
+        },
+        "swasta": {
+          "sma": 6,
+          "smk": 1,
+          "slb": 0,
+          "subtotal": 7
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 17.3,
+          "smk": 20.08,
+          "slb": 54.29,
+          "subtotal": 126.15
+        },
+        "swasta": {
+          "sma": 10.53,
+          "smk": 1.85,
+          "slb": 0.0,
+          "subtotal": 5.38
+        }
+      }
+    },
+    {
+      "no": 3,
+      "kabupatenKota": "Kota Subulussalam",
+      "dapodikData": {
+        "sma": 298,
+        "smk": 236,
+        "slb": 18,
+        "subtotal": 552
+      },
+      "dapodikDataSwasta": {
+        "sma": 66,
+        "smk": 3,
+        "slb": 0,
+        "subtotal": 69
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 44,
+          "smk": 38,
+          "slb": 5,
+          "subtotal": 87
+        },
+        "swasta": {
+          "sma": 9,
+          "smk": 0,
+          "slb": 0,
+          "subtotal": 9
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 14.77,
+          "smk": 16.1,
+          "slb": 27.78,
+          "subtotal": 126.09
+        },
+        "swasta": {
+          "sma": 13.64,
+          "smk": 0.0,
+          "slb": 0.0,
+          "subtotal": 13.04
+        }
+      }
+    },
+    {
+      "no": 4,
+      "kabupatenKota": "Kab. Aceh Barat Daya",
+      "dapodikData": {
+        "sma": 561,
+        "smk": 206,
+        "slb": 25,
+        "subtotal": 792
+      },
+      "dapodikDataSwasta": {
+        "sma": 36,
+        "smk": 0,
+        "slb": 0,
+        "subtotal": 36
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 98,
+          "smk": 42,
+          "slb": 9,
+          "subtotal": 149
+        },
+        "swasta": {
+          "sma": 2,
+          "smk": 0,
+          "slb": 0,
+          "subtotal": 2
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 17.47,
+          "smk": 20.39,
+          "slb": 36.0,
+          "subtotal": 413.89
+        },
+        "swasta": {
+          "sma": 5.56,
+          "smk": 0.0,
+          "slb": 0.0,
+          "subtotal": 5.56
+        }
+      }
+    },
+    {
+      "no": 5,
+      "kabupatenKota": "Kab. Aceh Besar",
+      "dapodikData": {
+        "sma": 1135,
+        "smk": 652,
+        "slb": 96,
+        "subtotal": 1883
+      },
+      "dapodikDataSwasta": {
+        "sma": 259,
+        "smk": 50,
+        "slb": 0,
+        "subtotal": 309
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 180,
+          "smk": 84,
+          "slb": 41,
+          "subtotal": 305
+        },
+        "swasta": {
+          "sma": 38,
+          "smk": 13,
+          "slb": 0,
+          "subtotal": 51
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 15.86,
+          "smk": 12.88,
+          "slb": 42.71,
+          "subtotal": 98.71
+        },
+        "swasta": {
+          "sma": 14.67,
+          "smk": 26.0,
+          "slb": 0.0,
+          "subtotal": 16.5
+        }
+      }
+    },
+    {
+      "no": 6,
+      "kabupatenKota": "Kota Sabang",
+      "dapodikData": {
+        "sma": 130,
+        "smk": 62,
+        "slb": 26,
+        "subtotal": 218
+      },
+      "dapodikDataSwasta": {
+        "sma": 18,
+        "smk": 0,
+        "slb": 0,
+        "subtotal": 18
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 15,
+          "smk": 8,
+          "slb": 12,
+          "subtotal": 35
+        },
+        "swasta": {
+          "sma": 0,
+          "smk": 0,
+          "slb": 0,
+          "subtotal": 0
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 11.54,
+          "smk": 12.9,
+          "slb": 46.15,
+          "subtotal": 194.44
+        },
+        "swasta": {
+          "sma": 0.0,
+          "smk": 0.0,
+          "slb": 0.0,
+          "subtotal": 0.0
+        }
+      }
+    },
+    {
+      "no": 7,
+      "kabupatenKota": "Kab. Pidie",
+      "dapodikData": {
+        "sma": 1350,
+        "smk": 473,
+        "slb": 74,
+        "subtotal": 1897
+      },
+      "dapodikDataSwasta": {
+        "sma": 114,
+        "smk": 137,
+        "slb": 0,
+        "subtotal": 251
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 211,
+          "smk": 92,
+          "slb": 30,
+          "subtotal": 333
+        },
+        "swasta": {
+          "sma": 7,
+          "smk": 5,
+          "slb": 0,
+          "subtotal": 12
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 15.63,
+          "smk": 19.45,
+          "slb": 40.54,
+          "subtotal": 132.67
+        },
+        "swasta": {
+          "sma": 6.14,
+          "smk": 3.65,
+          "slb": 0.0,
+          "subtotal": 4.78
+        }
+      }
+    },
+    {
+      "no": 8,
+      "kabupatenKota": "Kab. Aceh Jaya",
+      "dapodikData": {
+        "sma": 302,
+        "smk": 180,
+        "slb": 15,
+        "subtotal": 497
+      },
+      "dapodikDataSwasta": {
+        "sma": 50,
+        "smk": 15,
+        "slb": 0,
+        "subtotal": 65
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 56,
+          "smk": 20,
+          "slb": 11,
+          "subtotal": 87
+        },
+        "swasta": {
+          "sma": 2,
+          "smk": 0,
+          "slb": 0,
+          "subtotal": 2
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 18.54,
+          "smk": 11.11,
+          "slb": 73.33,
+          "subtotal": 133.85
+        },
+        "swasta": {
+          "sma": 4.0,
+          "smk": 0.0,
+          "slb": 0.0,
+          "subtotal": 3.08
+        }
+      }
+    },
+    {
+      "no": 9,
+      "kabupatenKota": "Kab. Bireuen",
+      "dapodikData": {
+        "sma": 1361,
+        "smk": 596,
+        "slb": 74,
+        "subtotal": 2031
+      },
+      "dapodikDataSwasta": {
+        "sma": 253,
+        "smk": 74,
+        "slb": 72,
+        "subtotal": 399
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 226,
+          "smk": 95,
+          "slb": 39,
+          "subtotal": 360
+        },
+        "swasta": {
+          "sma": 28,
+          "smk": 12,
+          "slb": 7,
+          "subtotal": 47
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 16.61,
+          "smk": 15.94,
+          "slb": 52.7,
+          "subtotal": 90.23
+        },
+        "swasta": {
+          "sma": 11.07,
+          "smk": 16.22,
+          "slb": 9.72,
+          "subtotal": 11.78
+        }
+      }
+    },
+    {
+      "no": 10,
+      "kabupatenKota": "Kab. Aceh Utara",
+      "dapodikData": {
+        "sma": 1791,
+        "smk": 805,
+        "slb": 24,
+        "subtotal": 2620
+      },
+      "dapodikDataSwasta": {
+        "sma": 299,
+        "smk": 278,
+        "slb": 55,
+        "subtotal": 632
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 356,
+          "smk": 178,
+          "slb": 12,
+          "subtotal": 546
+        },
+        "swasta": {
+          "sma": 25,
+          "smk": 47,
+          "slb": 7,
+          "subtotal": 79
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 19.88,
+          "smk": 22.11,
+          "slb": 50.0,
+          "subtotal": 86.39
+        },
+        "swasta": {
+          "sma": 8.36,
+          "smk": 16.91,
+          "slb": 12.73,
+          "subtotal": 12.5
+        }
+      }
+    },
+    {
+      "no": 11,
+      "kabupatenKota": "Kab. Aceh Singkil",
+      "dapodikData": {
+        "sma": 376,
+        "smk": 215,
+        "slb": 23,
+        "subtotal": 614
+      },
+      "dapodikDataSwasta": {
+        "sma": 41,
+        "smk": 41,
+        "slb": 0,
+        "subtotal": 82
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 47,
+          "smk": 20,
+          "slb": 8,
+          "subtotal": 75
+        },
+        "swasta": {
+          "sma": 3,
+          "smk": 3,
+          "slb": 0,
+          "subtotal": 6
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 12.5,
+          "smk": 9.3,
+          "slb": 34.78,
+          "subtotal": 91.46
+        },
+        "swasta": {
+          "sma": 7.32,
+          "smk": 7.32,
+          "slb": 0.0,
+          "subtotal": 7.32
+        }
+      }
+    },
+    {
+      "no": 12,
+      "kabupatenKota": "Kab. Aceh Tamiang",
+      "dapodikData": {
+        "sma": 1071,
+        "smk": 434,
+        "slb": 74,
+        "subtotal": 1579
+      },
+      "dapodikDataSwasta": {
+        "sma": 71,
+        "smk": 50,
+        "slb": 0,
+        "subtotal": 121
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 191,
+          "smk": 49,
+          "slb": 23,
+          "subtotal": 263
+        },
+        "swasta": {
+          "sma": 8,
+          "smk": 13,
+          "slb": 0,
+          "subtotal": 21
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 17.83,
+          "smk": 11.29,
+          "slb": 31.08,
+          "subtotal": 217.36
+        },
+        "swasta": {
+          "sma": 11.27,
+          "smk": 26.0,
+          "slb": 0.0,
+          "subtotal": 17.36
+        }
+      }
+    },
+    {
+      "no": 13,
+      "kabupatenKota": "Kota Langsa",
+      "dapodikData": {
+        "sma": 425,
+        "smk": 481,
+        "slb": 66,
+        "subtotal": 972
+      },
+      "dapodikDataSwasta": {
+        "sma": 45,
+        "smk": 38,
+        "slb": 25,
+        "subtotal": 108
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 64,
+          "smk": 56,
+          "slb": 20,
+          "subtotal": 140
+        },
+        "swasta": {
+          "sma": 6,
+          "smk": 3,
+          "slb": 6,
+          "subtotal": 15
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 15.06,
+          "smk": 11.64,
+          "slb": 30.3,
+          "subtotal": 129.63
+        },
+        "swasta": {
+          "sma": 13.33,
+          "smk": 7.89,
+          "slb": 24.0,
+          "subtotal": 13.89
+        }
+      }
+    },
+    {
+      "no": 14,
+      "kabupatenKota": "Kab. Aceh Tenggara",
+      "dapodikData": {
+        "sma": 873,
+        "smk": 389,
+        "slb": 48,
+        "subtotal": 1310
+      },
+      "dapodikDataSwasta": {
+        "sma": 116,
+        "smk": 97,
+        "slb": 0,
+        "subtotal": 213
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 126,
+          "smk": 43,
+          "slb": 12,
+          "subtotal": 181
+        },
+        "swasta": {
+          "sma": 29,
+          "smk": 17,
+          "slb": 0,
+          "subtotal": 46
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 14.43,
+          "smk": 11.05,
+          "slb": 25.0,
+          "subtotal": 84.98
+        },
+        "swasta": {
+          "sma": 25.0,
+          "smk": 17.53,
+          "slb": 0.0,
+          "subtotal": 21.6
+        }
+      }
+    },
+    {
+      "no": 15,
+      "kabupatenKota": "Kab. Nagan Raya",
+      "dapodikData": {
+        "sma": 606,
+        "smk": 96,
+        "slb": 33,
+        "subtotal": 735
+      },
+      "dapodikDataSwasta": {
+        "sma": 7,
+        "smk": 35,
+        "slb": 2,
+        "subtotal": 44
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 110,
+          "smk": 12,
+          "slb": 14,
+          "subtotal": 136
+        },
+        "swasta": {
+          "sma": 0,
+          "smk": 4,
+          "slb": 0,
+          "subtotal": 4
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 18.15,
+          "smk": 12.5,
+          "slb": 42.42,
+          "subtotal": 309.09
+        },
+        "swasta": {
+          "sma": 0.0,
+          "smk": 11.43,
+          "slb": 0.0,
+          "subtotal": 9.09
+        }
+      }
+    },
+    {
+      "no": 16,
+      "kabupatenKota": "Kab. Aceh Tengah",
+      "dapodikData": {
+        "sma": 662,
+        "smk": 390,
+        "slb": 107,
+        "subtotal": 1159
+      },
+      "dapodikDataSwasta": {
+        "sma": 16,
+        "smk": 12,
+        "slb": 107,
+        "subtotal": 135
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 108,
+          "smk": 68,
+          "slb": 24,
+          "subtotal": 200
+        },
+        "swasta": {
+          "sma": 2,
+          "smk": 2,
+          "slb": 18,
+          "subtotal": 22
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 16.31,
+          "smk": 17.44,
+          "slb": 22.43,
+          "subtotal": 148.15
+        },
+        "swasta": {
+          "sma": 12.5,
+          "smk": 16.67,
+          "slb": 16.82,
+          "subtotal": 16.3
+        }
+      }
+    },
+    {
+      "no": 17,
+      "kabupatenKota": "Kab. Bener Meriah",
+      "dapodikData": {
+        "sma": 505,
+        "smk": 250,
+        "slb": 59,
+        "subtotal": 814
+      },
+      "dapodikDataSwasta": {
+        "sma": 125,
+        "smk": 18,
+        "slb": 47,
+        "subtotal": 190
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 83,
+          "smk": 30,
+          "slb": 7,
+          "subtotal": 120
+        },
+        "swasta": {
+          "sma": 14,
+          "smk": 1,
+          "slb": 5,
+          "subtotal": 20
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 16.44,
+          "smk": 12.0,
+          "slb": 11.86,
+          "subtotal": 63.16
+        },
+        "swasta": {
+          "sma": 11.2,
+          "smk": 5.56,
+          "slb": 10.64,
+          "subtotal": 10.53
+        }
+      }
+    },
+    {
+      "no": 18,
+      "kabupatenKota": "Kab. Gayo Lues",
+      "dapodikData": {
+        "sma": 347,
+        "smk": 100,
+        "slb": 26,
+        "subtotal": 473
+      },
+      "dapodikDataSwasta": {
+        "sma": 31,
+        "smk": 0,
+        "slb": 35,
+        "subtotal": 66
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 41,
+          "smk": 15,
+          "slb": 4,
+          "subtotal": 60
+        },
+        "swasta": {
+          "sma": 2,
+          "smk": 0,
+          "slb": 0,
+          "subtotal": 2
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 11.82,
+          "smk": 15.0,
+          "slb": 15.38,
+          "subtotal": 90.91
+        },
+        "swasta": {
+          "sma": 6.45,
+          "smk": 0.0,
+          "slb": 0.0,
+          "subtotal": 3.03
+        }
+      }
+    },
+    {
+      "no": 19,
+      "kabupatenKota": "Kab. Simeulue",
+      "dapodikData": {
+        "sma": 676,
+        "smk": 227,
+        "slb": 13,
+        "subtotal": 916
+      },
+      "dapodikDataSwasta": {
+        "sma": 10,
+        "smk": 0,
+        "slb": 0,
+        "subtotal": 10
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 127,
+          "smk": 44,
+          "slb": 7,
+          "subtotal": 178
+        },
+        "swasta": {
+          "sma": 5,
+          "smk": 0,
+          "slb": 0,
+          "subtotal": 5
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 18.79,
+          "smk": 19.38,
+          "slb": 53.85,
+          "subtotal": 1780.0
+        },
+        "swasta": {
+          "sma": 50.0,
+          "smk": 0.0,
+          "slb": 0.0,
+          "subtotal": 50.0
+        }
+      }
+    },
+    {
+      "no": 20,
+      "kabupatenKota": "Kab. Aceh Barat",
+      "dapodikData": {
+        "sma": 619,
+        "smk": 504,
+        "slb": 40,
+        "subtotal": 1163
+      },
+      "dapodikDataSwasta": {
+        "sma": 111,
+        "smk": 0,
+        "slb": 22,
+        "subtotal": 133
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 104,
+          "smk": 89,
+          "slb": 6,
+          "subtotal": 199
+        },
+        "swasta": {
+          "sma": 8,
+          "smk": 0,
+          "slb": 1,
+          "subtotal": 9
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 16.8,
+          "smk": 17.66,
+          "slb": 15.0,
+          "subtotal": 149.62
+        },
+        "swasta": {
+          "sma": 7.21,
+          "smk": 0.0,
+          "slb": 4.55,
+          "subtotal": 6.77
+        }
+      }
+    },
+    {
+      "no": 21,
+      "kabupatenKota": "Kab. Aceh Timur",
+      "dapodikData": {
+        "sma": 1094,
+        "smk": 697,
+        "slb": 15,
+        "subtotal": 1806
+      },
+      "dapodikDataSwasta": {
+        "sma": 40,
+        "smk": 26,
+        "slb": 20,
+        "subtotal": 86
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 169,
+          "smk": 134,
+          "slb": 5,
+          "subtotal": 308
+        },
+        "swasta": {
+          "sma": 6,
+          "smk": 5,
+          "slb": 1,
+          "subtotal": 12
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 15.45,
+          "smk": 19.23,
+          "slb": 33.33,
+          "subtotal": 358.14
+        },
+        "swasta": {
+          "sma": 15.0,
+          "smk": 19.23,
+          "slb": 5.0,
+          "subtotal": 13.95
+        }
+      }
+    },
+    {
+      "no": 22,
+      "kabupatenKota": "Kota Banda Aceh",
+      "dapodikData": {
+        "sma": 1152,
+        "smk": 666,
+        "slb": 65,
+        "subtotal": 1883
+      },
+      "dapodikDataSwasta": {
+        "sma": 202,
+        "smk": 63,
+        "slb": 138,
+        "subtotal": 403
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 96,
+          "smk": 86,
+          "slb": 10,
+          "subtotal": 192
+        },
+        "swasta": {
+          "sma": 28,
+          "smk": 3,
+          "slb": 1,
+          "subtotal": 32
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 8.33,
+          "smk": 12.91,
+          "slb": 15.38,
+          "subtotal": 47.64
+        },
+        "swasta": {
+          "sma": 13.86,
+          "smk": 4.76,
+          "slb": 0.72,
+          "subtotal": 7.94
+        }
+      }
+    },
+    {
+      "no": 23,
+      "kabupatenKota": "Kota Lhokseumawe",
+      "dapodikData": {
+        "sma": 521,
+        "smk": 681,
+        "slb": 44,
+        "subtotal": 1246
+      },
+      "dapodikDataSwasta": {
+        "sma": 75,
+        "smk": 67,
+        "slb": 42,
+        "subtotal": 184
+      },
+      "bpjsData": {
+        "nonAsnNegeri": {
+          "sma": 115,
+          "smk": 175,
+          "slb": 17,
+          "subtotal": 307
+        },
+        "swasta": {
+          "sma": 8,
+          "smk": 10,
+          "slb": 4,
+          "subtotal": 22
+        }
+      },
+      "participationRates": {
+        "nonAsnNegeri": {
+          "sma": 22.07,
+          "smk": 25.7,
+          "slb": 38.64,
+          "subtotal": 166.85
+        },
+        "swasta": {
+          "sma": 10.67,
+          "smk": 14.93,
+          "slb": 9.52,
+          "subtotal": 11.96
+        }
+      }
+    }
+  ],
+  "summary": {
+    "totalDapodikNonAsnNegeri": {
+      "sma": 17660,
+      "smk": 9064,
+      "slb": 1032,
+      "subtotal": 27756
+    },
+    "totalDapodikSwasta": {
+      "sma": 2139,
+      "smk": 1090,
+      "slb": 596,
+      "subtotal": 3825
+    },
+    "totalBpjs": {
+      "nonAsnNegeri": {
+        "sma": 2814,
+        "smk": 1486,
+        "slb": 351,
+        "subtotal": 4651
+      },
+      "swasta": {
+        "sma": 251,
+        "smk": 140,
+        "slb": 50,
+        "subtotal": 441
+      }
+    },
+    "averageParticipationRates": {
+      "nonAsnNegeri": {
+        "sma": 15.93,
+        "smk": 16.39,
+        "slb": 34.01,
+        "subtotal": 16.76
+      },
+      "swasta": {
+        "sma": 11.73,
+        "smk": 12.84,
+        "slb": 8.39,
+        "subtotal": 11.53
+      }
+    }
+  }
+}

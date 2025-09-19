@@ -1,0 +1,14 @@
+{
+    "name": "KNODIK0006",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "file2-folder",
+    "creationDate": {
+        "$$date": 1758252558094
+    },
+    "modificationDate": {
+        "$$date": 1758252558094
+    },
+    "shortid": "file2",
+    "$entitySet": "folders"
+}

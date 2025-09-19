@@ -1,0 +1,16 @@
+{
+    "name": "header-footer",
+    "engine": "handlebars",
+    "recipe": "html",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "header-footer-file4",
+    "creationDate": {
+        "$$date": 1758252558130
+    },
+    "modificationDate": {
+        "$$date": 1758252558130
+    },
+    "shortid": "hf4",
+    "$entitySet": "templates"
+}

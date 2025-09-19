@@ -1,0 +1,39 @@
+/* ====== Header: logo kiri, judul tengah, meta kanan (GRID) ====== */
+.page-header{
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* kiri | tengah fleksibel | kanan */
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 12px;
+}
+.brand{ display:flex; align-items:center; }
+.brand-logo{
+  height: 90px;         /* atur besar logo di sini */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.brand-title{
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.brand-title .title-line-1{ font-size: 14px; }
+.brand-title .title-line-2{ font-size: 12.5px; }
+.brand-title .periode{ font-size: 11px; margin-top: 2px; }
+
+.meta{
+  font-size: 9.5px;
+  text-align: right;
+  line-height: 1.25;
+}
+
+/* Footer */
+.page-footer {
+  margin-top: 4mm;
+  display: flex; justify-content: space-between;
+  font-size: 9px; color: #444;
+}
+
+/* Amankan gambar */
+img { max-width: 100%; height: auto; }

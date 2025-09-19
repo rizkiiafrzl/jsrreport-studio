@@ -1,0 +1,14 @@
+{
+    "name": "assets",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "assets-file1",
+    "creationDate": {
+        "$$date": 1758252558098
+    },
+    "modificationDate": {
+        "$$date": 1758252558098
+    },
+    "shortid": "assets1",
+    "$entitySet": "folders"
+}

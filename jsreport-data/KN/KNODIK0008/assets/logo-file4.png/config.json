@@ -1,0 +1,14 @@
+{
+    "name": "logo-file4.png",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "logo-bpjs-file4",
+    "creationDate": {
+        "$$date": 1758252558151
+    },
+    "modificationDate": {
+        "$$date": 1758252558151
+    },
+    "shortid": "logo4",
+    "$entitySet": "assets"
+}

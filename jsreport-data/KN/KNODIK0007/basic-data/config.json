@@ -1,0 +1,15 @@
+{
+    "name": "basic-data",
+    "data": {},
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "basic-data-file3",
+    "creationDate": {
+        "$$date": 1758252558137
+    },
+    "modificationDate": {
+        "$$date": 1758252558137
+    },
+    "shortid": "bd3",
+    "$entitySet": "data"
+}

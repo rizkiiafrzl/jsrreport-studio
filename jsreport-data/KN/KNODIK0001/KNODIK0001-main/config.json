@@ -1,0 +1,41 @@
+{
+    "name": "KNODIK0001-main",
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "data": {
+        "shortid": "DPE3v8O"
+    },
+    "chrome": {
+        "displayHeaderFooter": true,
+        "printBackground": true,
+        "landscape": true,
+        "format": "A4",
+        "width": "297mm",
+        "height": "210mm",
+        "marginTop": "2cm",
+        "marginRight": "8mm",
+        "marginBottom": "2cm",
+        "marginLeft": "8mm"
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "creationDate": {
+        "$$date": 1758177763628
+    },
+    "modificationDate": {
+        "$$date": 1758252558114
+    },
+    "shortid": "tiWv8Ts",
+    "_id": "NiBliz1R1zOZtaWS",
+    "$entitySet": "templates",
+    "pdfOperations": [
+        {
+            "type": "merge",
+            "templateShortid": "ql-6SFy",
+            "mergeWholeDocument": true
+        }
+    ],
+    "pdfMeta": {
+        "title": "DAFTAR SATUAN PENDIDIKAN BY PPPK"
+    }
+}

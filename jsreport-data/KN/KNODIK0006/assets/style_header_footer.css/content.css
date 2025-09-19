@@ -1,0 +1,66 @@
+/* ====== Header: logo kiri, judul tengah, meta kanan (GRID) ====== */
+.page-header{
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* kiri | tengah fleksibel | kanan */
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 12px;
+}
+
+/* kiri (logo) */
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.brand-logo{
+  height: 100px;       /* besarkan sesuai kebutuhan (80–110px) */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* tengah (judul) */
+.brand-title{
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.brand-title .title-line-1{ font-size: 16px; }
+.brand-title .title-line-2{ font-size: 14px; }
+.brand-title .periode{ font-size: 12px; margin-top: 2px; }
+
+/* kanan (meta) */
+.meta {
+  flex: 0 0 auto;              /* blok kanan tetap rapat kanan */
+  font-size: 10px;
+  text-align: right;
+  line-height: 1.25;
+}
+
+/* ====== Section info kecil di bawah header ====== */
+.section{
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 6px 0 8px;
+  font-size: 11px;
+}
+.section .label{ font-weight: 700; }
+.section .underline{
+  flex: 1;
+  border-bottom: 1px solid #000;
+  margin-left: 6px;
+}
+
+/* Footer */
+.page-footer {
+  margin-top: 8mm;
+  display: flex; justify-content: space-between;
+  font-size: 10px; color: #444;
+}
+
+/* Amankan gambar */
+img { max-width: 100%; height: auto; }
+
+

@@ -1,0 +1,12 @@
+{
+    "name": "KNODIK0007",
+    "creationDate": {
+        "$$date": 1758252558095
+    },
+    "modificationDate": {
+        "$$date": 1758252558095
+    },
+    "shortid": "f3",
+    "_id": "file3-folder",
+    "$entitySet": "folders"
+}

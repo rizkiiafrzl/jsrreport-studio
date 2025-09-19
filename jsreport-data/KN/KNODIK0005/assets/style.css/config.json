@@ -1,0 +1,14 @@
+{
+    "name": "style.css",
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "style-css-file1",
+    "creationDate": {
+        "$$date": 1758252558145
+    },
+    "modificationDate": {
+        "$$date": 1758252558145
+    },
+    "shortid": "sc1",
+    "$entitySet": "assets"
+}

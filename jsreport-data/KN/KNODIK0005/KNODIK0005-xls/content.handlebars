@@ -1,0 +1,207 @@
+{{{xlsxPrint}}}
+<style>
+  table {
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;                 /* patuh ke colgroup */
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  th, td {
+    padding:2px 4px;
+    border:1px solid #cfcfcf;
+    text-align:center;
+    vertical-align:middle;
+  }
+
+  /* Isi tabel default 10pt */
+  table, td { font-size:10pt !important; }
+
+  /* Header kolom pakai 12pt */
+  thead th { font-size:10pt !important; }
+
+  /* Baris meta/judul juga 12pt */
+  th.meta,
+  th.meta.meta-code {
+    font-size:12pt !important;
+    font-weight:700;
+    background:#fff;
+  }
+
+  .title     { background:#fff; font-size:12pt; text-align:left; }
+  .subtotal  { background:#f0f0f0; font-weight:bold; }
+  .meta-code { font-weight:400 !important; }
+
+  /* alignment helpers */
+  .text-left   { text-align:left; }
+  .text-right  { text-align:right; }
+  .text-center { text-align:center; }
+  .tfoot-total { font-weight:700; background:#dcdcdc; }
+
+  /* --- ukuran kolom (rapat) --- */
+  .col-no   { width:16px; max-width:16px; }   /* No sangat rapat */
+  .col-prov { width:200px; text-align:left; } /* Nama provinsi */
+  .n        { width:45px; }                   /* angka */
+  .w        { width:55px; }                   /* subtotal */
+
+  /* paksa sel kolom No lebih rapat */
+  .cell-no {
+    padding-left:1px !important;
+    padding-right:1px !important;
+    max-width:16px !important;
+    overflow:hidden !important;
+    text-overflow:clip !important;
+    white-space:nowrap !important;
+  }
+</style>
+
+
+<table border="1">
+  <colgroup>
+    <col class="col-no" />
+    <col class="col-prov" />
+    <!-- DAPODIK NON ASN NEGERI -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+    <!-- DAPODIK SWASTA -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+    <!-- BPJS NON ASN NEGERI -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+    <!-- BPJS SWASTA -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+    <!-- % NON ASN NEGERI -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+    <!-- % SWASTA -->
+    <col class="n" /><col class="n" /><col class="n" /><col class="w" />
+  </colgroup>
+
+  <thead>
+    <!-- 1) KODE di kanan -->
+    <tr>
+      <th colspan="26" class="meta meta-code text-right">
+        {{#if @root.code}}{{@root.code}}{{else}}{{code}}{{/if}}
+      </th>
+    </tr>
+
+    <!-- 2) JUDUL di tengah -->
+    <tr>
+      <th colspan="26" class="meta text-center">
+        {{@root.title}} {{#if @root.subtitle}}({{@root.subtitle}}){{/if}}
+      </th>
+    </tr>
+
+    <!-- 3) Periode kiri | kanan kosong -->
+    <tr>
+      <th colspan="13" class="meta meta-code text-right">&nbsp;</th>
+      </th>
+      <th colspan="13" class="meta meta-code text-right">
+        PERIODE: {{@root.period}}
+    </tr>
+
+    <!-- Header utama tabel -->
+    <tr>
+      <th class="cell-no" rowspan="3">NO</th>
+      <th rowspan="3">NAMA PROVINSI</th>
+      <th colspan="8">JUMLAH GTK DAPODIK KEMENDIKBUD</th>
+      <th colspan="8">JUMLAH GTK TERDAFTAR BPJS KETENAGAKERJAAN</th>
+      <th colspan="8">KEPESERTAAN AKTIF</th>
+    </tr>
+    <tr>
+      <th colspan="4">NON ASN NEGERI</th>
+      <th colspan="4">SWASTA</th>
+      <th colspan="4">NON ASN NEGERI</th>
+      <th colspan="4">SWASTA</th>
+      <th colspan="4">NON ASN NEGERI</th>
+      <th colspan="4">SWASTA</th>
+    </tr>
+    <tr>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">SUBTOTAL</th>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">SUBTOTAL</th>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">SUBTOTAL</th>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">SUBTOTAL</th>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">SUBTOTAL</th>
+      <th>SMA</th><th>SMK</th><th>SLB</th><th class="subtotal">SUBTOTAL</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each provinces}}
+    <tr>
+      <td class="cell-no" data-type="number" data-format="0">{{index}}</td>
+      <td class="text-left">{{province}}</td>
+
+      <!-- DAPODIK NON ASN NEGERI -->
+      <td data-type="number" data-format="#,##0">{{dapodik.nonAsnNegeri.sma}}</td>
+      <td data-type="number" data-format="#,##0">{{dapodik.nonAsnNegeri.smk}}</td>
+      <td data-type="number" data-format="#,##0">{{dapodik.nonAsnNegeri.slb}}</td>
+      <td class="subtotal" data-type="number" data-format="#,##0">{{dapodik.nonAsnNegeri.subtotal}}</td>
+
+      <!-- DAPODIK SWASTA -->
+      <td data-type="number" data-format="#,##0">{{dapodik.swasta.sma}}</td>
+      <td data-type="number" data-format="#,##0">{{dapodik.swasta.smk}}</td>
+      <td data-type="number" data-format="#,##0">{{dapodik.swasta.slb}}</td>
+      <td class="subtotal" data-type="number" data-format="#,##0">{{dapodik.swasta.subtotal}}</td>
+
+      <!-- BPJS NON ASN NEGERI -->
+      <td data-type="number" data-format="#,##0">{{bpjsTerdaftar.nonAsnNegeri.sma}}</td>
+      <td data-type="number" data-format="#,##0">{{bpjsTerdaftar.nonAsnNegeri.smk}}</td>
+      <td data-type="number" data-format="#,##0">{{bpjsTerdaftar.nonAsnNegeri.slb}}</td>
+      <td class="subtotal" data-type="number" data-format="#,##0">{{bpjsTerdaftar.nonAsnNegeri.subtotal}}</td>
+
+      <!-- BPJS SWASTA -->
+      <td data-type="number" data-format="#,##0">{{bpjsTerdaftar.swasta.sma}}</td>
+      <td data-type="number" data-format="#,##0">{{bpjsTerdaftar.swasta.smk}}</td>
+      <td data-type="number" data-format="#,##0">{{bpjsTerdaftar.swasta.slb}}</td>
+      <td class="subtotal" data-type="number" data-format="#,##0">{{bpjsTerdaftar.swasta.subtotal}}</td>
+
+      <!-- % AKTIF -->
+      <td data-type="string">{{#if aktifPercent.nonAsnNegeri.sma}}{{aktifPercent.nonAsnNegeri.sma}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if aktifPercent.nonAsnNegeri.smk}}{{aktifPercent.nonAsnNegeri.smk}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if aktifPercent.nonAsnNegeri.slb}}{{aktifPercent.nonAsnNegeri.slb}}%{{else}}0{{/if}}</td>
+      <td class="subtotal" data-type="string">{{#if aktifPercent.nonAsnNegeri.subtotal}}{{aktifPercent.nonAsnNegeri.subtotal}}%{{else}}0{{/if}}</td>
+
+      <td data-type="string">{{#if aktifPercent.swasta.sma}}{{aktifPercent.swasta.sma}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if aktifPercent.swasta.smk}}{{aktifPercent.swasta.smk}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if aktifPercent.swasta.slb}}{{aktifPercent.swasta.slb}}%{{else}}0{{/if}}</td>
+      <td class="subtotal" data-type="string">{{#if aktifPercent.swasta.subtotal}}{{aktifPercent.swasta.subtotal}}%{{else}}0{{/if}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+  <tfoot>
+    <tr class="tfoot-total">
+      <td class="cell-no" colspan="2">TOTAL</td>
+
+      <!-- TOTAL DAPODIK -->
+      <td data-type="number" data-format="#,##0">{{totals.dapodik.nonAsnNegeri.sma}}</td>
+      <td data-type="number" data-format="#,##0">{{totals.dapodik.nonAsnNegeri.smk}}</td>
+      <td data-type="number" data-format="#,##0">{{totals.dapodik.nonAsnNegeri.slb}}</td>
+      <td class="subtotal" data-type="number" data-format="#,##0">{{totals.dapodik.nonAsnNegeri.subtotal}}</td>
+
+      <td data-type="number" data-format="#,##0">{{totals.dapodik.swasta.sma}}</td>
+      <td data-type="number" data-format="#,##0">{{totals.dapodik.swasta.smk}}</td>
+      <td data-type="number" data-format="#,##0">{{totals.dapodik.swasta.slb}}</td>
+      <td class="subtotal" data-type="number" data-format="#,##0">{{totals.dapodik.swasta.subtotal}}</td>
+
+      <!-- TOTAL BPJS -->
+      <td data-type="number" data-format="#,##0">{{totals.bpjsTerdaftar.nonAsnNegeri.sma}}</td>
+      <td data-type="number" data-format="#,##0">{{totals.bpjsTerdaftar.nonAsnNegeri.smk}}</td>
+      <td data-type="number" data-format="#,##0">{{totals.bpjsTerdaftar.nonAsnNegeri.slb}}</td>
+      <td class="subtotal" data-type="number" data-format="#,##0">{{totals.bpjsTerdaftar.nonAsnNegeri.subtotal}}</td>
+
+      <td data-type="number" data-format="#,##0">{{totals.bpjsTerdaftar.swasta.sma}}</td>
+      <td data-type="number" data-format="#,##0">{{totals.bpjsTerdaftar.swasta.smk}}</td>
+      <td data-type="number" data-format="#,##0">{{totals.bpjsTerdaftar.swasta.slb}}</td>
+      <td class="subtotal" data-type="number" data-format="#,##0">{{totals.bpjsTerdaftar.swasta.subtotal}}</td>
+
+      <!-- TOTAL % AKTIF -->
+      <td data-type="string">{{#if totals.aktifPercent.nonAsnNegeri.sma}}{{totals.aktifPercent.nonAsnNegeri.sma}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if totals.aktifPercent.nonAsnNegeri.smk}}{{totals.aktifPercent.nonAsnNegeri.smk}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if totals.aktifPercent.nonAsnNegeri.slb}}{{totals.aktifPercent.nonAsnNegeri.slb}}%{{else}}0{{/if}}</td>
+      <td class="subtotal" data-type="string">{{#if totals.aktifPercent.nonAsnNegeri.subtotal}}{{totals.aktifPercent.nonAsnNegeri.subtotal}}%{{else}}0{{/if}}</td>
+
+      <td data-type="string">{{#if totals.aktifPercent.swasta.sma}}{{totals.aktifPercent.swasta.sma}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if totals.aktifPercent.swasta.smk}}{{totals.aktifPercent.swasta.smk}}%{{else}}0{{/if}}</td>
+      <td data-type="string">{{#if totals.aktifPercent.swasta.slb}}{{totals.aktifPercent.swasta.slb}}%{{else}}0{{/if}}</td>
+      <td class="subtotal" data-type="string">{{#if totals.aktifPercent.swasta.subtotal}}{{totals.aktifPercent.swasta.subtotal}}%{{else}}0{{/if}}</td>
+    </tr>
+  </tfoot>
+</table>
